@@ -42,7 +42,7 @@ def scrape_catalogue():
 
 	#Put this outside of function
 	for e in elems:
-		print(e.getText())
+		print (e.getText())
 		print ('\n')
 
 get_html_file(url)
