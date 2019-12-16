@@ -4,15 +4,7 @@ import webbrowser
 import requests
 import bs4 
 
-# Program line argument is used as search text.  If no pla is provided, 'Frank Zappa' is used as default.
-if len(sys.argv) > 1:
-	search_text = ''.join(sys.argv[1:])
-else:
-	search_text = 'Frank Zappa'
-
-url = 'http://www.banq.qc.ca/techno/recherche/rms.html?q=' + search_text
-#uncomment the following line if you want to compare search results in browser
-webbrowser.open(url)
+DEBUG = True
 html_file_name = 'catalogue.html'
 
 def get_html_file(url):
@@ -45,7 +37,20 @@ def scrape_catalogue():
 		print (e.getText())
 		print ('\n')
 
-get_html_file(url)
-scrape_catalogue()
+if __name__ == "__main__":
+
+	if DEBUG == True:
+		search_text = 'Frank Zappa'
+	else:
+		if len(sys.argv) > 1:
+			search_text = ''.join(sys.argv[1:])
+
+	url = 'http://www.banq.qc.ca/techno/recherche/rms.html?q=' + search_text
+	
+	#uncomment the following line if you want to compare search results in browser
+	#webbrowser.open(url)
+	
+	get_html_file(url)
+	scrape_catalogue()
 
 
