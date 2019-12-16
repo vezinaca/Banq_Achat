@@ -1,23 +1,15 @@
 #!/usr/bin/env python 3
 
-'''
-project A: scrape BANQ search results
 
-high level overview:
-- use 'requests' library
-- get the url, but change the user-agent... (actually, might not be
-necessary...! try)
-- use 'beautifulsoup' (bs4) library to parse the html page
-- find the actual search results (the "Catalogue" results) in the html
-page using beautifulsoup
-
-'''
 
 # DISCUSSION ENTRE GREG ET CARL
 # CARL - I am aware of the hard coded stuff in there.
 # GREG - Well, if you are aware of it, why are you keeping it in there?
 
-import sys, webbrowser,requests, bs4 
+import sys
+import webbrowser
+import requests
+import bs4 
 
 # Program line argument is used as search text.  If no pla is provided, 'Frank Zappa' is used as default.
 if len(sys.argv) > 1:
@@ -44,9 +36,9 @@ def get_html_file(url):
 
 def scrape_catalogue():
 
-	belle_soupe = bs4.BeautifulSoup(open(html_file_name), 'html.parser')
+	soup = bs4.BeautifulSoup(open(html_file_name), 'html.parser')
 		
-	elems = belle_soupe.select('#RMS_afficherIris .ValorisationListeDesc a')
+	elems = soup.select('#RMS_afficherIris .ValorisationListeDesc a')
 	print ("type elems: " + str(type(elems)))
 	print ('type element 0: ' + str(type(elems[0])))
 	
@@ -70,7 +62,7 @@ scrape_catalogue()
 '''
 I'm able to get all the <a> tags that are in '#RMS_afficherIris .ValorisationListeDesc a'. 
 However as you can see, they are not all titles.  One of them in this case is a 
-link to 'Accès par PRETNUMERIQUE.CA (format ePub)', which I don't want.  I guess it doesn't 
+link to 'Acces par PRETNUMERIQUE.CA (format ePub)', which I don't want.  I guess it doesn't 
 really matter, seeing as obviously this will never be a match with what I'm looking for.  I still
 think it's better to get rid of it. 
 
