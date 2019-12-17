@@ -2,8 +2,8 @@
 
 from selenium import webdriver
 
-browser = webdriver.Firefox()
-type (browser)
+browser = webdriver.Firefox(executable_path="/home/alienmint/Documents/Programmation/pythonPDF/gecko/geckodriver")
+# type (browser)
 
 
 #browser.get('http://banq.qc.ca')
@@ -24,15 +24,10 @@ connection_button = browser.find_element_by_name('_eventId_proceed')
 print(connection_button.location)
 connection_button.click()
 
-container_blanc = browser.find_element_by_class_name('ContainerBlanc')
-print(container_blanc.location)
-
-# need to renew browser page
 
 
+consul_dossier = browser.find_element_by_link_text('Consulter mon dossier')
+consul_dossier.click()
 
-
-#consul_dossier = browser.find_element_by_link_text('Consulter mon dossier')
-#print (consul_dossier.location)
 
 #<input type="submit" name="_eventId_proceed" value="Connexion">

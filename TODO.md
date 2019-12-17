@@ -15,7 +15,7 @@ page using beautifulsoup
 # GREG - Well, if you are aware of it, why are you keeping it in there?
 
 #Would it be better if this function had a 'return'? i.e elementsTrouves = scrapeCatalogue()
-	#Then I would iterate and print the elementsTrouves array?
+#Then I would iterate and print the elementsTrouves array?
 
 '''
 I'm able to get all the <a> tags that are in '#RMS_afficherIris .ValorisationListeDesc a'. 

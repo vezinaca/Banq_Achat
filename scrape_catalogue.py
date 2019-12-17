@@ -1,4 +1,4 @@
-#!/usr/bin/env python 3
+#!/usr/bin/env python3
 import sys, os.path
 import webbrowser
 import requests
@@ -34,18 +34,23 @@ def scrape_catalogue():
 	else:
 		soup = bs4.BeautifulSoup(res.text, 'html.parser')
 	elems = soup.select('#RMS_afficherIris .ValorisationListeDesc a')
-	print ("type elems: " + str(type(elems)))
-	print ('type element 0: ' + str(type(elems[0])))
+	print("type elems: " + str(type(elems)))
+	print('type element 0: ' + str(type(elems[0])))
 	
 	#elems.find('.pRchrContent').extract()
 
 	#Do not put 'prints' inside functions
-	print ('nombre elements trouve: ' + str(len(elems)))
+	print('nombre elements trouve: ' + str(len(elems)))
 
 	#Put this outside of function
 	for e in elems:
-		print (e.getText())
-		print ('\n')
+		if not e['href'].startswith('https://cap.banq.qc.ca'):
+			continue
+		print(e.getText())
+		print(e['href'])
+		print('\n')
+
+	#build list of dictionary
 
 if __name__ == "__main__":
 
@@ -62,5 +67,7 @@ if __name__ == "__main__":
 	
 	get_html_file(url)
 	scrape_catalogue()
+
+	#assert
 
 
