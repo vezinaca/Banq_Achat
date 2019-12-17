@@ -49,6 +49,7 @@ def scrape_catalogue():
 		print(e.getText())
 		print(e['href'])
 		print('\n')
+		print ('ok')
 
 	#build list of dictionary
 
