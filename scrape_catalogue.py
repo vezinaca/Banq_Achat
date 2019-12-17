@@ -5,53 +5,48 @@ import requests
 import bs4 
 
 DEBUG = True
+#Currently not used
+LOCAL = False
 html_file_name = 'catalogue.html'
 
-res = None
+pre_url_search = 'http://www.banq.qc.ca/techno/recherche/rms.html?q='
+pre_media_url = 'https://cap.banq.qc.ca'
+css_selector_media = '#RMS_afficherIris .ValorisationListeDesc a'
 
-def get_html_file(url):
-
+#Currently not used
+def create_local_html_file(html_file_name, response):
+	
 	if not os.path.isfile(html_file_name):
-
-		res = requests.get(url)
-		res.raise_for_status()
-
-		if DEBUG == True:
-			html_file = open(html_file_name, 'wb')
-
-			for chunk in res.iter_content(100000):
-				html_file.write(chunk)
+		html_file = open(html_file_name, 'wb')
+		for chunk in response.iter_content(100000):
+			html_file.write(chunk)
 
 		html_file.close()
 
-		#return res
 
+def get_response(url):
+	res = requests.get(url)
+	res.raise_for_status()
+	return res
 
-def scrape_catalogue():
-
-	if DEBUG == True:
-		soup = bs4.BeautifulSoup(open(html_file_name), 'html.parser')
-	else:
-		soup = bs4.BeautifulSoup(res.text, 'html.parser')
-	elems = soup.select('#RMS_afficherIris .ValorisationListeDesc a')
-	print("type elems: " + str(type(elems)))
-	print('type element 0: ' + str(type(elems[0])))
+# This function takes a list of possible media links as argument and removes the non-media links
+# returns dictionnary of media title as key and href of media as value.
+def remove_non_media_links(list_links):
 	
-	#elems.find('.pRchrContent').extract()
+	only_media_list_of_dic = []
 
-	#Do not put 'prints' inside functions
-	print('nombre elements trouve: ' + str(len(elems)))
-
-	#Put this outside of function
-	for e in elems:
-		if not e['href'].startswith('https://cap.banq.qc.ca'):
+	for a_link in list_links:
+		if not a_link['href'].startswith(pre_media_url):
 			continue
-		print(e.getText())
-		print(e['href'])
-		print('\n')
-		print ('ok')
+		only_media_list_of_dic.append({'Title':a_link.getText(), 'Link':a_link['href'], 'future_key': 'future_value'})
+		
+	return only_media_list_of_dic
 
-	#build list of dictionary
+def post_process(html):
+
+	soup = bs4.BeautifulSoup(html, 'html.parser')
+	my_links = soup.select(css_selector_media)
+	return(remove_non_media_links(my_links))
 
 if __name__ == "__main__":
 
@@ -62,14 +57,21 @@ if __name__ == "__main__":
 		#if len(sys.argv) > 1:
 		search_text = ''.join(sys.argv[1:])
 
-	url = 'http://www.banq.qc.ca/techno/recherche/rms.html?q=' + search_text
-	
+	url = pre_url_search + search_text
+
+
 	#uncomment the following line if you want to compare search results in browser
 	#webbrowser.open(url)
 	
-	get_html_file(url)
-	scrape_catalogue()
+	response = get_response(url)
+	
+	list_of_dic_of_medias = post_process(response.text)
 
-	#assert
-
-
+	for media in list_of_dic_of_medias:
+		#python2
+		#for k, v in d.iteritems():
+		#	print k, v
+		for k, v in media.items():
+			print(k, v)
+		print('\n')
+	
