@@ -33,6 +33,7 @@ def get_response(url):
 # returns dictionnary of media title as key and href of media as value.
 def remove_non_media_links(list_links):
 	
+	
 	only_media_list_of_dic = []
 
 	for a_link in list_links:
