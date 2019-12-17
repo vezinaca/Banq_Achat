@@ -58,8 +58,9 @@ if __name__ == "__main__":
 	if DEBUG == True:
 		search_text = 'Frank Zappa'
 	else:
-		if len(sys.argv) > 1:
-			search_text = ''.join(sys.argv[1:])
+		assert len(sys.argv) > 1, "Missing arguments."
+		#if len(sys.argv) > 1:
+		search_text = ''.join(sys.argv[1:])
 
 	url = 'http://www.banq.qc.ca/techno/recherche/rms.html?q=' + search_text
 	
