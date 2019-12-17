@@ -29,6 +29,7 @@ def get_response(url):
 	res.raise_for_status()
 	return res
 
+
 # This function takes a list of possible media links as argument and removes the non-media links
 # returns dictionnary of media title as key and href of media as value.
 def remove_non_media_links(list_links):
