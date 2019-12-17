@@ -1,5 +1,5 @@
 #!/usr/bin/env python 3
-import sys
+import sys, os.path
 import webbrowser
 import requests
 import bs4 
@@ -7,22 +7,32 @@ import bs4
 DEBUG = True
 html_file_name = 'catalogue.html'
 
+res = None
+
 def get_html_file(url):
 
-	req = requests.get(url)
-	req.raise_for_status()
+	if not os.path.isfile(html_file_name):
 
-	html_file = open(html_file_name, 'wb')
+		res = requests.get(url)
+		res.raise_for_status()
 
-	for chunk in req.iter_content(100000):
-		html_file.write(chunk)
+		if DEBUG == True:
+			html_file = open(html_file_name, 'wb')
 
-	html_file.close()
+			for chunk in res.iter_content(100000):
+				html_file.write(chunk)
+
+		html_file.close()
+
+		#return res
+
 
 def scrape_catalogue():
 
-	soup = bs4.BeautifulSoup(open(html_file_name), 'html.parser')
-		
+	if DEBUG == True:
+		soup = bs4.BeautifulSoup(open(html_file_name), 'html.parser')
+	else:
+		soup = bs4.BeautifulSoup(res.text, 'html.parser')
 	elems = soup.select('#RMS_afficherIris .ValorisationListeDesc a')
 	print ("type elems: " + str(type(elems)))
 	print ('type element 0: ' + str(type(elems[0])))
