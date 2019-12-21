@@ -127,7 +127,15 @@ for due_date_word in all_just_words_due_dates:
 	print(due_date_word.text)
 	print('\n')
 
+#dict(zip(list1, zip(list2, list3)))
+gros_dic = dict(zip(all_due_dates,zip(all_renew_buttons_text,all_renew_buttons)))
 
+print('\n allo \n')
+for k,v in gros_dic.items():
+	print(k.text)
+	le_text, piton = v
+	print(le_text.text)
+	print('\n')
 #driver.find_element_by_xpath("//div[@class
 
 #time.sleep(10)
