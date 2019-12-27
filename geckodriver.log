@@ -1418,3 +1418,120 @@ JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d3
 JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=10&cb=212079087, line 1: unreachable code after return statement
 JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=10&cb=212079087 line 1 > eval, line 1: unreachable code after return statement
 JavaScript error: https://platform.twitter.com/widgets/widget_iframe.69e02060c7c44baddf1b5629549acc0c.html?origin=https%3A%2F%2Fcap.banq.qc.ca, line 12: Error: Network error.
+[Parent 5668, Gecko_IOThread] WARNING: pipe error (76): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+[Parent 5668, Gecko_IOThread] WARNING: pipe error (107): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+1576952327419	Marionette	INFO	Stopped listening on port 35767
+[Parent 5376, Gecko_IOThread] WARNING: pipe error (77): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+[Parent 5376, Gecko_IOThread] WARNING: pipe error (76): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+1576952332175	Marionette	INFO	Stopped listening on port 40399
+[Parent 5125, Gecko_IOThread] WARNING: pipe error (76): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+[Parent 5125, Gecko_IOThread] WARNING: pipe error (104): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+1576952334538	Marionette	INFO	Stopped listening on port 36641
+[Parent 4810, Gecko_IOThread] WARNING: pipe error (76): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+[Parent 4810, Gecko_IOThread] WARNING: pipe error (90): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+1576952337456	Marionette	INFO	Stopped listening on port 34919
+[Parent 2881, Gecko_IOThread] WARNING: pipe error (76): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+[Parent 2881, Gecko_IOThread] WARNING: pipe error (108): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+1576952340364	Marionette	INFO	Stopped listening on port 34667
+1577040837291	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilemu6TPu"
+1577040837897	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1577040837898	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1577040837898	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1577040837898	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1577040839527	Marionette	INFO	Listening on port 34801
+1577040839599	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=2&cb=1996375379, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=2&cb=1996375379, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=2&cb=1996375379 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=6&cb=1955233775, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=6&cb=1955233775, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=6&cb=1955233775 line 1 > eval, line 1: unreachable code after return statement
+JavaScript error: https://platform.twitter.com/widgets/widget_iframe.69e02060c7c44baddf1b5629549acc0c.html?origin=https%3A%2F%2Fcap.banq.qc.ca, line 12: Error: Network error.
+1577040863638	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilemZajgK"
+1577040863979	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1577040863979	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1577040863980	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1577040863980	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1577040865067	Marionette	INFO	Stopped listening on port 34801
+1577040865180	Marionette	INFO	Listening on port 45449
+1577040865242	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=5&cb=636838637, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=5&cb=636838637, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=5&cb=636838637 line 1 > eval, line 1: unreachable code after return statement
+JavaScript error: https://platform.twitter.com/widgets/widget_iframe.69e02060c7c44baddf1b5629549acc0c.html?origin=https%3A%2F%2Fcap.banq.qc.ca, line 12: Error: Network error.
+[Parent 3357, Gecko_IOThread] WARNING: pipe error (76): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+[Parent 3357, Gecko_IOThread] WARNING: pipe error (104): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+1577042730426	Marionette	INFO	Stopped listening on port 45449
+1577042733860	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileGrjt5u"
+1577042734265	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1577042734266	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1577042734266	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1577042734266	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1577042735530	Marionette	INFO	Listening on port 33449
+1577042735565	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=912017683, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=912017683, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=912017683 line 1 > eval, line 1: unreachable code after return statement
+JavaScript error: https://platform.twitter.com/widgets/widget_iframe.69e02060c7c44baddf1b5629549acc0c.html?origin=https%3A%2F%2Fcap.banq.qc.ca, line 12: Error: Network error.
+[Parent 4623, Gecko_IOThread] WARNING: pipe error (76): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+[Parent 4623, Gecko_IOThread] WARNING: pipe error (90): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+1577043259654	Marionette	INFO	Stopped listening on port 33449
+1577426103041	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilekPLJdg"
+1577426103384	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1577426103384	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1577426103384	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1577426103384	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1577426104706	Marionette	INFO	Listening on port 44271
+1577426104746	Marionette	WARN	TLS certificate errors will be ignored for this session
+1577426108564	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+bail@chrome://marionette/content/sync.js:237:64
+JavaScript error: https://cap.banq.qc.ca/main.e14e2afa383e2d5df501.js, line 189: Error: required module 'WrappedSelection' not supported
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=836888037, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=10&cb=1909245990, line 1: unreachable code after return statement
+JavaScript error: https://platform.twitter.com/widgets/widget_iframe.69e02060c7c44baddf1b5629549acc0c.html?origin=https%3A%2F%2Fcap.banq.qc.ca, line 12: Error: Network error.
+1577426308626	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileiD1VZz"
+1577426308963	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1577426308963	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1577426308964	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1577426308964	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1577426310264	Marionette	INFO	Listening on port 37493
+1577426310336	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 13755, Gecko_IOThread] WARNING: pipe error (95): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+[Parent 13755, Gecko_IOThread] WARNING: pipe error (76): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+1577426313468	Marionette	INFO	Stopped listening on port 44271
+JavaScript error: https://cap.banq.qc.ca/main.e14e2afa383e2d5df501.js, line 189: Error: required module 'WrappedSelection' not supported
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=464597051, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=10&cb=1201420646, line 1: unreachable code after return statement
+JavaScript error: https://platform.twitter.com/widgets/widget_iframe.69e02060c7c44baddf1b5629549acc0c.html?origin=https%3A%2F%2Fcap.banq.qc.ca, line 12: Error: Network error.
+1577426509423	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileY99ALj"
+1577426509769	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1577426509770	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1577426509770	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1577426509770	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1577426511013	Marionette	INFO	Listening on port 44915
+1577426511032	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 14006, Gecko_IOThread] WARNING: pipe error (76): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+[Parent 14006, Gecko_IOThread] WARNING: pipe error (104): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+1577426514832	Marionette	INFO	Stopped listening on port 37493
+1577426515228	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+bail@chrome://marionette/content/sync.js:237:64
+JavaScript error: https://cap.banq.qc.ca/main.e14e2afa383e2d5df501.js, line 189: Error: required module 'WrappedSelection' not supported
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=2096334879, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=10&cb=2012041926, line 1: unreachable code after return statement
+JavaScript error: https://platform.twitter.com/widgets/widget_iframe.69e02060c7c44baddf1b5629549acc0c.html?origin=https%3A%2F%2Fcap.banq.qc.ca, line 12: Error: Network error.
+1577426603881	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilei27RCe"
+1577426604214	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1577426604214	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1577426604215	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1577426604215	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1577426605521	Marionette	INFO	Listening on port 39763
+1577426605585	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 14266, Gecko_IOThread] WARNING: pipe error (76): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+[Parent 14266, Gecko_IOThread] WARNING: pipe error (106): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+1577426607938	Marionette	INFO	Stopped listening on port 44915
+1577426609523	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+bail@chrome://marionette/content/sync.js:237:64
+JavaScript error: https://cap.banq.qc.ca/main.e14e2afa383e2d5df501.js, line 189: Error: required module 'WrappedSelection' not supported
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1155222709, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=10&cb=1714856585, line 1: unreachable code after return statement
+JavaScript error: https://platform.twitter.com/widgets/widget_iframe.69e02060c7c44baddf1b5629549acc0c.html?origin=https%3A%2F%2Fcap.banq.qc.ca, line 12: Error: Network error.

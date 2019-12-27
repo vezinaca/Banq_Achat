@@ -6,10 +6,12 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import TimeoutException
 import time
+import datetime
 
 mon_dossier_link = "http://banq.qc.ca/mon_dossier/mon_dossier.html"
 loans_link = "https://cap.banq.qc.ca/account/loans"
 reservations_link = "https://cap.banq.qc.ca/account/reservations"
+#today = datetime(now)
 
 browser = webdriver.Firefox(executable_path="/home/alienmint/Documents/Programmation/pythonPDF/gecko/geckodriver")
 # type (browser)
@@ -115,20 +117,28 @@ print(len(all_renew_buttons))
 ##print(type(this_div))
 #print(this_div.text)
 
+all_due_dates_datetime = []
+
 for button_text in all_renew_buttons_text:
 	print(button_text.text)
 	print('\n')
 
 for due_date in all_due_dates:
 	print(due_date.text)
+	all_due_dates_datetime.append(datetime.datetime.strptime(due_date.text, '%d/%m/%Y'))
 	print('\n')
 
 for due_date_word in all_just_words_due_dates:
 	print(due_date_word.text)
 	print('\n')
 
+for due_date_datetime in all_due_dates_datetime:
+	print(due_date_datetime)
+	print('shit')
+
 #dict(zip(list1, zip(list2, list3)))
 gros_dic = dict(zip(all_due_dates,zip(all_renew_buttons_text,all_renew_buttons)))
+#gros_dic = dict(zip(datetime.datetime.strptime(all_due_dates, '%d/%m/%Y'),zip(all_renew_buttons_text,all_renew_buttons)))
 
 print('\n allo \n')
 for k,v in gros_dic.items():
