@@ -11,11 +11,7 @@ import datetime
 mon_dossier_link = "http://banq.qc.ca/mon_dossier/mon_dossier.html"
 loans_link = "https://cap.banq.qc.ca/account/loans"
 reservations_link = "https://cap.banq.qc.ca/account/reservations"
-#today = datetime(now)
-
 browser = webdriver.Firefox(executable_path="/home/alienmint/Documents/Programmation/pythonPDF/gecko/geckodriver")
-# type (browser)
-
 
 #browser.get('http://banq.qc.ca')
 browser.get('http://banq.qc.ca/mon_dossier/mon_dossier.html')
@@ -37,7 +33,6 @@ pwd.send_keys('19771314')
 connection_button = browser.find_element_by_name('_eventId_proceed')
 connection_button.click()
 
-
 delay = 3 # seconds
 try:
     link_consul_dossier = WebDriverWait(browser, delay).until(EC.presence_of_element_located((By.LINK_TEXT, 'Consulter mon dossier')))
@@ -47,7 +42,6 @@ except TimeoutException:
 
 
 #WebDriverWait(browser, 10).until(lambda browser: EC.presence_of_element_located((By.LINK_TEXT, 'Consulter mon dossier')) != None)
-
 consul_dossier = browser.find_element_by_link_text('Consulter mon dossier')
 consul_dossier.click()
 
@@ -107,6 +101,11 @@ time.sleep(8)
 '''
 #all_renew_buttons = browser.find_elements_by_xpath("//div[@class='cardActions_1423utz']/button[1]/span[1]")
 #driver.find_elements_by_xpath("//div[@class='event']/preceding-sibling::div[@class='header']")
+
+# for book titles
+#<div class="cardContent_p5m42o">
+
+all_book_titles = browser.find_elements_by_xpath("//div[@class='cardContent_p5m42o']/div[1]/div[1]/div[1]/span[1]/div[1]/div[1]/span[1]") 
 all_renew_buttons = browser.find_elements_by_xpath("//div[@class='cardActions_1423utz']/button[1]")
 all_renew_buttons_text = browser.find_elements_by_xpath("//div[@class='cardActions_1423utz']/button[1]/div[1]/span[1]")
 all_just_words_due_dates = browser.find_elements_by_xpath("//div[contains(text(),'Due date')]")
@@ -117,6 +116,9 @@ print(len(all_renew_buttons))
 ##print(type(this_div))
 #print(this_div.text)
 
+for book_title in all_book_titles:
+	print("titre: " + book_title.text)
+	print('\n')
 all_due_dates_datetime = []
 
 for button_text in all_renew_buttons_text:
@@ -146,6 +148,18 @@ for k,v in gros_dic.items():
 	le_text, piton = v
 	print(le_text.text)
 	print('\n')
+
+date = "1/8/2020"
+
+for k,v in gros_dic.items():
+	if (k.text == date):
+		print ("k.text == date oui")
+		le_text, piton = v
+		if (le_text.text == "RENEW"):
+			print('on renouvelle')
+			piton.click()
+			exit()
+
 #driver.find_element_by_xpath("//div[@class
 
 #time.sleep(10)
