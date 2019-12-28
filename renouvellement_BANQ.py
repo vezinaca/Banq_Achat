@@ -25,7 +25,7 @@ connection_button.click()
 delay = 3 # seconds
 try:
     link_consul_dossier = WebDriverWait(browser, delay).until(EC.presence_of_element_located((By.LINK_TEXT, 'Consulter mon dossier')))
-    print("page is ready")
+    print("Consulter mon dossier page is ready")
 except TimeoutException:
 	print ("Loading took too much time!")
 
@@ -38,20 +38,19 @@ consul_dossier.click()
 #Il faudrait s'assurer que le site demeure en français.  (une fois rendu ici, il switch en anglais)
 #Par contre, je ne trouve pas le lien (a href) lorsque j'inspecte en utilisant les dev tools de Google Chrome???
 
-'''
-delay = 10 # seconds
+
+delay = 8 # seconds
 try:
-    link_borrowed_items = WebDriverWait(browser, delay).until(EC.presence_of_element_located((By.LINK_TEXT, 'Borrowed and renewed items')))
-    print("page is ready")
+    link_borrowed_items = WebDriverWait(browser, delay).until(EC.presence_of_element_located((By.XPATH, "//*[contains(text(), 'Borrowed and renewed items')]")))
+    print("Borrowed page is ready")
     link_borrowed_items.click()
 except TimeoutException:
-	print ("Loading took too much time!")
+	print ("Loading Borrowed page took too much time!")
 
-'''
 
-time.sleep(8)
-e = browser.find_element_by_xpath("//*[contains(text(), 'Borrowed and renewed items')]")
-e.click()
+#time.sleep(8)
+#e = browser.find_element_by_xpath("//*[contains(text(), 'Borrowed and renewed items')]")
+#e.click()
 
 #parent DIV class = "cardContent_p5m42o"
 
@@ -124,6 +123,7 @@ for k,v in gros_dic.items():
 
 date = "1/8/2022"
 
+'''
 for k,v in gros_dic.items():
 	if (k.text == date):
 		print ("k.text == date oui")
@@ -134,7 +134,7 @@ for k,v in gros_dic.items():
 			exit()
 	else:
 		print('non pas de renouvellement')
-
+'''
 #driver.find_element_by_xpath("//div[@class
 
 #time.sleep(10)
