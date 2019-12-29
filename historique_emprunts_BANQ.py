@@ -72,21 +72,22 @@ except TimeoutException:
 #infinite scroll
 # https://stackoverflow.com/questions/20986631/how-can-i-scroll-a-web-page-using-selenium-webdriver-in-python
 
-SCROLL_PAUSE_TIME = 1.5
+SCROLL_PAUSE_TIME = 6
 
 # Get scroll height
 last_height = browser.execute_script("return document.body.scrollHeight")
 
-
+p = 1
 try:
-	#while True:
-	for i in range(33):
+	while True:
+	#for i in range(33):
 	    # Scroll down to bottom
 	    browser.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 
 	    # Wait to load page
 	    time.sleep(SCROLL_PAUSE_TIME)
-	    print('scrolling...')
+	    print(str(p) + ") " +'scrolling...')
+	    p = p + 1
 
 	    # Calculate new scroll height and compare with last scroll height
 	    new_height = browser.execute_script("return document.body.scrollHeight")
@@ -108,8 +109,9 @@ fichier_historique = 'historique_emprunt.txt'
 open(fichier_historique, 'w').close()
 
 file_to_write = open(fichier_historique, "a")
-
+i = 1
 for book in all_book_titles:
-	file_to_write.write(book.text + '\n')
+	file_to_write.write(str(i) + ") " + book.text + '\n')
+	i = i + 1
 
 file_to_write.close()
