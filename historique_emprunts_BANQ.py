@@ -28,9 +28,10 @@ def create_local_html_file(html_file_name, response):
 mon_dossier_link = "http://banq.qc.ca/mon_dossier/mon_dossier.html"
 loans_link = "https://cap.banq.qc.ca/account/loans"
 reservations_link = "https://cap.banq.qc.ca/account/reservations"
+loan_history_link = "https://cap.banq.qc.ca/account/loanhistory"
 
 
-my_res = get_response(mon_dossier_link)
+#my_res = get_response(mon_dossier_link)
 
 browser = webdriver.Firefox(executable_path="/home/alienmint/Documents/Programmation/pythonPDF/gecko/geckodriver")
 
@@ -68,26 +69,24 @@ except TimeoutException:
 	print ("Loading Borrowing history page took too much time!")
 
 
-
-
 #infinite scroll
-
+# https://stackoverflow.com/questions/20986631/how-can-i-scroll-a-web-page-using-selenium-webdriver-in-python
 
 SCROLL_PAUSE_TIME = 1.5
 
 # Get scroll height
 last_height = browser.execute_script("return document.body.scrollHeight")
 
-fichier_historique = 'historique_emprunt.txt'
 
 try:
-	while True:
+	#while True:
+	for i in range(33):
 	    # Scroll down to bottom
 	    browser.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 
 	    # Wait to load page
 	    time.sleep(SCROLL_PAUSE_TIME)
-	    print('scroll scroll scroll')
+	    print('scrolling...')
 
 	    # Calculate new scroll height and compare with last scroll height
 	    new_height = browser.execute_script("return document.body.scrollHeight")
@@ -95,6 +94,22 @@ try:
 	        break
 	    last_height = new_height
 except KeyboardInterrupt:
-	create_local_html_file('mon_historique.html', my_res)
+	print('allo')
+
+#create_local_html_file('mon_historique.html', my_res)
 	
 
+#time.sleep(7)
+
+all_book_titles = browser.find_elements_by_xpath("//div[@class='cardContent_p5m42o']/div[1]/div[1]/div[1]/span[1]/div[1]/div[1]/span[1]") 
+print ("size of all book titles: " + str(len(all_book_titles)))
+fichier_historique = 'historique_emprunt.txt'
+
+open(fichier_historique, 'w').close()
+
+file_to_write = open(fichier_historique, "a")
+
+for book in all_book_titles:
+	file_to_write.write(book.text + '\n')
+
+file_to_write.close()
