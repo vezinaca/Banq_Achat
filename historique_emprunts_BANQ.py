@@ -79,8 +79,8 @@ last_height = browser.execute_script("return document.body.scrollHeight")
 
 p = 1
 try:
-	while True:
-	#for i in range(33):
+	#while True:
+	for i in range(2):
 	    # Scroll down to bottom
 	    browser.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 
@@ -103,11 +103,46 @@ except KeyboardInterrupt:
 #time.sleep(7)
 
 all_book_titles = browser.find_elements_by_xpath("//div[@class='cardContent_p5m42o']/div[1]/div[1]/div[1]/span[1]/div[1]/div[1]/span[1]") 
+#all_book_authors = browser.find_elements_by_xpath("//div[@class='meta-values metaValue_tcono5']/span[1]") 
+
+all_book_authors = browser.find_elements_by_xpath("//div[@class='metaFields_1su17lh']/div[1]/div[@class='meta-values metaValue_tcono5']/span[1]")
+#all_book_types = browser.find_elements_by_xpath("//div[@class='metaFields_1su17lh']/div[2]/div[@class='meta-values metaValue_tcono5']/span[1]") 
+
+all_borrowing_dates = browser.find_elements_by_xpath("//div[@class='listContent_1nnce6d']/div[@class='cardContent_p5m42o']/div[1]/div[1]/div[1]/div[1]")
+all_due_dates = browser.find_elements_by_xpath("//div[@class='listContent_1nnce6d']/div[@class='cardContent_p5m42o']/div[1]/div[2]/div[1]/div[1]")
+
+#<div class="listContent_1nnce6d" style="padding: 8px 0px;"><div class="cardContent_p5m42o">
+
+#<div class="meta-label metaLabel_13uwct0"> type of document
+#<div class="meta-values metaValue_tcono5"><span>Printed Books</span></div>
+
+
 print ("size of all book titles: " + str(len(all_book_titles)))
+print ("size of all book authors: " + str(len(all_book_authors)))
+print ("size of all borrowing dates: " + str(len(all_borrowing_dates)))
+print ("size of all due dates: " + str(len(all_due_dates)))
+#print ("size of all book types: " + str(len(all_book_types)))
 fichier_historique = 'historique_emprunt.txt'
 
 open(fichier_historique, 'w').close()
 
+def printList(my_list):
+	i = 1
+	for item in my_list:
+		print(str(i) + ") " +item.text + '\n')
+		i = i +1
+
+printList(all_book_titles)
+print ("=======================================")
+printList(all_book_authors)
+print ("=======================================")
+printList(all_borrowing_dates)
+print ("=======================================")
+printList(all_due_dates)
+
+#printList(all_book_types)
+
+'''
 file_to_write = open(fichier_historique, "a")
 i = 1
 for book in all_book_titles:
@@ -115,3 +150,5 @@ for book in all_book_titles:
 	i = i + 1
 
 file_to_write.close()
+
+'''

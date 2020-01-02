@@ -2410,3 +2410,356 @@ console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message f
 [Parent 11235, Gecko_IOThread] WARNING: pipe error (76): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
 [Parent 11235, Gecko_IOThread] WARNING: pipe error (111): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
 1577595396870	Marionette	INFO	Stopped listening on port 46351
+1577645790771	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileN1otN7"
+1577645791113	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1577645791113	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1577645791113	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1577645791113	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1577645792591	Marionette	INFO	Listening on port 45563
+1577645792678	Marionette	WARN	TLS certificate errors will be ignored for this session
+1577645796887	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+bail@chrome://marionette/content/sync.js:237:64
+JavaScript error: https://cap.banq.qc.ca/main.e14e2afa383e2d5df501.js, line 189: Error: required module 'WrappedSelection' not supported
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1614941606, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1614941606, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1614941606 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=10&cb=1154009402, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=10&cb=1154009402, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=10&cb=1154009402 line 1 > eval, line 1: unreachable code after return statement
+JavaScript error: https://platform.twitter.com/widgets/widget_iframe.69e02060c7c44baddf1b5629549acc0c.html?origin=https%3A%2F%2Fcap.banq.qc.ca, line 12: Error: Network error.
+1577646299657	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileSRFEgH"
+1577646299987	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1577646299988	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1577646299988	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1577646299988	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1577646301202	Marionette	INFO	Listening on port 42199
+1577646301262	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://cap.banq.qc.ca/main.e14e2afa383e2d5df501.js, line 189: Error: required module 'WrappedSelection' not supported
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1114007323, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1114007323, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1114007323 line 1 > eval, line 1: unreachable code after return statement
+1577646456298	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile7dfAqk"
+1577646456643	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1577646456643	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1577646456643	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1577646456644	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1577646457919	Marionette	INFO	Listening on port 37007
+1577646458004	Marionette	WARN	TLS certificate errors will be ignored for this session
+1577646462249	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+bail@chrome://marionette/content/sync.js:237:64
+JavaScript error: https://cap.banq.qc.ca/main.e14e2afa383e2d5df501.js, line 189: Error: required module 'WrappedSelection' not supported
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1473861300, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1473861300, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1473861300 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=10&cb=364430718, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=10&cb=364430718, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=10&cb=364430718 line 1 > eval, line 1: unreachable code after return statement
+JavaScript error: https://platform.twitter.com/widgets/widget_iframe.69e02060c7c44baddf1b5629549acc0c.html?origin=https%3A%2F%2Fcap.banq.qc.ca, line 12: Error: Network error.
+[Parent 6304, Gecko_IOThread] WARNING: pipe error (76): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+[Parent 6304, Gecko_IOThread] WARNING: pipe error (90): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+1577646468508	Marionette	INFO	Stopped listening on port 42199
+[Parent 6564, Gecko_IOThread] WARNING: pipe error (76): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+[Parent 6564, Gecko_IOThread] WARNING: pipe error (90): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+1577646528631	Marionette	INFO	Stopped listening on port 37007
+1577646532865	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileQ3BArE"
+1577646533203	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1577646533203	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1577646533203	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1577646533204	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1577646534616	Marionette	INFO	Listening on port 34355
+1577646534669	Marionette	WARN	TLS certificate errors will be ignored for this session
+1577646538464	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+bail@chrome://marionette/content/sync.js:237:64
+JavaScript error: https://cap.banq.qc.ca/main.e14e2afa383e2d5df501.js, line 189: Error: required module 'WrappedSelection' not supported
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=2127543748, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=2127543748, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=2127543748 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=10&cb=1494773789, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=10&cb=1494773789, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=10&cb=1494773789 line 1 > eval, line 1: unreachable code after return statement
+1577646569393	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofiled41zma"
+1577646569748	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1577646569748	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1577646569748	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1577646569748	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1577646570927	Marionette	INFO	Listening on port 42587
+1577646571001	Marionette	WARN	TLS certificate errors will be ignored for this session
+1577646575518	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+bail@chrome://marionette/content/sync.js:237:64
+JavaScript error: https://cap.banq.qc.ca/main.e14e2afa383e2d5df501.js, line 189: Error: required module 'WrappedSelection' not supported
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1717124278, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1717124278, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1717124278 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=10&cb=1384013954, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=10&cb=1384013954, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=10&cb=1384013954 line 1 > eval, line 1: unreachable code after return statement
+1577646576794	Marionette	INFO	Stopped listening on port 34355
+JavaScript error: https://platform.twitter.com/widgets/widget_iframe.69e02060c7c44baddf1b5629549acc0c.html?origin=https%3A%2F%2Fcap.banq.qc.ca, line 12: Error: Network error.
+[Parent 5892, Gecko_IOThread] WARNING: pipe error (107): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+[Parent 5892, Gecko_IOThread] WARNING: pipe error (76): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+1577646655094	Marionette	INFO	Stopped listening on port 45563
+1577647030204	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofiletixrwZ"
+1577647030546	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1577647030546	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1577647030546	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1577647030546	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1577647031807	Marionette	INFO	Listening on port 38623
+1577647031911	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://cap.banq.qc.ca/main.e14e2afa383e2d5df501.js, line 189: Error: required module 'WrappedSelection' not supported
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1677442326, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1677442326, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1677442326 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=824991955, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=824991955, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=824991955 line 1 > eval, line 1: unreachable code after return statement
+JavaScript error: https://www.banq.qc.ca/Shibboleth.sso/Logout, line 1: ReferenceError: correctPNG is not defined
+JavaScript error: https://www.banq.qc.ca/extranetca/Shibboleth.sso/Logout, line 1: ReferenceError: correctPNG is not defined
+JavaScript error: https://www.banq.qc.ca/grandextranet/Shibboleth.sso/Logout, line 1: ReferenceError: correctPNG is not defined
+JavaScript error: https://jeunes.banq.qc.ca/nouveaujeunes/Shibboleth.sso/Logout, line 1: ReferenceError: correctPNG is not defined
+JavaScript warning: https://square.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=287125425, line 1: unreachable code after return statement
+JavaScript warning: https://square.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=287125425, line 1: unreachable code after return statement
+JavaScript warning: https://square.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=287125425 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://capjeunes.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=2&cb=123713204, line 1: unreachable code after return statement
+JavaScript warning: https://capjeunes.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=2&cb=123713204, line 1: unreachable code after return statement
+JavaScript warning: https://capjeunes.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=2&cb=123713204 line 1 > eval, line 1: unreachable code after return statement
+JavaScript error: https://portailjeunes.banq.qc.ca/pjeunes/Shibboleth.sso/Logout, line 1: ReferenceError: correctPNG is not defined
+console.error: "Error while calling actor 'pagestyle's method 'getLayout'" "node is null"
+console.error: "getLayout@resource://devtools/server/actors/styles.js:944:5\nhandler@resource://devtools/shared/protocol/Actor.js:154:37\nonPacket@resource://devtools/server/debugger-server-connection.js:378:58\nreceiveMessage@resource://devtools/shared/transport/child-transport.js:66:16\n"
+console.error: "TypeError: nodeFront.walkerFront is null: _onNewSelection@resource://devtools/client/inspector/markup/markup.js:934:7\nemit@resource://devtools/shared/event-emitter.js:190:24\nemit@resource://devtools/shared/event-emitter.js:271:18\nsetNodeFront@resource://devtools/client/framework/selection.js:161:10\nonDetached@resource://devtools/client/inspector/inspector.js:1593:20\nemit@resource://devtools/shared/event-emitter.js:190:24\nemit@resource://devtools/shared/event-emitter.js:271:18\n_onMutations@resource://devtools/client/framework/selection.js:104:12\nemit@resource://devtools/shared/event-emitter.js:190:24\nemit@resource://devtools/shared/event-emitter.js:271:18\ngetMutations/<@resource://devtools/shared/fronts/inspector.js:443:12\n"
+TypeError: nodeFront.walkerFront is null: _onNewSelection@resource://devtools/client/inspector/markup/markup.js:934:7
+emit@resource://devtools/shared/event-emitter.js:190:24
+emit@resource://devtools/shared/event-emitter.js:271:18
+setNodeFront@resource://devtools/client/framework/selection.js:161:10
+onDetached@resource://devtools/client/inspector/inspector.js:1593:20
+emit@resource://devtools/shared/event-emitter.js:190:24
+emit@resource://devtools/shared/event-emitter.js:271:18
+_onMutations@resource://devtools/client/framework/selection.js:104:12
+emit@resource://devtools/shared/event-emitter.js:190:24
+emit@resource://devtools/shared/event-emitter.js:271:18
+getMutations/<@resource://devtools/shared/fronts/inspector.js:443:12
+
+console.error: "Error: Can not send request 'getUniqueSelector' because front 'domnode' is already destroyed.: generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:29:15\nupdateSelectionCssSelector@resource://devtools/client/inspector/inspector.js:1445:32\nonNewSelection@resource://devtools/client/inspector/inspector.js:1516:10\nemit@resource://devtools/shared/event-emitter.js:190:24\nemit@resource://devtools/shared/event-emitter.js:271:18\nsetNodeFront@resource://devtools/client/framework/selection.js:161:10\nonDetached@resource://devtools/client/inspector/inspector.js:1593:20\nemit@resource://devtools/shared/event-emitter.js:190:24\nemit@resource://devtools/shared/event-emitter.js:271:18\n_onMutations@resource://devtools/client/framework/selection.js:104:12\nemit@resource://devtools/shared/event-emitter.js:190:24\nemit@resource://devtools/shared/event-emitter.js:271:18\ngetMutations/<@resource://devtools/shared/fronts/inspector.js:443:12\n"
+Error: Can not send request 'getUniqueSelector' because front 'domnode' is already destroyed.: generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:29:15
+updateSelectionCssSelector@resource://devtools/client/inspector/inspector.js:1445:32
+onNewSelection@resource://devtools/client/inspector/inspector.js:1516:10
+emit@resource://devtools/shared/event-emitter.js:190:24
+emit@resource://devtools/shared/event-emitter.js:271:18
+setNodeFront@resource://devtools/client/framework/selection.js:161:10
+onDetached@resource://devtools/client/inspector/inspector.js:1593:20
+emit@resource://devtools/shared/event-emitter.js:190:24
+emit@resource://devtools/shared/event-emitter.js:271:18
+_onMutations@resource://devtools/client/framework/selection.js:104:12
+emit@resource://devtools/shared/event-emitter.js:190:24
+emit@resource://devtools/shared/event-emitter.js:271:18
+getMutations/<@resource://devtools/shared/fronts/inspector.js:443:12
+
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2242))
+console.error: "Protocol error (unknownError): node is null"
+JavaScript error: https://www.banq.qc.ca/grandextranet/Shibboleth.sso/Logout, line 1: ReferenceError: correctPNG is not defined
+JavaScript error: https://www.banq.qc.ca/Shibboleth.sso/Logout, line 1: ReferenceError: correctPNG is not defined
+JavaScript warning: https://square.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=151624393, line 1: unreachable code after return statement
+JavaScript warning: https://square.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=151624393, line 1: unreachable code after return statement
+JavaScript warning: https://square.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=151624393 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://capjeunes.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=2&cb=823021287, line 1: unreachable code after return statement
+JavaScript warning: https://capjeunes.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=2&cb=823021287, line 1: unreachable code after return statement
+JavaScript warning: https://capjeunes.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=2&cb=823021287 line 1 > eval, line 1: unreachable code after return statement
+JavaScript error: https://www.banq.qc.ca/extranetca/Shibboleth.sso/Logout, line 1: ReferenceError: correctPNG is not defined
+JavaScript error: https://portailjeunes.banq.qc.ca/pjeunes/Shibboleth.sso/Logout, line 1: ReferenceError: correctPNG is not defined
+JavaScript error: https://jeunes.banq.qc.ca/nouveaujeunes/Shibboleth.sso/Logout, line 1: ReferenceError: correctPNG is not defined
+[Parent 7078, Gecko_IOThread] WARNING: pipe error (76): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+[Parent 7078, Gecko_IOThread] WARNING: pipe error (104): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+1577663301073	Marionette	INFO	Stopped listening on port 42587
+[Parent 7444, Gecko_IOThread] WARNING: pipe error (76): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+1577663308332	Marionette	INFO	Stopped listening on port 38623
+1577665320230	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileHok2kv"
+1577665320569	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1577665320569	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1577665320569	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1577665320569	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1577665322005	Marionette	INFO	Listening on port 40993
+1577665322035	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1942504764, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1942504764, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1942504764 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=558697226, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=558697226, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=558697226 line 1 > eval, line 1: unreachable code after return statement
+JavaScript error: https://platform.twitter.com/widgets/widget_iframe.69e02060c7c44baddf1b5629549acc0c.html?origin=https%3A%2F%2Fcap.banq.qc.ca, line 12: Error: Network error.
+1577665470029	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileOqe0E9"
+1577665470409	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1577665470409	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1577665470410	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1577665470410	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1577665471944	Marionette	INFO	Listening on port 34659
+1577665472035	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 14864, Gecko_IOThread] WARNING: pipe error (76): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+[Parent 14864, Gecko_IOThread] WARNING: pipe error (95): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+1577665475501	Marionette	INFO	Stopped listening on port 40993
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1845460259, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1845460259, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1845460259 line 1 > eval, line 1: unreachable code after return statement
+[Parent 15116, Gecko_IOThread] WARNING: pipe error (76): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+[Parent 15116, Gecko_IOThread] WARNING: pipe error (100): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+1577666961438	Marionette	INFO	Stopped listening on port 34659
+1577921790050	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileLXc0rh"
+1577921790379	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1577921790379	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1577921790379	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1577921790379	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1577921791867	Marionette	INFO	Listening on port 41335
+1577921792003	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=2&cb=1609580224, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=2&cb=1609580224, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=2&cb=1609580224 line 1 > eval, line 1: unreachable code after return statement
+JavaScript error: https://platform.twitter.com/widgets/widget_iframe.69e02060c7c44baddf1b5629549acc0c.html?origin=https%3A%2F%2Fcap.banq.qc.ca, line 12: Error: Network error.
+1577921827499	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileOAfhRA"
+1577921827833	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1577921827833	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1577921827833	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1577921827833	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1577921829232	Marionette	INFO	Listening on port 43083
+1577921829303	Marionette	WARN	TLS certificate errors will be ignored for this session
+1577921835319	Marionette	INFO	Stopped listening on port 41335
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1577921852702	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilePI5BCI"
+1577921853032	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1577921853032	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1577921853032	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1577921853032	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1577921854429	Marionette	INFO	Listening on port 35129
+1577921854533	Marionette	WARN	TLS certificate errors will be ignored for this session
+1577921858690	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+bail@chrome://marionette/content/sync.js:237:64
+JavaScript error: https://cap.banq.qc.ca/main.e14e2afa383e2d5df501.js, line 189: Error: required module 'WrappedSelection' not supported
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1396082693, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1396082693, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1396082693 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=10&cb=623283512, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=10&cb=623283512, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=10&cb=623283512 line 1 > eval, line 1: unreachable code after return statement
+JavaScript error: https://platform.twitter.com/widgets/widget_iframe.69e02060c7c44baddf1b5629549acc0c.html?origin=https%3A%2F%2Fcap.banq.qc.ca, line 12: Error: Network error.
+1577921980878	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilecN2Ubz"
+1577921981208	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1577921981208	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1577921981208	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1577921981208	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1577921982402	Marionette	INFO	Listening on port 32821
+1577921982483	Marionette	WARN	TLS certificate errors will be ignored for this session
+1577921987008	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+bail@chrome://marionette/content/sync.js:237:64
+JavaScript error: https://cap.banq.qc.ca/main.e14e2afa383e2d5df501.js, line 189: Error: required module 'WrappedSelection' not supported
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=753233110, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=753233110, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=753233110 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=10&cb=1209633262, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=10&cb=1209633262, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=10&cb=1209633262 line 1 > eval, line 1: unreachable code after return statement
+[Parent 11110, Gecko_IOThread] WARNING: pipe error (76): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+[Parent 11110, Gecko_IOThread] WARNING: pipe error (77): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+1577922855322	Marionette	INFO	Stopped listening on port 32821
+1577922859490	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileWEb4Vm"
+1577922859853	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1577922859853	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1577922859853	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1577922859854	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1577922861159	Marionette	INFO	Listening on port 46699
+1577922861195	Marionette	WARN	TLS certificate errors will be ignored for this session
+1577922865331	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+bail@chrome://marionette/content/sync.js:237:64
+JavaScript error: https://cap.banq.qc.ca/main.e14e2afa383e2d5df501.js, line 189: Error: required module 'WrappedSelection' not supported
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1132493060, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1132493060, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1132493060 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=10&cb=1319650680, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=10&cb=1319650680, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=10&cb=1319650680 line 1 > eval, line 1: unreachable code after return statement
+JavaScript error: https://platform.twitter.com/widgets/widget_iframe.69e02060c7c44baddf1b5629549acc0c.html?origin=https%3A%2F%2Fcap.banq.qc.ca, line 12: Error: Network error.
+JavaScript error: https://www.banq.qc.ca/grandextranet/Shibboleth.sso/Logout, line 1: ReferenceError: correctPNG is not defined
+JavaScript error: https://www.banq.qc.ca/Shibboleth.sso/Logout, line 1: ReferenceError: correctPNG is not defined
+JavaScript error: https://portailjeunes.banq.qc.ca/pjeunes/Shibboleth.sso/Logout, line 1: ReferenceError: correctPNG is not defined
+JavaScript error: https://jeunes.banq.qc.ca/nouveaujeunes/Shibboleth.sso/Logout, line 1: ReferenceError: correctPNG is not defined
+JavaScript warning: https://square.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=27776416, line 1: unreachable code after return statement
+JavaScript warning: https://square.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=27776416, line 1: unreachable code after return statement
+JavaScript warning: https://square.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=27776416 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://capjeunes.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=2&cb=1151155743, line 1: unreachable code after return statement
+JavaScript warning: https://capjeunes.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=2&cb=1151155743, line 1: unreachable code after return statement
+JavaScript warning: https://capjeunes.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=2&cb=1151155743 line 1 > eval, line 1: unreachable code after return statement
+JavaScript error: https://idp.banq.qc.ca/idp/logout_banq_redirection.jsp?return=%23, line 93: InvalidAccessError: A parameter or an operation is not supported by the underlying object
+JavaScript error: https://www.banq.qc.ca/extranetca/Shibboleth.sso/Logout, line 1: ReferenceError: correctPNG is not defined
+console.error: "Error while calling actor 'pagestyle's method 'getLayout'" "node is null"
+console.error: "getLayout@resource://devtools/server/actors/styles.js:944:5\nhandler@resource://devtools/shared/protocol/Actor.js:154:37\nonPacket@resource://devtools/server/debugger-server-connection.js:378:58\nreceiveMessage@resource://devtools/shared/transport/child-transport.js:66:16\n"
+console.error: "TypeError: nodeFront.walkerFront is null: _onNewSelection@resource://devtools/client/inspector/markup/markup.js:934:7\nemit@resource://devtools/shared/event-emitter.js:190:24\nemit@resource://devtools/shared/event-emitter.js:271:18\nsetNodeFront@resource://devtools/client/framework/selection.js:161:10\nonDetached@resource://devtools/client/inspector/inspector.js:1593:20\nemit@resource://devtools/shared/event-emitter.js:190:24\nemit@resource://devtools/shared/event-emitter.js:271:18\n_onMutations@resource://devtools/client/framework/selection.js:104:12\nemit@resource://devtools/shared/event-emitter.js:190:24\nemit@resource://devtools/shared/event-emitter.js:271:18\ngetMutations/<@resource://devtools/shared/fronts/inspector.js:443:12\n"
+TypeError: nodeFront.walkerFront is null: _onNewSelection@resource://devtools/client/inspector/markup/markup.js:934:7
+emit@resource://devtools/shared/event-emitter.js:190:24
+emit@resource://devtools/shared/event-emitter.js:271:18
+setNodeFront@resource://devtools/client/framework/selection.js:161:10
+onDetached@resource://devtools/client/inspector/inspector.js:1593:20
+emit@resource://devtools/shared/event-emitter.js:190:24
+emit@resource://devtools/shared/event-emitter.js:271:18
+_onMutations@resource://devtools/client/framework/selection.js:104:12
+emit@resource://devtools/shared/event-emitter.js:190:24
+emit@resource://devtools/shared/event-emitter.js:271:18
+getMutations/<@resource://devtools/shared/fronts/inspector.js:443:12
+
+console.error: "Error: Can not send request 'getUniqueSelector' because front 'domnode' is already destroyed.: generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:29:15\nupdateSelectionCssSelector@resource://devtools/client/inspector/inspector.js:1445:32\nonNewSelection@resource://devtools/client/inspector/inspector.js:1516:10\nemit@resource://devtools/shared/event-emitter.js:190:24\nemit@resource://devtools/shared/event-emitter.js:271:18\nsetNodeFront@resource://devtools/client/framework/selection.js:161:10\nonDetached@resource://devtools/client/inspector/inspector.js:1593:20\nemit@resource://devtools/shared/event-emitter.js:190:24\nemit@resource://devtools/shared/event-emitter.js:271:18\n_onMutations@resource://devtools/client/framework/selection.js:104:12\nemit@resource://devtools/shared/event-emitter.js:190:24\nemit@resource://devtools/shared/event-emitter.js:271:18\ngetMutations/<@resource://devtools/shared/fronts/inspector.js:443:12\n"
+Error: Can not send request 'getUniqueSelector' because front 'domnode' is already destroyed.: generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:29:15
+updateSelectionCssSelector@resource://devtools/client/inspector/inspector.js:1445:32
+onNewSelection@resource://devtools/client/inspector/inspector.js:1516:10
+emit@resource://devtools/shared/event-emitter.js:190:24
+emit@resource://devtools/shared/event-emitter.js:271:18
+setNodeFront@resource://devtools/client/framework/selection.js:161:10
+onDetached@resource://devtools/client/inspector/inspector.js:1593:20
+emit@resource://devtools/shared/event-emitter.js:190:24
+emit@resource://devtools/shared/event-emitter.js:271:18
+_onMutations@resource://devtools/client/framework/selection.js:104:12
+emit@resource://devtools/shared/event-emitter.js:190:24
+emit@resource://devtools/shared/event-emitter.js:271:18
+getMutations/<@resource://devtools/shared/fronts/inspector.js:443:12
+
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2242))
+console.error: "Protocol error (unknownError): node is null"
+JavaScript error: https://www.banq.qc.ca/grandextranet/Shibboleth.sso/Logout, line 1: ReferenceError: correctPNG is not defined
+JavaScript error: https://www.banq.qc.ca/extranetca/Shibboleth.sso/Logout, line 1: ReferenceError: correctPNG is not defined
+JavaScript error: https://www.banq.qc.ca/Shibboleth.sso/Logout, line 1: ReferenceError: correctPNG is not defined
+JavaScript error: https://portailjeunes.banq.qc.ca/pjeunes/Shibboleth.sso/Logout, line 1: ReferenceError: correctPNG is not defined
+JavaScript error: https://jeunes.banq.qc.ca/nouveaujeunes/Shibboleth.sso/Logout, line 1: ReferenceError: correctPNG is not defined
+JavaScript warning: https://square.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=637769637, line 1: unreachable code after return statement
+JavaScript warning: https://square.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=637769637, line 1: unreachable code after return statement
+JavaScript warning: https://square.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=637769637 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://capjeunes.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=2&cb=1690862413, line 1: unreachable code after return statement
+JavaScript warning: https://capjeunes.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=2&cb=1690862413, line 1: unreachable code after return statement
+JavaScript warning: https://capjeunes.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=2&cb=1690862413 line 1 > eval, line 1: unreachable code after return statement
+console.error: "Error while calling actor 'pagestyle's method 'getLayout'" "node is null"
+console.error: "getLayout@resource://devtools/server/actors/styles.js:944:5\nhandler@resource://devtools/shared/protocol/Actor.js:154:37\nonPacket@resource://devtools/server/debugger-server-connection.js:378:58\nreceiveMessage@resource://devtools/shared/transport/child-transport.js:66:16\n"
+console.error: "TypeError: nodeFront.walkerFront is null: _onNewSelection@resource://devtools/client/inspector/markup/markup.js:934:7\nemit@resource://devtools/shared/event-emitter.js:190:24\nemit@resource://devtools/shared/event-emitter.js:271:18\nsetNodeFront@resource://devtools/client/framework/selection.js:161:10\nonDetached@resource://devtools/client/inspector/inspector.js:1593:20\nemit@resource://devtools/shared/event-emitter.js:190:24\nemit@resource://devtools/shared/event-emitter.js:271:18\n_onMutations@resource://devtools/client/framework/selection.js:104:12\nemit@resource://devtools/shared/event-emitter.js:190:24\nemit@resource://devtools/shared/event-emitter.js:271:18\ngetMutations/<@resource://devtools/shared/fronts/inspector.js:443:12\n"
+TypeError: nodeFront.walkerFront is null: _onNewSelection@resource://devtools/client/inspector/markup/markup.js:934:7
+emit@resource://devtools/shared/event-emitter.js:190:24
+emit@resource://devtools/shared/event-emitter.js:271:18
+setNodeFront@resource://devtools/client/framework/selection.js:161:10
+onDetached@resource://devtools/client/inspector/inspector.js:1593:20
+emit@resource://devtools/shared/event-emitter.js:190:24
+emit@resource://devtools/shared/event-emitter.js:271:18
+_onMutations@resource://devtools/client/framework/selection.js:104:12
+emit@resource://devtools/shared/event-emitter.js:190:24
+emit@resource://devtools/shared/event-emitter.js:271:18
+getMutations/<@resource://devtools/shared/fronts/inspector.js:443:12
+
+console.error: "Error: Can not send request 'getUniqueSelector' because front 'domnode' is already destroyed.: generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:29:15\nupdateSelectionCssSelector@resource://devtools/client/inspector/inspector.js:1445:32\nonNewSelection@resource://devtools/client/inspector/inspector.js:1516:10\nemit@resource://devtools/shared/event-emitter.js:190:24\nemit@resource://devtools/shared/event-emitter.js:271:18\nsetNodeFront@resource://devtools/client/framework/selection.js:161:10\nonDetached@resource://devtools/client/inspector/inspector.js:1593:20\nemit@resource://devtools/shared/event-emitter.js:190:24\nemit@resource://devtools/shared/event-emitter.js:271:18\n_onMutations@resource://devtools/client/framework/selection.js:104:12\nemit@resource://devtools/shared/event-emitter.js:190:24\nemit@resource://devtools/shared/event-emitter.js:271:18\ngetMutations/<@resource://devtools/shared/fronts/inspector.js:443:12\n"
+Error: Can not send request 'getUniqueSelector' because front 'domnode' is already destroyed.: generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:29:15
+updateSelectionCssSelector@resource://devtools/client/inspector/inspector.js:1445:32
+onNewSelection@resource://devtools/client/inspector/inspector.js:1516:10
+emit@resource://devtools/shared/event-emitter.js:190:24
+emit@resource://devtools/shared/event-emitter.js:271:18
+setNodeFront@resource://devtools/client/framework/selection.js:161:10
+onDetached@resource://devtools/client/inspector/inspector.js:1593:20
+emit@resource://devtools/shared/event-emitter.js:190:24
+emit@resource://devtools/shared/event-emitter.js:271:18
+_onMutations@resource://devtools/client/framework/selection.js:104:12
+emit@resource://devtools/shared/event-emitter.js:190:24
+emit@resource://devtools/shared/event-emitter.js:271:18
+getMutations/<@resource://devtools/shared/fronts/inspector.js:443:12
+
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2242))
+console.error: "Protocol error (unknownError): node is null"
