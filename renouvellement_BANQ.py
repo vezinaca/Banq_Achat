@@ -49,34 +49,40 @@ except TimeoutException:
 
 
 #time.sleep(8)
-#e = browser.find_element_by_xpath("//*[contains(text(), 'Borrowed and renewed items')]")
-#e.click()
 
-#parent DIV class = "cardContent_p5m42o"
+##=================================================================
+#infinite scroll
+# https://stackoverflow.com/questions/20986631/how-can-i-scroll-a-web-page-using-selenium-webdriver-in-python
 
-#driver.find_element_by_xpath("//form[1]")
-#email_input = driver.find_element_by_xpath("//form[@id='loginForm']/input[1]")
+SCROLL_PAUSE_TIME = 2
 
-time.sleep(8)
-#driver.find_element_by_xpath("//div[contains(@class, 'first_name')]")
-#driver.find_element_by_class_name("first_name")
-#this_div = browser.find_element_by_xpath("//div[contains(@class,'cardContent_p5m42o')]")
+# Get scroll height
+last_height = browser.execute_script("return document.body.scrollHeight")
+
+p = 1
+try:
+	#while True:
+	for i in range(5):
+	    # Scroll down to bottom
+	    browser.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+
+	    # Wait to load page
+	    time.sleep(SCROLL_PAUSE_TIME)
+	    print(str(p) + ") " +'scrolling...')
+	    p = p + 1
+
+	    # Calculate new scroll height and compare with last scroll height
+	    new_height = browser.execute_script("return document.body.scrollHeight")
+	    if new_height == last_height:
+	        break
+	    last_height = new_height
+except KeyboardInterrupt:
+	print('allo')
+
 
 '''
-<div class="header">Planets</div>
-<div class="event">Jupiter</div>
-<div class="event">Mars</div>
 
-<div class="header">Stars</div>
-<div class="event">Acturus</div>
-<div class="event">Pleaides</div>
-'''
-#all_renew_buttons = browser.find_elements_by_xpath("//div[@class='cardActions_1423utz']/button[1]/span[1]")
-#driver.find_elements_by_xpath("//div[@class='event']/preceding-sibling::div[@class='header']")
-
-# for book titles
-#<div class="cardContent_p5m42o">
-
+##================================================================
 all_book_titles = browser.find_elements_by_xpath("//div[@class='cardContent_p5m42o']/div[1]/div[1]/div[1]/span[1]/div[1]/div[1]/span[1]") 
 all_renew_buttons = browser.find_elements_by_xpath("//div[@class='cardActions_1423utz']/button[1]")
 all_renew_buttons_text = browser.find_elements_by_xpath("//div[@class='cardActions_1423utz']/button[1]/div[1]/span[1]")
@@ -110,18 +116,31 @@ for due_date_datetime in all_due_dates_datetime:
 	print(due_date_datetime)
 	print('shit')
 
-#dict(zip(list1, zip(list2, list3)))
-gros_dic = dict(zip(all_due_dates,zip(all_renew_buttons_text,all_renew_buttons)))
-#gros_dic = dict(zip(datetime.datetime.strptime(all_due_dates, '%d/%m/%Y'),zip(all_renew_buttons_text,all_renew_buttons)))
+print("size of all_due_dates: " + str(len(all_due_dates)))
+print("size of all_due_dates_datetime: " + str(len(all_due_dates_datetime)))
 
-print('\n allo \n')
+#dict(zip(list1, zip(list2, list3)))
+#gros_dic = dict(zip(all_due_dates,zip(all_renew_buttons_text,all_renew_buttons)))
+#gros_dic = dict(zip(datetime.datetime.strptime(all_due_dates, '%d/%m/%Y'),zip(all_renew_buttons_text,all_renew_buttons)))
+gros_dic = dict(zip(all_due_dates_datetime,zip(all_renew_buttons_text,all_renew_buttons)))
+print('\n ==================================================allo \n')
+print("size of gros_dic: " + str(len(gros_dic)))
 for k,v in gros_dic.items():
-	print(k.text)
+	#print(k.text)
+	#print(type(k.text))
+	print(k)
+	print(type(k))
 	le_text, piton = v
 	print(le_text.text)
 	print('\n')
 
 date = "1/8/2022"
+aujourdhui = datetime.datetime.now()
+
+'''
+
+
+
 
 '''
 for k,v in gros_dic.items():
@@ -135,8 +154,3 @@ for k,v in gros_dic.items():
 	else:
 		print('non pas de renouvellement')
 '''
-#driver.find_element_by_xpath("//div[@class
-
-#time.sleep(10)
-#e = browser.find_elements_by_xpath("//*[contains(text(), 'Due date')]")
-#print(len(e))

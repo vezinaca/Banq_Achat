@@ -72,7 +72,7 @@ except TimeoutException:
 #infinite scroll
 # https://stackoverflow.com/questions/20986631/how-can-i-scroll-a-web-page-using-selenium-webdriver-in-python
 
-SCROLL_PAUSE_TIME = 6
+SCROLL_PAUSE_TIME = 2
 
 # Get scroll height
 last_height = browser.execute_script("return document.body.scrollHeight")
@@ -80,7 +80,7 @@ last_height = browser.execute_script("return document.body.scrollHeight")
 p = 1
 try:
 	#while True:
-	for i in range(2):
+	for i in range(5):
 	    # Scroll down to bottom
 	    browser.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 
@@ -113,8 +113,9 @@ all_due_dates = browser.find_elements_by_xpath("//div[@class='listContent_1nnce6
 
 #<div class="listContent_1nnce6d" style="padding: 8px 0px;"><div class="cardContent_p5m42o">
 
-#<div class="meta-label metaLabel_13uwct0"> type of document
-#<div class="meta-values metaValue_tcono5"><span>Printed Books</span></div>
+#both in metaFields_1su17lh
+#<div class="meta-label metaLabel_13uwct0"> type of document / author
+#<div class="meta-values metaValue_tcono5"><span>Printed Books</span></div> this can be name of author or printed books
 
 
 print ("size of all book titles: " + str(len(all_book_titles)))
