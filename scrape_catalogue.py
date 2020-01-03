@@ -3,6 +3,21 @@ import sys, os.path
 import webbrowser
 import requests
 import bs4 
+from selenium import webdriver
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
+from selenium.common.exceptions import TimeoutException
+import time
+
+def connect_to_site(browser, url):
+	browser.get(url)
+	num_client = browser.find_element_by_id('NUM')
+	num_client.send_keys('00115446')
+	pwd = browser.find_element_by_id('PWD')
+	pwd.send_keys('19771314')
+	connection_button = browser.find_element_by_name('_eventId_proceed')
+	connection_button.click()
 
 DEBUG = True
 #Currently not used
@@ -29,7 +44,6 @@ def get_response(url):
 	res.raise_for_status()
 	return res
 
-
 # This function takes a list of possible media links as argument and removes the non-media links
 # returns dictionnary of media title as key and href of media as value.
 def remove_non_media_links(list_links):
@@ -49,7 +63,37 @@ def post_process(html):
 	my_links = soup.select(css_selector_media)
 	return(remove_non_media_links(my_links))
 
+def connect_to_site(browser, url):
+	browser.get(url)
+	num_client = browser.find_element_by_id('NUM')
+	num_client.send_keys('00115446')
+	pwd = browser.find_element_by_id('PWD')
+	pwd.send_keys('19771314')
+	connection_button = browser.find_element_by_name('_eventId_proceed')
+	connection_button.click()
+
+def verify_presence_by_link_text_click(browser, link_text):
+	delay = 3 # seconds
+	try:
+	    link_verify = WebDriverWait(browser, delay).until(EC.presence_of_element_located((By.LINK_TEXT, link_text)))
+	    print(link_text + " page is ready")
+	    link_verify.click()
+	except TimeoutException:
+		print ("Loading of " + link_text + "took too much time!")
+
+def verify_presence_by_xpath_click(browser, link_text):
+	delay = 8 # seconds
+	try:
+	    link_verify = WebDriverWait(browser, delay).until(EC.presence_of_element_located((By.XPATH, link_text)))
+	    print(link_text + " page is ready")
+	    link_verify.click()
+	except TimeoutException:
+		print ("Loading of " + link_text + "took too much time!")
+
 if __name__ == "__main__":
+
+	url_mon_dossier = 'http://banq.qc.ca/mon_dossier/mon_dossier.html'
+	browser = webdriver.Firefox(executable_path="/home/alienmint/Documents/Programmation/pythonPDF/gecko/geckodriver")
 
 	if DEBUG == True:
 		search_text = 'Frank Zappa'
@@ -76,3 +120,9 @@ if __name__ == "__main__":
 			print(k, v)
 		print('\n')
 	
+	connect_to_site(browser, url_mon_dossier)
+	#<a href="/formulaires/index.html">Formulaires</a>
+	verify_presence_by_link_text_click(browser, "Formulaires")
+	#<a href="/formulaires/suggestions_achat/index.html">» Suggestions d'achat</a>
+	time.sleep(5)
+	verify_presence_by_link_text_click(browser, " Suggestions d'achat")

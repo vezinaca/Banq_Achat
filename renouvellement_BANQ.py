@@ -61,8 +61,8 @@ last_height = browser.execute_script("return document.body.scrollHeight")
 
 p = 1
 try:
-	#while True:
-	for i in range(5):
+	while True:
+	#for i in range(5):
 	    # Scroll down to bottom
 	    browser.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 
@@ -79,7 +79,14 @@ try:
 except KeyboardInterrupt:
 	print('allo')
 
+time.sleep(10)
 
+#<div class="cardMedia_11e1yhs-o_O-color_1bra37d" 
+
+all_book_images = browser.find_elements_by_class_name('cardMedia_11e1yhs-o_O-color_1bra37d')
+book_title = browser.find_element_by_xpath("//div[@class='cardContent_p5m42o']/div[1]/div[1]/div[1]/span[1]/div[1]/div[1]/span[contains(text(), 'Nirvana')]") 
+print("size of all book images: " + str(len(all_book_images)))
+print ('book title: ' + str(book_title.text))
 '''
 
 ##================================================================
