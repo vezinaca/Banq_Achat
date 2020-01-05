@@ -3725,3 +3725,462 @@ JavaScript error: https://platform.twitter.com/widgets/widget_iframe.69e02060c7c
 JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1829835580, line 1: unreachable code after return statement
 JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1829835580, line 1: unreachable code after return statement
 JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1829835580 line 1 > eval, line 1: unreachable code after return statement
+[Parent 9498, Gecko_IOThread] WARNING: pipe error (76): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+[Parent 9498, Gecko_IOThread] WARNING: pipe error (104): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+1578097753446	Marionette	INFO	Stopped listening on port 34071
+[Parent 8835, Gecko_IOThread] WARNING: pipe error (76): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+[Parent 8835, Gecko_IOThread] WARNING: pipe error (106): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+1578097755686	Marionette	INFO	Stopped listening on port 42625
+[Parent 8436, Gecko_IOThread] WARNING: pipe error (76): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+[Parent 8436, Gecko_IOThread] WARNING: pipe error (106): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+1578097758248	Marionette	INFO	Stopped listening on port 46401
+1578261405172	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilenpLJFa"
+1578261405512	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1578261405513	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1578261405513	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1578261405513	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1578261406957	Marionette	INFO	Listening on port 37911
+1578261406977	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=817991245, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=817991245, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=817991245, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=817991245 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=817991245 line 1 > eval, line 1: unreachable code after return statement
+JavaScript error: https://platform.twitter.com/widgets/widget_iframe.69e02060c7c44baddf1b5629549acc0c.html?origin=https%3A%2F%2Fcap.banq.qc.ca, line 12: Error: Network error.
+1578261598570	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileeWy7mz"
+1578261598901	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1578261598901	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1578261598901	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1578261598901	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1578261600110	Marionette	INFO	Listening on port 39059
+1578261600178	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=924828950, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=924828950, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=924828950, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=924828950 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=924828950 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1237696893, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1237696893, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1237696893, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1237696893 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1237696893 line 1 > eval, line 1: unreachable code after return statement
+JavaScript error: https://platform.twitter.com/widgets/widget_iframe.69e02060c7c44baddf1b5629549acc0c.html?origin=https%3A%2F%2Fcap.banq.qc.ca, line 12: Error: Network error.
+1578261654451	Marionette	INFO	Stopped listening on port 39059
+[Parent 2906, Gecko_IOThread] WARNING: pipe error (76): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+[Parent 2906, Gecko_IOThread] WARNING: pipe error (111): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+1578261655969	Marionette	INFO	Stopped listening on port 37911
+1578261658030	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileoY7oM5"
+1578261658350	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1578261658350	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1578261658350	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1578261658350	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1578261659569	Marionette	INFO	Listening on port 37957
+1578261659634	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=426088869, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=426088869, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=426088869, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=426088869 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=426088869 line 1 > eval, line 1: unreachable code after return statement
+JavaScript error: https://platform.twitter.com/widgets/widget_iframe.69e02060c7c44baddf1b5629549acc0c.html?origin=https%3A%2F%2Fcap.banq.qc.ca, line 12: Error: Network error.
+1578261696265	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileUxUvDh"
+1578261696602	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1578261696602	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1578261696602	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1578261696602	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1578261697834	Marionette	INFO	Listening on port 46235
+1578261697869	Marionette	WARN	TLS certificate errors will be ignored for this session
+1578261701058	Marionette	INFO	Stopped listening on port 37957
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1129813582, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1129813582, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1129813582, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1129813582 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1129813582 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=367118851, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=367118851, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=367118851, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=367118851 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=367118851 line 1 > eval, line 1: unreachable code after return statement
+[Parent 3649, Gecko_IOThread] WARNING: pipe error (76): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+[Parent 3649, Gecko_IOThread] WARNING: pipe error (93): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+1578262000173	Marionette	INFO	Stopped listening on port 46235
+1578262003633	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilelWIsNw"
+1578262003989	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1578262003990	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1578262003990	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1578262003990	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1578262005422	Marionette	INFO	Listening on port 41963
+1578262005438	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://cap.banq.qc.ca/main.e14e2afa383e2d5df501.js, line 189: Error: required module 'WrappedSelection' not supported
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1514174515, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1514174515, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1514174515, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1514174515 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1514174515 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=313652903, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=313652903, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=313652903, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=313652903 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=313652903 line 1 > eval, line 1: unreachable code after return statement
+[Parent 5268, Gecko_IOThread] WARNING: pipe error (84): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+[Parent 5268, Gecko_IOThread] WARNING: pipe error (76): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+1578262110882	Marionette	INFO	Stopped listening on port 41963
+1578262113230	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileDKsfOY"
+1578262113559	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1578262113559	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1578262113559	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1578262113559	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1578262114777	Marionette	INFO	Listening on port 34711
+1578262114836	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=943594081, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=943594081, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=943594081, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=943594081 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=943594081 line 1 > eval, line 1: unreachable code after return statement
+JavaScript error: https://platform.twitter.com/widgets/widget_iframe.69e02060c7c44baddf1b5629549acc0c.html?origin=https%3A%2F%2Fcap.banq.qc.ca, line 12: Error: Network error.
+1578262355945	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileQLT8y2"
+1578262356266	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1578262356266	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1578262356266	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1578262356267	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1578262357674	Marionette	INFO	Listening on port 42445
+1578262357750	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1406791189, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1406791189, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1406791189, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1406791189 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1406791189 line 1 > eval, line 1: unreachable code after return statement
+1578262604967	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile88yijS"
+1578262605301	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1578262605301	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1578262605301	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1578262605301	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1578262606709	Marionette	INFO	Listening on port 33479
+1578262606771	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=494752171, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=494752171, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=494752171, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=494752171 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=494752171 line 1 > eval, line 1: unreachable code after return statement
+JavaScript error: https://platform.twitter.com/widgets/widget_iframe.69e02060c7c44baddf1b5629549acc0c.html?origin=https%3A%2F%2Fcap.banq.qc.ca, line 12: Error: Network error.
+1578262662582	Marionette	INFO	Stopped listening on port 33479
+[Parent 5796, Gecko_IOThread] WARNING: pipe error (76): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+[Parent 5796, Gecko_IOThread] WARNING: pipe error (69): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+1578262665332	Marionette	INFO	Stopped listening on port 42445
+1578263520921	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilemqovmE"
+1578263521249	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1578263521249	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1578263521250	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1578263521250	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1578263522509	Marionette	INFO	Listening on port 33397
+1578263522526	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=627799332, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=627799332, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=627799332, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=627799332 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=627799332 line 1 > eval, line 1: unreachable code after return statement
+JavaScript error: https://platform.twitter.com/widgets/widget_iframe.69e02060c7c44baddf1b5629549acc0c.html?origin=https%3A%2F%2Fcap.banq.qc.ca, line 12: Error: Network error.
+1578263559901	Marionette	INFO	Stopped listening on port 33397
+1578263841320	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileBSROkk"
+1578263841654	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1578263841655	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1578263841655	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1578263841655	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1578263842961	Marionette	INFO	Listening on port 44593
+1578263843024	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=560992294, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=560992294, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=560992294, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=560992294 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=560992294 line 1 > eval, line 1: unreachable code after return statement
+JavaScript error: https://platform.twitter.com/widgets/widget_iframe.69e02060c7c44baddf1b5629549acc0c.html?origin=https%3A%2F%2Fcap.banq.qc.ca, line 12: Error: Network error.
+1578263880237	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileuW687P"
+1578263880570	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1578263880570	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1578263880570	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1578263880570	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1578263881815	Marionette	INFO	Listening on port 40813
+1578263881841	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=2124848455, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=2124848455, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=2124848455, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=2124848455 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=2124848455 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=162245960, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=162245960, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=162245960, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=162245960 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=162245960 line 1 > eval, line 1: unreachable code after return statement
+JavaScript error: https://platform.twitter.com/widgets/widget_iframe.69e02060c7c44baddf1b5629549acc0c.html?origin=https%3A%2F%2Fcap.banq.qc.ca, line 12: Error: Network error.
+1578263935324	Marionette	INFO	Stopped listening on port 40813
+1578263937576	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileAchsBi"
+1578263937900	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1578263937900	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1578263937900	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1578263937900	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1578263939128	Marionette	INFO	Listening on port 42431
+1578263939181	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=71312615, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=71312615, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=71312615, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=71312615 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=71312615 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1069930919, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1069930919, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1069930919, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1069930919 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1069930919 line 1 > eval, line 1: unreachable code after return statement
+1578263987605	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofiledhCTev"
+1578263987938	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1578263987938	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1578263987939	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1578263987939	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1578263989105	Marionette	INFO	Listening on port 39361
+1578263989128	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=42933775, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=42933775, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=42933775, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=42933775 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=42933775 line 1 > eval, line 1: unreachable code after return statement
+1578263993401	Marionette	INFO	Stopped listening on port 42431
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1452762654, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1452762654, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1452762654, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1452762654 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1452762654 line 1 > eval, line 1: unreachable code after return statement
+JavaScript error: https://platform.twitter.com/widgets/widget_iframe.69e02060c7c44baddf1b5629549acc0c.html?origin=https%3A%2F%2Fcap.banq.qc.ca, line 12: Error: Network error.
+[Parent 6696, Gecko_IOThread] WARNING: pipe error (76): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+[Parent 6696, Gecko_IOThread] WARNING: pipe error (107): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+1578263996073	Marionette	INFO	Stopped listening on port 44593
+1578264303938	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilex2V8nh"
+1578264304268	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1578264304268	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1578264304268	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1578264304268	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1578264305582	Marionette	INFO	Listening on port 44157
+1578264305643	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=411835016, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=411835016, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=411835016, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=411835016 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=411835016 line 1 > eval, line 1: unreachable code after return statement
+JavaScript error: https://platform.twitter.com/widgets/widget_iframe.69e02060c7c44baddf1b5629549acc0c.html?origin=https%3A%2F%2Fcap.banq.qc.ca, line 12: Error: Network error.
+[Parent 7854, Gecko_IOThread] WARNING: pipe error (76): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+[Parent 7854, Gecko_IOThread] WARNING: pipe error (77): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+1578264782883	Marionette	INFO	Stopped listening on port 44157
+1578264818482	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilelLrH4s"
+1578264818808	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1578264818808	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1578264818808	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1578264818808	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1578264820040	Marionette	INFO	Listening on port 33861
+1578264820086	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1313084906, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1313084906, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1313084906, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1313084906 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1313084906 line 1 > eval, line 1: unreachable code after return statement
+JavaScript error: https://platform.twitter.com/widgets/widget_iframe.69e02060c7c44baddf1b5629549acc0c.html?origin=https%3A%2F%2Fcap.banq.qc.ca, line 12: Error: Network error.
+JavaScript error: https://www.banq.qc.ca/grandextranet/Shibboleth.sso/Logout, line 1: ReferenceError: correctPNG is not defined
+JavaScript error: https://www.banq.qc.ca/extranetca/Shibboleth.sso/Logout, line 1: ReferenceError: correctPNG is not defined
+JavaScript error: https://www.banq.qc.ca/Shibboleth.sso/Logout, line 1: ReferenceError: correctPNG is not defined
+JavaScript warning: https://square.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=263605320, line 1: unreachable code after return statement
+JavaScript warning: https://square.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=263605320, line 1: unreachable code after return statement
+JavaScript warning: https://square.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=263605320, line 1: unreachable code after return statement
+JavaScript warning: https://square.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=263605320 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://square.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=263605320 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://capjeunes.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=2&cb=1319988005, line 1: unreachable code after return statement
+JavaScript warning: https://capjeunes.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=2&cb=1319988005, line 1: unreachable code after return statement
+JavaScript warning: https://capjeunes.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=2&cb=1319988005, line 1: unreachable code after return statement
+JavaScript warning: https://capjeunes.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=2&cb=1319988005 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://capjeunes.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=2&cb=1319988005 line 1 > eval, line 1: unreachable code after return statement
+JavaScript error: https://idp.banq.qc.ca/idp/logout_banq_redirection.jsp?return=%23, line 88: InvalidAccessError: A parameter or an operation is not supported by the underlying object
+JavaScript error: https://portailjeunes.banq.qc.ca/pjeunes/Shibboleth.sso/Logout, line 1: ReferenceError: correctPNG is not defined
+JavaScript error: https://jeunes.banq.qc.ca/nouveaujeunes/Shibboleth.sso/Logout, line 1: ReferenceError: correctPNG is not defined
+console.error: "TypeError: nodeFront.walkerFront is null: _onNewSelection@resource://devtools/client/inspector/markup/markup.js:934:7\nemit@resource://devtools/shared/event-emitter.js:190:24\nemit@resource://devtools/shared/event-emitter.js:271:18\nsetNodeFront@resource://devtools/client/framework/selection.js:161:10\nonDetached@resource://devtools/client/inspector/inspector.js:1593:20\nemit@resource://devtools/shared/event-emitter.js:190:24\nemit@resource://devtools/shared/event-emitter.js:271:18\n_onMutations@resource://devtools/client/framework/selection.js:104:12\nemit@resource://devtools/shared/event-emitter.js:190:24\nemit@resource://devtools/shared/event-emitter.js:271:18\ngetMutations/<@resource://devtools/shared/fronts/inspector.js:443:12\n"
+TypeError: nodeFront.walkerFront is null: _onNewSelection@resource://devtools/client/inspector/markup/markup.js:934:7
+emit@resource://devtools/shared/event-emitter.js:190:24
+emit@resource://devtools/shared/event-emitter.js:271:18
+setNodeFront@resource://devtools/client/framework/selection.js:161:10
+onDetached@resource://devtools/client/inspector/inspector.js:1593:20
+emit@resource://devtools/shared/event-emitter.js:190:24
+emit@resource://devtools/shared/event-emitter.js:271:18
+_onMutations@resource://devtools/client/framework/selection.js:104:12
+emit@resource://devtools/shared/event-emitter.js:190:24
+emit@resource://devtools/shared/event-emitter.js:271:18
+getMutations/<@resource://devtools/shared/fronts/inspector.js:443:12
+
+console.error: "Error: Can not send request 'getUniqueSelector' because front 'domnode' is already destroyed.: generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:29:15\nupdateSelectionCssSelector@resource://devtools/client/inspector/inspector.js:1445:32\nonNewSelection@resource://devtools/client/inspector/inspector.js:1516:10\nemit@resource://devtools/shared/event-emitter.js:190:24\nemit@resource://devtools/shared/event-emitter.js:271:18\nsetNodeFront@resource://devtools/client/framework/selection.js:161:10\nonDetached@resource://devtools/client/inspector/inspector.js:1593:20\nemit@resource://devtools/shared/event-emitter.js:190:24\nemit@resource://devtools/shared/event-emitter.js:271:18\n_onMutations@resource://devtools/client/framework/selection.js:104:12\nemit@resource://devtools/shared/event-emitter.js:190:24\nemit@resource://devtools/shared/event-emitter.js:271:18\ngetMutations/<@resource://devtools/shared/fronts/inspector.js:443:12\n"
+Error: Can not send request 'getUniqueSelector' because front 'domnode' is already destroyed.: generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:29:15
+updateSelectionCssSelector@resource://devtools/client/inspector/inspector.js:1445:32
+onNewSelection@resource://devtools/client/inspector/inspector.js:1516:10
+emit@resource://devtools/shared/event-emitter.js:190:24
+emit@resource://devtools/shared/event-emitter.js:271:18
+setNodeFront@resource://devtools/client/framework/selection.js:161:10
+onDetached@resource://devtools/client/inspector/inspector.js:1593:20
+emit@resource://devtools/shared/event-emitter.js:190:24
+emit@resource://devtools/shared/event-emitter.js:271:18
+_onMutations@resource://devtools/client/framework/selection.js:104:12
+emit@resource://devtools/shared/event-emitter.js:190:24
+emit@resource://devtools/shared/event-emitter.js:271:18
+getMutations/<@resource://devtools/shared/fronts/inspector.js:443:12
+
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2242))
+console.error: "TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:83:24\nonMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:100:41\nemit@resource://devtools/shared/event-emitter.js:190:24\nemit@resource://devtools/shared/event-emitter.js:271:18\ngetMutations/<@resource://devtools/shared/fronts/inspector.js:443:12\n"
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:83:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:100:41
+emit@resource://devtools/shared/event-emitter.js:190:24
+emit@resource://devtools/shared/event-emitter.js:271:18
+getMutations/<@resource://devtools/shared/fronts/inspector.js:443:12
+
+1578265756643	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofiletaohI0"
+1578265756984	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1578265756984	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1578265756984	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1578265756984	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1578265758251	Marionette	INFO	Listening on port 43857
+1578265758350	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1842515294, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1842515294, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1842515294, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1842515294 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1842515294 line 1 > eval, line 1: unreachable code after return statement
+JavaScript error: https://platform.twitter.com/widgets/widget_iframe.69e02060c7c44baddf1b5629549acc0c.html?origin=https%3A%2F%2Fcap.banq.qc.ca, line 12: Error: Network error.
+1578265817377	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileNND9fO"
+1578265817725	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1578265817725	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1578265817726	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1578265817726	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1578265819036	Marionette	INFO	Listening on port 33987
+1578265819081	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=2106284076, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=2106284076, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=2106284076, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=2106284076 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=2106284076 line 1 > eval, line 1: unreachable code after return statement
+JavaScript error: https://platform.twitter.com/widgets/widget_iframe.69e02060c7c44baddf1b5629549acc0c.html?origin=https%3A%2F%2Fcap.banq.qc.ca, line 12: Error: Network error.
+1578266034838	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilekqonWn"
+1578266035199	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1578266035199	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1578266035199	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1578266035199	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1578266036482	Marionette	INFO	Listening on port 45605
+1578266036545	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=474379781, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=474379781, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=474379781, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=474379781 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=474379781 line 1 > eval, line 1: unreachable code after return statement
+JavaScript error: https://platform.twitter.com/widgets/widget_iframe.69e02060c7c44baddf1b5629549acc0c.html?origin=https%3A%2F%2Fcap.banq.qc.ca, line 12: Error: Network error.
+1578266086503	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileaAd1F6"
+1578266086868	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1578266086868	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1578266086868	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1578266086868	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1578266088394	Marionette	INFO	Listening on port 36045
+1578266088415	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 8231, Gecko_IOThread] WARNING: pipe error (76): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+[Parent 8231, Gecko_IOThread] WARNING: pipe error (107): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+1578266092806	Marionette	INFO	Stopped listening on port 33861
+[Parent 8789, Gecko_IOThread] WARNING: pipe error (76): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+[Parent 8789, Gecko_IOThread] WARNING: pipe error (79): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+1578266095242	Marionette	INFO	Stopped listening on port 43857
+JavaScript error: https://cap.banq.qc.ca/main.e14e2afa383e2d5df501.js, line 189: Error: required module 'WrappedSelection' not supported
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=857131938, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=857131938, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=857131938, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=857131938 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=857131938 line 1 > eval, line 1: unreachable code after return statement
+JavaScript error: https://platform.twitter.com/widgets.js, line 8: NS_ERROR_FAILURE: 
+1578266099742	Marionette	INFO	Stopped listening on port 45605
+[Parent 9070, Gecko_IOThread] WARNING: pipe error (76): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+[Parent 9070, Gecko_IOThread] WARNING: pipe error (68): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+1578266103165	Marionette	INFO	Stopped listening on port 33987
+1578266139361	Marionette	INFO	Stopped listening on port 36045
+1578266213408	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileRz6R0M"
+1578266213736	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1578266213737	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1578266213737	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1578266213737	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1578266214955	Marionette	INFO	Listening on port 42815
+1578266215012	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1705058183, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1705058183, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1705058183, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1705058183 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1705058183 line 1 > eval, line 1: unreachable code after return statement
+JavaScript error: https://platform.twitter.com/widgets/widget_iframe.69e02060c7c44baddf1b5629549acc0c.html?origin=https%3A%2F%2Fcap.banq.qc.ca, line 12: Error: Network error.
+1578266259241	Marionette	INFO	Stopped listening on port 42815
+1578266261968	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileMzZ7NE"
+1578266262292	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1578266262292	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1578266262292	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1578266262292	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1578266263504	Marionette	INFO	Listening on port 42465
+1578266263573	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1056649719, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1056649719, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1056649719, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1056649719 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1056649719 line 1 > eval, line 1: unreachable code after return statement
+JavaScript error: https://platform.twitter.com/widgets/widget_iframe.69e02060c7c44baddf1b5629549acc0c.html?origin=https%3A%2F%2Fcap.banq.qc.ca, line 12: Error: Network error.
+[Parent 10116, Gecko_IOThread] WARNING: pipe error (106): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+[Parent 10116, Gecko_IOThread] WARNING: pipe error (76): Connection reset by peer: file /build/firefox-HwDgAI/firefox-71.0+linuxmint2+tricia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+1578266367742	Marionette	INFO	Stopped listening on port 42465
+1578266369983	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileoXUZUl"
+1578266370314	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1578266370314	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1578266370314	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1578266370314	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1578266371734	Marionette	INFO	Listening on port 44363
+1578266371788	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://cap.banq.qc.ca/main.e14e2afa383e2d5df501.js, line 189: Error: required module 'WrappedSelection' not supported
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=989074136, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=989074136, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=989074136, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=989074136 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=989074136 line 1 > eval, line 1: unreachable code after return statement
+1578266431747	Marionette	INFO	Stopped listening on port 44363
+1578266433958	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilezJnV4S"
+1578266434289	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1578266434289	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1578266434290	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1578266434290	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1578266435474	Marionette	INFO	Listening on port 45949
+1578266435564	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1005987932, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1005987932, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1005987932, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1005987932 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1005987932 line 1 > eval, line 1: unreachable code after return statement
+JavaScript error: https://platform.twitter.com/widgets/widget_iframe.69e02060c7c44baddf1b5629549acc0c.html?origin=https%3A%2F%2Fcap.banq.qc.ca, line 12: Error: Network error.
+1578266476529	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilei4u5Ma"
+1578266476865	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1578266476866	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1578266476866	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1578266476866	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1578266478157	Marionette	INFO	Listening on port 35731
+1578266478233	Marionette	WARN	TLS certificate errors will be ignored for this session
+1578266480629	Marionette	INFO	Stopped listening on port 45949
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1460446153, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1460446153, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1460446153, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1460446153 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=1460446153 line 1 > eval, line 1: unreachable code after return statement
+1578267137734	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilebnzfDK"
+1578267138076	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1578267138076	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1578267138076	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1578267138076	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1578267139325	Marionette	INFO	Listening on port 43135
+1578267139340	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1375799071, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1375799071, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1375799071, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1375799071 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1375799071 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=696743474, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=696743474, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=696743474, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=696743474 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://cap.banq.qc.ca/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=696743474 line 1 > eval, line 1: unreachable code after return statement
+JavaScript error: https://platform.twitter.com/widgets/widget_iframe.69e02060c7c44baddf1b5629549acc0c.html?origin=https%3A%2F%2Fcap.banq.qc.ca, line 12: Error: Network error.

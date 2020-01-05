@@ -58,22 +58,42 @@ def is_html_element_present_click(browser, link_text, by_search):
 	except TimeoutException:
 		print ("Loading of " + link_text + "took too much time!")
 
+def printList(my_list):
+	i = 1
+	for item in my_list:
+		print("=====")
+		print(type(item))
+		print(str(i) + ") " +item.text + '\n')
+		i = i +1
+		print("=====")
+
 if __name__ == "__main__":
 	connect_to_site(browser, url)
 	is_html_element_present_click(browser, 'Consulter mon dossier' , By.LINK_TEXT)
 	time.sleep(8)
-	is_html_element_present_click(browser, "//*[contains(text(), 'Borrowing history') or contains(text(), 'Historique des emprunts')]", By.XPATH)
+	#is_html_element_present_click(browser, "//*[contains(text(), 'Borrowing history') or contains(text(), 'Historique des emprunts')]", By.XPATH)
+	is_html_element_present_click(browser, "//*[contains(text(), 'Borrowed and renewed items')]", By.XPATH)
+	
 	#infinite_scroll()
 	time.sleep(4)
 	#//input[starts-with(@id, 'activation:') and contains(@id, ':voId:1')]
 	#all_cards = browser.find_elements_by_xpath("//div[starts-with(@class, 'cardContent_')]") 
 	#<div class="cardStacked_n7d4vb"><div class="cardContent_p5m42o">
-	all_cards_main = browser.find_elements_by_xpath("//div[@class='cardStacked_n7d4vb']")
-	all_cards = browser.find_elements_by_xpath("//div[@class='cardContent_p5m42o']") 
-	all_book_titles = browser.find_elements_by_xpath("//div[@class='cardContent_p5m42o']/div[1]/div[1]/div[1]/span[1]/div[1]/div[1]/span[1]") 
+	#all_cards = browser.find_elements_by_xpath("//div[@class='cardContent_p5m42o']") 
+	#all_book_titles = browser.find_elements_by_xpath("//div[@class='cardContent_p5m42o']/div[1]/div[1]/div[1]/span[1]/div[1]/div[1]/span[1]") 
 
-	print("size of all cards: " + str(len(all_cards)))
-	print("size of all cards main: " + str(len(all_cards_main)))
+	#all_cards_main = browser.find_elements_by_xpath("//div[@class='cardStacked_n7d4vb']")
+	#<div class="card_dzxwpk"><div class="cardMediaNoActions_xe8xza-o_O-color_1bra37d" title="Experiencing Nirvana : grunge in Europe, 1989">
+	#all_cards_stacked = browser.find_elements_by_xpath("//div[starts-with(@class,'cardStacked_')]")
+	all_cards_stacked = browser.find_elements_by_xpath("//div[starts-with(@class,'card_dzxwpk')]")
 
-	print("size of all book titles: " + str(len(all_book_titles)))
+	print("size of all cards main: " + str(len(all_cards_stacked)))
+
+	for card in all_cards_stacked:
+		#the_cards = card.find_elements_by_xpath("//div[starts-with(@class,'cardContent_p5m42o')]")
+		#<div class="cardMediaNoActions_xe8xza-o_O-color_1bra37d" title="Amsterdam - 2017">
+		#username = driver.find_element_by_xpath("//input[@name='username']")
+		book_title = card.find_element_by_xpath("//div[@class='cardContent_p5m42o']/div[1]/div[1]/div[1]/span[1]/div[1]/div[1]/span[1]")
+		print(book_title.text)
+
 
