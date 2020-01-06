@@ -62,7 +62,7 @@ def printList(my_list):
 	i = 1
 	for item in my_list:
 		print("=====")
-		print(type(item))
+		#print(type(item))
 		print(str(i) + ") " +item.text + '\n')
 		i = i +1
 		print("=====")
@@ -96,8 +96,14 @@ if __name__ == "__main__":
 		#the_cards = card.find_elements_by_xpath("//div[starts-with(@class,'cardContent_p5m42o')]")
 		#<div class="cardMediaNoActions_xe8xza-o_O-color_1bra37d" title="Amsterdam - 2017">
 		#username = driver.find_element_by_xpath("//input[@name='username']")
-		book_title = card.find_element_by_xpath("/div[2]/div[@class='cardContent_p5m42o']/div[1]/div[1]/div[1]/span[1]/div[1]/div[1]/span[1]")
-		print(book_title.text)
+		#book_title = card.find_element_by_xpath("/div[2]/div[@class='cardContent_p5m42o']/div[1]/div[1]/div[1]/span[1]/div[1]/div[1]/span[1]")
+		#the_cards = card.find_elements_by_xpath("div[@class='cardMediaNoActions_xe8xza-o_O-color_1bra37d']")
+		the_cards = card.find_elements_by_xpath("div[@class='cardStacked_n7d4vb']/div[@class='cardContent_p5m42o']/div[1]/div[1]/div[1]/span[1]/div[1]/div[1]/span[1]")
+		#<div class="cardStacked_n7d4vb"><div class="cardContent_p5m42o">
+		#the_spans = card.find_elements_by_tag_name('span')
+		#<div class="cardMediaNoActions_xe8xza-o_O-color_1bra37d" title="Experiencing Nirvana : grunge in Europe, 1989">
+		print(str(len(the_cards)))
+		printList(the_cards)
 
 	
 
