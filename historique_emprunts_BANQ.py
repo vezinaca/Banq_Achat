@@ -61,11 +61,11 @@ def is_html_element_present_click(browser, link_text, by_search):
 def printList(my_list):
 	i = 1
 	for item in my_list:
-		print("=====")
+		#print("=====")
 		#print(type(item))
 		print(str(i) + ") " +item.text + '\n')
 		i = i +1
-		print("=====")
+		#print("=====")
 
 if __name__ == "__main__":
 	connect_to_site(browser, url)
@@ -98,13 +98,36 @@ if __name__ == "__main__":
 		#username = driver.find_element_by_xpath("//input[@name='username']")
 		#book_title = card.find_element_by_xpath("/div[2]/div[@class='cardContent_p5m42o']/div[1]/div[1]/div[1]/span[1]/div[1]/div[1]/span[1]")
 		#the_cards = card.find_elements_by_xpath("div[@class='cardMediaNoActions_xe8xza-o_O-color_1bra37d']")
-		the_cards = card.find_elements_by_xpath("div[@class='cardStacked_n7d4vb']/div[@class='cardContent_p5m42o']/div[1]/div[1]/div[1]/span[1]/div[1]/div[1]/span[1]")
-		#<div class="cardStacked_n7d4vb"><div class="cardContent_p5m42o">
-		#the_spans = card.find_elements_by_tag_name('span')
-		#<div class="cardMediaNoActions_xe8xza-o_O-color_1bra37d" title="Experiencing Nirvana : grunge in Europe, 1989">
-		print(str(len(the_cards)))
-		printList(the_cards)
+		
+		titles = card.find_elements_by_xpath("div[@class='cardStacked_n7d4vb']/div[@class='cardContent_p5m42o']/div[1]/div[1]/div[1]/span[1]/div[1]/div[1]/span[1]")
+		#label = card.find_elements_by_xpath("div[@class='cardStacked_n7d4vb']/div[@class='cardContent_p5m42o']/div[1]/div[1]/div[@class='metaFields_1su17lh']/div[1]/div[@class='meta-label metaLabel_13uwct0']")
+		meta_fields = card.find_elements_by_xpath("div[@class='cardStacked_n7d4vb']/div[@class='cardContent_p5m42o']/div[1]/div[1]/div[@class='metaFields_1su17lh']/div")
+		if(len(meta_fields)>1):
+			author = meta_fields.find_elements_by_xpath("div[1]/div[@class='meta-values metaValue_tcono5']")
+			type_document = meta_fields.find_elements_by_xpath("div[2]/div[@class='meta-values metaValue_tcono5']")
+			print('author: ' + author)
+		else:
+			type_document = meta_fields.find_elements_by_xpath("div[1]/div[@class='meta-values metaValue_tcono5']")
 
+		print('type_document' + type_document)
+
+
+
+		label = card.find_elements_by_xpath("div[@class='cardStacked_n7d4vb']/div[@class='cardContent_p5m42o']/div[1]/div[1]/div[@class='metaFields_1su17lh']/div[1]/div[@class='meta-label metaLabel_13uwct0']")
+		value = card.find_elements_by_xpath("div[@class='cardStacked_n7d4vb']/div[@class='cardContent_p5m42o']/div[1]/div[1]/div[@class='metaFields_1su17lh']/div[1]/div[@class='meta-values metaValue_tcono5']/span[1]")
+		
+		#<div class="meta-label metaLabel_13uwct0"><!-- react-text: 957 -->Author<!-- /react-text -->
+		#<div class="meta-values metaValue_tcono5"><span>Pavitt, Bruce, 1959- auteur</span></div>
+		#<div class='metaFields_1su17lh'><div><div class="meta-label metaLabel_13uwct0"><!-- react-text: 957 -->Author<!-- 
+		
+		#print(str(len(titles)))
+		#print(str(len(label)))
+		#print(str(len(value)))
+		print(str(len(meta_fields)))
+
+		printList(titles)
+		#printList(label)
+		#printList(value)
 	
 
 '''
