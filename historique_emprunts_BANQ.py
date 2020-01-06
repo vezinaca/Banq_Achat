@@ -91,7 +91,7 @@ if __name__ == "__main__":
 	print ("size of all book titles: " + str(len(all_book_titles)))
 
 	#printList(all_book_titles)
-	printList(all_cards_stacked)
+	#printList(all_cards_stacked)
 	for card in all_cards_stacked:
 		#the_cards = card.find_elements_by_xpath("//div[starts-with(@class,'cardContent_p5m42o')]")
 		#<div class="cardMediaNoActions_xe8xza-o_O-color_1bra37d" title="Amsterdam - 2017">
@@ -102,14 +102,20 @@ if __name__ == "__main__":
 		titles = card.find_elements_by_xpath("div[@class='cardStacked_n7d4vb']/div[@class='cardContent_p5m42o']/div[1]/div[1]/div[1]/span[1]/div[1]/div[1]/span[1]")
 		#label = card.find_elements_by_xpath("div[@class='cardStacked_n7d4vb']/div[@class='cardContent_p5m42o']/div[1]/div[1]/div[@class='metaFields_1su17lh']/div[1]/div[@class='meta-label metaLabel_13uwct0']")
 		meta_fields = card.find_elements_by_xpath("div[@class='cardStacked_n7d4vb']/div[@class='cardContent_p5m42o']/div[1]/div[1]/div[@class='metaFields_1su17lh']/div")
+		
 		if(len(meta_fields)>1):
-			author = meta_fields.find_elements_by_xpath("div[1]/div[@class='meta-values metaValue_tcono5']")
-			type_document = meta_fields.find_elements_by_xpath("div[2]/div[@class='meta-values metaValue_tcono5']")
-			print('author: ' + author)
+			author = meta_fields[0]
+			author_name = author.find_element_by_xpath("div[@class='meta-values metaValue_tcono5']/span[1]")
+			type_document = meta_fields[1]
+			type_document_name = type_document.find_element_by_xpath("div[@class='meta-values metaValue_tcono5']/span[1]")
+			print(author_name.text)
 		else:
-			type_document = meta_fields.find_elements_by_xpath("div[1]/div[@class='meta-values metaValue_tcono5']")
+			#type_document = meta_fields.find_elements_by_xpath("div[1]/div[@class='meta-values metaValue_tcono5']")
+			type_document = meta_fields[0]
+			type_document_name = type_document.find_element_by_xpath("div[@class='meta-values metaValue_tcono5']/span[1]")
+			
 
-		print('type_document' + type_document)
+		print(type_document_name.text)
 
 
 
@@ -123,9 +129,9 @@ if __name__ == "__main__":
 		#print(str(len(titles)))
 		#print(str(len(label)))
 		#print(str(len(value)))
-		print(str(len(meta_fields)))
+		#print(str(len(meta_fields)))
 
-		printList(titles)
+		#printList(titles)
 		#printList(label)
 		#printList(value)
 	
