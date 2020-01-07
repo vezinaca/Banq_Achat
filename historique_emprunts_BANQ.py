@@ -124,9 +124,6 @@ if __name__ == "__main__":
 		label = card.find_elements_by_xpath("div[@class='cardStacked_n7d4vb']/div[@class='cardContent_p5m42o']/div[1]/div[1]/div[@class='metaFields_1su17lh']/div[1]/div[@class='meta-label metaLabel_13uwct0']")
 		value = card.find_elements_by_xpath("div[@class='cardStacked_n7d4vb']/div[@class='cardContent_p5m42o']/div[1]/div[1]/div[@class='metaFields_1su17lh']/div[1]/div[@class='meta-values metaValue_tcono5']/span[1]")
 		
-		#<div class="meta-label metaLabel_13uwct0"><!-- react-text: 957 -->Author<!-- /react-text -->
-		#<div class="meta-values metaValue_tcono5"><span>Pavitt, Bruce, 1959- auteur</span></div>
-		#<div class='metaFields_1su17lh'><div><div class="meta-label metaLabel_13uwct0"><!-- react-text: 957 -->Author<!-- 
 		
 		#print(str(len(titles)))
 		#print(str(len(label)))
