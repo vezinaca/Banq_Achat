@@ -14,6 +14,7 @@ if __name__ == "__main__":
 	is_html_element_present_click(browser, "//*[contains(text(), 'Borrowed and renewed items')]", By.XPATH)
 	
 	time.sleep(4)
+	#for this renouvellement page, i have to use infinite scroll twice.
 	infinite_scroll()
 	infinite_scroll()
 	#scroll_to_bottom()
@@ -53,7 +54,7 @@ if __name__ == "__main__":
 			if(difference_date < 16):
 				all_renew_buttons_to_click.append(renew_button)
 				#renew_button.click()
-		else:
+		elif (renew_button.text == "NON-RENEWABLE"):
 			all_non_renewable_buttons_to_click.append(renew_button)
 
 
@@ -67,7 +68,10 @@ if __name__ == "__main__":
 
 	for button in all_non_renewable_buttons_to_click:
 		print("click non renew!")
-		#button.click()
+		button.click()
+		popup_button = browser.find_element_by_xpath("//body/div[4]/div[1]/div[1]/div[1]/div[1]/div[2]/button[1]")
+		print("click pop up non renew")
+		popup_button.click()
 
 
 
