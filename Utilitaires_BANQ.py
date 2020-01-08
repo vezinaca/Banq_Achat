@@ -5,6 +5,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import TimeoutException
+from selenium.webdriver.common.keys import Keys
 from datetime import datetime
 import time
 
@@ -29,6 +30,12 @@ def is_html_element_present_click(browser, link_text, by_search):
 	except TimeoutException:
 		print ("Loading of " + link_text + "took too much time!")
 
+def scroll_to_bottom():
+	#from selenium.webdriver.common.keys import Keys
+	#html = browser.find_element_by_tag_name('html')
+	#html.send_keys(Keys.END)
+	browser.find_element_by_tag_name('html').send_keys(Keys.END)
+
 def infinite_scroll():
 	#infinite scroll
 	# https://stackoverflow.com/questions/20986631/how-can-i-scroll-a-web-page-using-selenium-webdriver-in-python
@@ -40,8 +47,8 @@ def infinite_scroll():
 
 	p = 1
 	try:
-		#while True:
-		for i in range(5):
+		while True:
+		#for i in range(5):
 		    # Scroll down to bottom
 		    browser.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 

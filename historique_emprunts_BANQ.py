@@ -27,7 +27,7 @@ if __name__ == "__main__":
 	time.sleep(4)
 	is_html_element_present_click(browser, "//*[contains(text(), 'Borrowing history') or contains(text(), 'Historique des emprunts')]", By.XPATH)
 
-	#infinite_scroll()
+	infinite_scroll()
 	time.sleep(4)
 	#//input[starts-with(@id, 'activation:') and contains(@id, ':voId:1')]
 	all_book_titles = browser.find_elements_by_xpath("//div[@class='cardContent_p5m42o']/div[1]/div[1]/div[1]/span[1]/div[1]/div[1]/span[1]") 
@@ -45,9 +45,13 @@ if __name__ == "__main__":
 		borrowing_date = card.find_element_by_xpath("div[@class='cardStacked_n7d4vb']/div[@class='cardContent_p5m42o']/div[2]/div[@class='listContent_1nnce6d']/div[@class='cardContent_p5m42o']/div[1]/div[1]/div[1]/div[1]")
 		due_date = card.find_element_by_xpath("div[@class='cardStacked_n7d4vb']/div[@class='cardContent_p5m42o']/div[2]/div[@class='listContent_1nnce6d']/div[@class='cardContent_p5m42o']/div[1]/div[2]/div[1]/div[1]")
 		
+		#en
 		borrowing_date_object = datetime.strptime(borrowing_date.text, '%m/%d/%Y')
+		#fr
 		#borrowing_date_object = datetime.strptime(borrowing_date.text, '%d/%m/%Y')
+		#en
 		due_date_object = datetime.strptime(due_date.text, '%m/%d/%Y')
+		#fr
 		#due_date_object = datetime.strptime(due_date.text, '%d/%m/%Y')
 		
 		formatted_borrowing_date = borrowing_date_object.strftime('%Y-%m-%d %H:%M:%S')

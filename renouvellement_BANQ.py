@@ -15,8 +15,11 @@ if __name__ == "__main__":
 	
 	time.sleep(4)
 	infinite_scroll()
-	time.sleep(4)
+	infinite_scroll()
+	#scroll_to_bottom()
+	#scroll_to_bottom()
 	
+		
 	#//input[starts-with(@id, 'activation:') and contains(@id, ':voId:1')]
 	#all_cards = browser.find_elements_by_xpath("//div[starts-with(@class, 'cardContent_')]") 
 	
@@ -25,6 +28,7 @@ if __name__ == "__main__":
 	print("size of all cards main: " + str(len(all_cards_stacked)))
 
 	all_renew_buttons_to_click = []
+	all_non_renewable_buttons_to_click = []
 	for card in all_cards_stacked:
 		
 		title = card.find_element_by_xpath("div[@class='cardStacked_n7d4vb']/div[@class='cardContent_p5m42o']/div[1]/div[1]/div[1]/span[1]/div[1]/div[1]/span[1]")
@@ -49,6 +53,8 @@ if __name__ == "__main__":
 			if(difference_date < 16):
 				all_renew_buttons_to_click.append(renew_button)
 				#renew_button.click()
+		else:
+			all_non_renewable_buttons_to_click.append(renew_button)
 
 
 		print(title.text)
@@ -56,7 +62,16 @@ if __name__ == "__main__":
 		print(due_date.text)
 
 	for button in all_renew_buttons_to_click:
-		print("ca click!")
+		print("click renew!")
 		#button.click()
+
+	for button in all_non_renewable_buttons_to_click:
+		print("click non renew!")
+		#button.click()
+
+
+
+#pop up box
+'''<div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms; box-sizing: border-box; font-family: Roboto; box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 45px, rgba(0, 0, 0, 0.22) 0px 10px 18px; border-radius: 2px;"><h3 style="margin: 0px 0px -1px; padding: 24px 24px 20px; color: rgb(0, 0, 0); font-size: 22px; line-height: 32px; font-weight: 400; border-bottom: 1px solid rgb(136, 136, 136);">Non-renewable</h3><div style="font-size: 16px; color: rgba(0, 0, 0, 0.6); padding: 24px; box-sizing: border-box; overflow-y: auto; max-height: 122px;"><div><div style="color: rgb(0, 0, 0); display: block; font-size: 16px; line-height: 16px; position: relative; transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms; margin-left: 0px; padding: 16px 16px 16px 72px;"><svg viewBox="0 0 24 24" style="display: block; color: rgb(0, 0, 0); fill: rgb(244, 67, 54); height: 24px; width: 24px; user-select: none; transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms; position: absolute; top: 0px; margin: 12px; left: 4px;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg><div>Transaction refused: renewal limit has been reached.</div></div></div></div><div style="box-sizing: border-box; padding: 8px; width: 100%; text-align: right; margin-top: -1px; border-top: 1px solid rgb(136, 136, 136);"><button tabindex="0" type="button" style="border: 10px none; box-sizing: border-box; display: inline-block; font-family: Roboto; cursor: pointer; text-decoration: none; margin: 0px; padding: 0px; outline: currentcolor none medium; font-size: inherit; font-weight: inherit; position: relative; height: 36px; line-height: 36px; min-width: 88px; color: rgb(66, 133, 244); transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms; border-radius: 2px; user-select: none; overflow: hidden; background-color: rgba(0, 0, 0, 0); text-align: center;"><div><span style="position: relative; padding-left: 16px; padding-right: 16px; vertical-align: middle; letter-spacing: 0px; text-transform: uppercase; font-weight: 500; font-size: 14px;">Close</span></div></button></div></div>'''
 
 
