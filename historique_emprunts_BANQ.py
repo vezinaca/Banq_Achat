@@ -22,7 +22,8 @@ if __name__ == "__main__":
 	#delete_all_table_rows(my_cursor, table)
 
 	connect_to_site(browser, url)
-	is_html_element_present_click(browser, 'Consulter mon dossier' , By.LINK_TEXT)
+	#is_html_element_present_click(browser, 'Consulter mon dossier' , By.LINK_TEXT)
+	is_html_element_present_click(browser, "subscriber's account" , By.LINK_TEXT)
 	time.sleep(4)
 	is_html_element_present_click(browser, "//*[contains(text(), 'Borrowing history') or contains(text(), 'Historique des emprunts')]", By.XPATH)
 
@@ -68,7 +69,7 @@ if __name__ == "__main__":
 			type_document_name = type_document.find_element_by_xpath("div[@class='meta-values metaValue_tcono5']/span[1]")
 			val = [str(title.text), "" , str(type_document_name.text), formatted_borrowing_date, formatted_due_date]
 		
-		insert_into_db(cnx, my_cursor, val)	
+		#insert_into_db(cnx, my_cursor, val)	
 		print(title.text)
 		print(type_document_name.text)
 		print(borrowing_date.text)

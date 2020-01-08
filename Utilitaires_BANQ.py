@@ -8,7 +8,7 @@ from selenium.common.exceptions import TimeoutException
 from datetime import datetime
 import time
 
-url = 'http://banq.qc.ca/mon_dossier/mon_dossier.html'
+url = 'http://banq.qc.ca/mon_dossier/mon_dossier.html?language_id=1'
 browser = webdriver.Firefox(executable_path="/home/alienmint/Documents/Programmation/pythonPDF/gecko/geckodriver")
 
 def connect_to_site(browser, url):

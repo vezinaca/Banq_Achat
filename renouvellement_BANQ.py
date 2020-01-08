@@ -6,7 +6,9 @@ if __name__ == "__main__":
 
 	today = datetime.now()
 	connect_to_site(browser, url)
-	is_html_element_present_click(browser, 'Consulter mon dossier' , By.LINK_TEXT)
+	#is_html_element_present_click(browser, 'Consulter mon dossier' , By.LINK_TEXT)
+	is_html_element_present_click(browser, "subscriber's account" , By.LINK_TEXT)
+	#is_html_element_present_click(browser, "//*[contains(text(), 'subscriber\'s account') or contains(text(), 'Consulter mon dossier')]", By.XPATH)
 	time.sleep(8)
 	#is_html_element_present_click(browser, "//*[contains(text(), 'Borrowing history') or contains(text(), 'Historique des emprunts')]", By.XPATH)
 	is_html_element_present_click(browser, "//*[contains(text(), 'Borrowed and renewed items')]", By.XPATH)
