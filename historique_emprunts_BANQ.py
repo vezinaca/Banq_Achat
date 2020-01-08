@@ -70,10 +70,14 @@ def printList(my_list):
 		i = i +1
 		#print("=====")
 
+def delete_all_table_rows(table):
+	pass
+
 if __name__ == "__main__":
 
 	cnx = mysql.connector.connect(user='root', password='root', host='127.0.0.1', database='banq')
 	mycursor = cnx.cursor()
+	mycursor.execute("TRUNCATE TABLE livre")
 
 	connect_to_site(browser, url)
 	is_html_element_present_click(browser, 'Consulter mon dossier' , By.LINK_TEXT)
@@ -81,6 +85,8 @@ if __name__ == "__main__":
 	is_html_element_present_click(browser, "//*[contains(text(), 'Borrowing history') or contains(text(), 'Historique des emprunts')]", By.XPATH)
 	#is_html_element_present_click(browser, "//*[contains(text(), 'Borrowed and renewed items')]", By.XPATH)
 	
+
+
 	#infinite_scroll()
 	time.sleep(4)
 	#//input[starts-with(@id, 'activation:') and contains(@id, ':voId:1')]
@@ -131,7 +137,7 @@ if __name__ == "__main__":
 			#insert into db
 			sql = "INSERT INTO livre (title, author, type_document, borrowing_date, due_date) VALUES (%s, %s, %s, %s, %s)"
 			#val = ["The Great Gatsby", "Fitzgerald", "Printed Books", "2020-01-01", "2020-01-21"]
-			val = [str(title.text), str(author.text) , str(type_document.text), formatted_borrowing_date, formatted_due_date]
+			val = [str(title.text), str(author_name.text) , str(type_document_name.text), formatted_borrowing_date, formatted_due_date]
 			mycursor.execute(sql, val)
 
 			cnx.commit()
@@ -149,7 +155,7 @@ if __name__ == "__main__":
 			#insert into db
 			
 			sql = "INSERT INTO livre (title, author, type_document, borrowing_date, due_date) VALUES (%s, %s, %s, %s, %s)"
-			val = [str(title.text), "" , str(type_document.text), formatted_borrowing_date, formatted_due_date]
+			val = [str(title.text), "" , str(type_document_name.text), formatted_borrowing_date, formatted_due_date]
 			mycursor.execute(sql, val)
 
 			cnx.commit()
