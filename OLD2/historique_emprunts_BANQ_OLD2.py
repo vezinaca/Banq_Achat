@@ -1,12 +1,77 @@
 #!/usr/bin/env python 3
 
-from Utilitaires_BANQ import *
+from selenium import webdriver
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
+from selenium.common.exceptions import TimeoutException
+from datetime import datetime
+import time
 
 import mysql.connector
 
+url = 'http://banq.qc.ca/mon_dossier/mon_dossier.html'
+browser = webdriver.Firefox(executable_path="/home/alienmint/Documents/Programmation/pythonPDF/gecko/geckodriver")
 
-def delete_all_table_rows(cursor, table):
-	cursor.execute("TRUNCATE TABLE " + table)
+def connect_to_site(browser, url):
+	browser.get(url)
+	num_client = browser.find_element_by_id('NUM')
+	num_client.send_keys('00115446')
+	pwd = browser.find_element_by_id('PWD')
+	pwd.send_keys('19771314')
+	connection_button = browser.find_element_by_name('_eventId_proceed')
+	connection_button.click()
+
+def infinite_scroll():
+	#infinite scroll
+	# https://stackoverflow.com/questions/20986631/how-can-i-scroll-a-web-page-using-selenium-webdriver-in-python
+
+	SCROLL_PAUSE_TIME = 2
+
+	# Get scroll height
+	last_height = browser.execute_script("return document.body.scrollHeight")
+
+	p = 1
+	try:
+		#while True:
+		for i in range(5):
+		    # Scroll down to bottom
+		    browser.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+
+		    # Wait to load page
+		    time.sleep(SCROLL_PAUSE_TIME)
+		    print(str(p) + ") " +'scrolling...')
+		    p = p + 1
+
+		    # Calculate new scroll height and compare with last scroll height
+		    new_height = browser.execute_script("return document.body.scrollHeight")
+		    if new_height == last_height:
+		        break
+		    last_height = new_height
+	except KeyboardInterrupt:
+		print('allo')
+
+
+def is_html_element_present_click(browser, link_text, by_search):
+	delay = 3 # seconds
+	try:
+	    link_verify = WebDriverWait(browser, delay).until(EC.presence_of_element_located((by_search, link_text)))
+	    print(link_text + " page is ready")
+	    link_verify.click()
+	except TimeoutException:
+		print ("Loading of " + link_text + "took too much time!")
+
+def printList(my_list):
+	i = 1
+	for item in my_list:
+		#print("=====")
+		#print(type(item))
+		print(str(i) + ") " +item.text + '\n')
+		i = i +1
+		#print("=====")
+
+def delete_all_table_rows(table):
+	pass
 
 def insert_into_db(cnx, cursor, valeurs):
 	
@@ -18,8 +83,8 @@ def insert_into_db(cnx, cursor, valeurs):
 if __name__ == "__main__":
 
 	cnx = mysql.connector.connect(user='root', password='root', host='127.0.0.1', database='banq')
-	my_cursor = cnx.cursor()
-	#delete_all_table_rows(my_cursor, table)
+	mycursor = cnx.cursor()
+	#mycursor.execute("TRUNCATE TABLE livre")
 
 	connect_to_site(browser, url)
 	is_html_element_present_click(browser, 'Consulter mon dossier' , By.LINK_TEXT)
@@ -68,7 +133,7 @@ if __name__ == "__main__":
 			type_document_name = type_document.find_element_by_xpath("div[@class='meta-values metaValue_tcono5']/span[1]")
 			val = [str(title.text), "" , str(type_document_name.text), formatted_borrowing_date, formatted_due_date]
 		
-		insert_into_db(cnx, my_cursor, val)	
+		insert_into_db(cnx, mycursor, val)	
 		print(title.text)
 		print(type_document_name.text)
 		print(borrowing_date.text)
