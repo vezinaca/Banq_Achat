@@ -30,10 +30,8 @@ def is_html_element_present_click(browser, link_text, by_search):
 	except TimeoutException:
 		print ("Loading of " + link_text + "took too much time!")
 
+#unused
 def scroll_to_bottom():
-	#from selenium.webdriver.common.keys import Keys
-	#html = browser.find_element_by_tag_name('html')
-	#html.send_keys(Keys.END)
 	browser.find_element_by_tag_name('html').send_keys(Keys.END)
 
 def infinite_scroll():

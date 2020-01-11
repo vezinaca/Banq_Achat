@@ -8,45 +8,42 @@ def renouvellement_livre():
 
 	print("dans renouvellement_livre")
 	
-	all_cards_stacked = browser.find_elements_by_xpath("//div[starts-with(@class,'card_dzxwpk')]")
-	#print("size of all cards main: " + str(len(all_cards_stacked)))
-
+	#all_cards_stacked = browser.find_elements_by_xpath("//div[starts-with(@class,'card_dzxwpk')]")
+	all_cards_stacked = browser.find_elements_by_xpath("//div[starts-with(@class,'card_dzxwpk')]/div[starts-with(@class,'cardStacked_')]")
+	
 	for card in all_cards_stacked:
 		
-		#author_name = author.find_element_by_xpath("div[@class='meta-values metaValue_tcono5']/span[1]")
-		title = card.find_element_by_xpath("div[@class='cardStacked_n7d4vb']/div[@class='cardContent_p5m42o']/div[1]/div[1]/div[1]/span[1]/div[1]/div[1]/span[1]")
-		borrowing_date = card.find_element_by_xpath("div[@class='cardStacked_n7d4vb']/div[@class='cardContent_p5m42o']/div[2]/div[@class='listContent_1nnce6d']/div[@class='cardContent_p5m42o']/div[1]/div[1]/div[1]/div[1]")
-		due_date = card.find_element_by_xpath("div[@class='cardStacked_n7d4vb']/div[@class='cardContent_p5m42o']/div[2]/div[@class='listContent_1nnce6d']/div[@class='cardContent_p5m42o']/div[1]/div[2]/div[1]/div[1]")
-		#type_document_name = card.find_element_by_xpath("div[@class='meta-values metaValue_tcono5']/span[1]")
-		#renew_button_text = card.find_element_by_xpath("div[@class='cardStacked_n7d4vb']/div[2]/div[@class='cardActions_1423utz']/button[1]/div[1]/span[1]")				
-		renew_button = card.find_element_by_xpath("div[@class='cardStacked_n7d4vb']/div[2]/div[@class='cardActions_1423utz']/button[1]")				
+		#title = card.find_element_by_xpath("div[@class='cardStacked_n7d4vb']/div[@class='cardContent_p5m42o']/div[1]/div[1]/div[1]/span[1]/div[1]/div[1]/span[1]")
+		title = card.find_element_by_xpath("div[starts-with(@class,'cardContent_')]/div[1]/div[1]/div[1]/span[1]/div[1]/div[1]/span[1]")		
 		
-		#if "Kerouac" not in str(title.text):
-		#if "hacks" in str(title.text) or "AWS" in str(title.text):
+		#borrowing_date = card.find_element_by_xpath("div[@class='cardStacked_n7d4vb']/div[@class='cardContent_p5m42o']/div[2]/div[@class='listContent_1nnce6d']/div[@class='cardContent_p5m42o']/div[1]/div[1]/div[1]/div[1]")
+		borrowing_date = card.find_element_by_xpath("div[starts-with(@class,'cardContent_')]/div[2]/div[@class='listContent_1nnce6d']/div[@class='cardContent_p5m42o']/div[1]/div[1]/div[1]/div[1]")		
+		
+		#due_date = card.find_element_by_xpath("div[@class='cardStacked_n7d4vb']/div[@class='cardContent_p5m42o']/div[2]/div[@class='listContent_1nnce6d']/div[@class='cardContent_p5m42o']/div[1]/div[2]/div[1]/div[1]")
+		due_date = card.find_element_by_xpath("div[starts-with(@class,'cardContent_')]/div[2]/div[@class='listContent_1nnce6d']/div[@class='cardContent_p5m42o']/div[1]/div[2]/div[1]/div[1]")		
+		
+		#renew_button_text = card.find_element_by_xpath("div[@class='cardStacked_n7d4vb']/div[2]/div[@class='cardActions_1423utz']/button[1]/div[1]/span[1]")				
+
+		#renew_button = card.find_element_by_xpath("div[@class='cardStacked_n7d4vb']/div[2]/div[@class='cardActions_1423utz']/button[1]")				
+		renew_button = card.find_element_by_xpath("div[2]/div[@class='cardActions_1423utz']/button[1]")		
+		
 		if(renew_button.text == "RENEW"):
-			#print("oui hacks or aws")
 			due_date_object = datetime.strptime(due_date.text, '%m/%d/%Y')
 
 			difference_date = (due_date_object - today).days
 			#print(str(difference_date))
 			#print(difference_date < 16)
 			if(difference_date < 100):
-				if "free" in title.text:
-					print('renew Then again')
+				if "fury" in title.text or "free" in title.text:
+					if "fury" in title.text:
+						print('renew fury')
+					if "free" in title.text:
+						print('renew free')
+						
 					renew_button.click()
 					infinite_scroll()
 					infinite_scroll()
 					break
-				if "fury" in title.text:
-					print('renew streak')
-					renew_button.click()
-					infinite_scroll()
-					infinite_scroll()
-					break
-
-				if "Kerouac" in str(title.text):
-					#print('kerouac oui')
-					continue
 				
 		
 if __name__ == "__main__":
@@ -64,70 +61,25 @@ if __name__ == "__main__":
 	#for this renouvellement page, i have to use infinite scroll twice.
 	infinite_scroll()
 	infinite_scroll()
-	#scroll_to_bottom()
-	#scroll_to_bottom()
-	
-		
+			
 	#//input[starts-with(@id, 'activation:') and contains(@id, ':voId:1')]
-	#all_cards = browser.find_elements_by_xpath("//div[starts-with(@class, 'cardContent_')]") 
-	
-	
+		
 	first_card_stacked = browser.find_element_by_xpath("//div[starts-with(@class,'card_dzxwpk')]")
-	#print("first card stacked found " + first_card_stacked.text)
-	renew_button = first_card_stacked.find_element_by_xpath("div[@class='cardStacked_n7d4vb']/div[2]/div[@class='cardActions_1423utz']/button[1]")				
-	#print("renew button text: " + renew_button.text)
-
+	
 	all_cards_stacked = browser.find_elements_by_xpath("//div[starts-with(@class,'card_dzxwpk')]")
 	print("size of all cards main: " + str(len(all_cards_stacked)))
 
 	for i in range(len(all_cards_stacked)):
-		#print(str(i) + ')on passe dans la boucle')
 		renouvellement_livre()
-		#time.sleep(3)
+		
 
-	#print("nombre husker: " + str(nombre_husker))
+	
 
 	'''
-	all_cards_stacked = browser.find_elements_by_xpath("//div[starts-with(@class,'card_dzxwpk')]")
-	print("size of all cards main: " + str(len(all_cards_stacked)))
-
-	all_renew_buttons_to_click = []
-	all_non_renewable_buttons_to_click = []
-	for card in all_cards_stacked:
-		
-		title = card.find_element_by_xpath("div[@class='cardStacked_n7d4vb']/div[@class='cardContent_p5m42o']/div[1]/div[1]/div[1]/span[1]/div[1]/div[1]/span[1]")
-		borrowing_date = card.find_element_by_xpath("div[@class='cardStacked_n7d4vb']/div[@class='cardContent_p5m42o']/div[2]/div[@class='listContent_1nnce6d']/div[@class='cardContent_p5m42o']/div[1]/div[1]/div[1]/div[1]")
-		due_date = card.find_element_by_xpath("div[@class='cardStacked_n7d4vb']/div[@class='cardContent_p5m42o']/div[2]/div[@class='listContent_1nnce6d']/div[@class='cardContent_p5m42o']/div[1]/div[2]/div[1]/div[1]")
-		
-		#renew_button_text = card.find_element_by_xpath("div[@class='cardStacked_n7d4vb']/div[2]/div[@class='cardActions_1423utz']/button[1]/div[1]/span[1]")				
-		renew_button = card.find_element_by_xpath("div[@class='cardStacked_n7d4vb']/div[2]/div[@class='cardActions_1423utz']/button[1]")				
-		
-		print("====begin====")
-		print(renew_button.text)
-		print("====end====")
-
-
-		if(renew_button.text == "RENEW"):
-
-			due_date_object = datetime.strptime(due_date.text, '%m/%d/%Y')
-
-			difference_date = (due_date_object - today).days
-			print(str(difference_date))
-			print(difference_date < 16)
-			if(difference_date < 16):
-				all_renew_buttons_to_click.append(renew_button)
-				#renew_button.click()
-		elif (renew_button.text == "NON-RENEWABLE"):
+			elif (renew_button.text == "NON-RENEWABLE"):
 			all_non_renewable_buttons_to_click.append(renew_button)
 
 
-		print(title.text)
-		print(borrowing_date.text)
-		print(due_date.text)
-
-	for button in all_renew_buttons_to_click:
-		print("click renew!")
-		#button.click()
 
 	for button in all_non_renewable_buttons_to_click:
 		print("click non renew!")
