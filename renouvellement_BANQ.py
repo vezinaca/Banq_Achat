@@ -40,7 +40,7 @@ def renouvellement_livre():
 					if "free" in title.text:
 						print('renew free')
 						
-					renew_button.click()
+					#renew_button.click()
 					infinite_scroll()
 					infinite_scroll()
 					break
@@ -48,8 +48,10 @@ def renouvellement_livre():
 		
 if __name__ == "__main__":
 
+	creds = getCredentials()
+
 	today = datetime.now()
-	connect_to_site(browser, url)
+	connect_to_site(browser, url, creds)
 	#is_html_element_present_click(browser, 'Consulter mon dossier' , By.LINK_TEXT)
 	is_html_element_present_click(browser, "subscriber's account" , By.LINK_TEXT)
 	#is_html_element_present_click(browser, "//*[contains(text(), 'subscriber\'s account') or contains(text(), 'Consulter mon dossier')]", By.XPATH)

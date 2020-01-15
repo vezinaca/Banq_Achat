@@ -8,16 +8,26 @@ from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.keys import Keys
 from datetime import datetime
 import time
+import sys
 
 url = 'http://banq.qc.ca/mon_dossier/mon_dossier.html?language_id=1'
 browser = webdriver.Firefox(executable_path="/home/alienmint/Documents/Programmation/pythonPDF/gecko/geckodriver")
 
-def connect_to_site(browser, url):
+def getCredentials():
+	creds = ()
+	if (len(sys.argv) == 3):
+			creds = (sys.argv[1], sys.argv[2])
+			return creds
+	else:
+		print("Need to pass credentials as arguments. Ex: python3 app.py username password")
+		exit(0)
+
+def connect_to_site(browser, url, creds):
 	browser.get(url)
 	num_client = browser.find_element_by_id('NUM')
-	num_client.send_keys('00115446')
+	num_client.send_keys(creds[0])
 	pwd = browser.find_element_by_id('PWD')
-	pwd.send_keys('19771314')
+	pwd.send_keys(creds[1])
 	connection_button = browser.find_element_by_name('_eventId_proceed')
 	connection_button.click()
 
