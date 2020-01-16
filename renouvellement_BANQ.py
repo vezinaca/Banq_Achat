@@ -17,16 +17,19 @@ def renouvellement_livre():
 		title = card.find_element_by_xpath("div[starts-with(@class,'cardContent_')]/div[1]/div[1]/div[1]/span[1]/div[1]/div[1]/span[1]")		
 		
 		#borrowing_date = card.find_element_by_xpath("div[@class='cardStacked_n7d4vb']/div[@class='cardContent_p5m42o']/div[2]/div[@class='listContent_1nnce6d']/div[@class='cardContent_p5m42o']/div[1]/div[1]/div[1]/div[1]")
-		borrowing_date = card.find_element_by_xpath("div[starts-with(@class,'cardContent_')]/div[2]/div[@class='listContent_1nnce6d']/div[@class='cardContent_p5m42o']/div[1]/div[1]/div[1]/div[1]")		
+		#borrowing_date = card.find_element_by_xpath("div[starts-with(@class,'cardContent_')]/div[2]/div[@class='listContent_1nnce6d']/div[@class='cardContent_p5m42o']/div[1]/div[1]/div[1]/div[1]")		
+		borrowing_date = card.find_element_by_xpath("div[starts-with(@class,'cardContent_')]/div[2]/div[starts-with(@class,'listContent_')]/div[starts-with(@class,'cardContent_')]/div[1]/div[1]/div[1]/div[1]")				
 		
 		#due_date = card.find_element_by_xpath("div[@class='cardStacked_n7d4vb']/div[@class='cardContent_p5m42o']/div[2]/div[@class='listContent_1nnce6d']/div[@class='cardContent_p5m42o']/div[1]/div[2]/div[1]/div[1]")
-		due_date = card.find_element_by_xpath("div[starts-with(@class,'cardContent_')]/div[2]/div[@class='listContent_1nnce6d']/div[@class='cardContent_p5m42o']/div[1]/div[2]/div[1]/div[1]")		
+		#due_date = card.find_element_by_xpath("div[starts-with(@class,'cardContent_')]/div[2]/div[@class='listContent_1nnce6d']/div[@class='cardContent_p5m42o']/div[1]/div[2]/div[1]/div[1]")		
+		due_date = card.find_element_by_xpath("div[starts-with(@class,'cardContent_')]/div[2]/div[starts-with(@class,'listContent_')]/div[starts-with(@class,'cardContent_')]/div[1]/div[2]/div[1]/div[1]")				
 		
 		#renew_button_text = card.find_element_by_xpath("div[@class='cardStacked_n7d4vb']/div[2]/div[@class='cardActions_1423utz']/button[1]/div[1]/span[1]")				
 
 		#renew_button = card.find_element_by_xpath("div[@class='cardStacked_n7d4vb']/div[2]/div[@class='cardActions_1423utz']/button[1]")				
-		renew_button = card.find_element_by_xpath("div[2]/div[@class='cardActions_1423utz']/button[1]")		
-		
+		#renew_button = card.find_element_by_xpath("div[2]/div[@class='cardActions_1423utz']/button[1]")		
+		renew_button = card.find_element_by_xpath("div[2]/div[starts-with(@class,'cardActions_')]/button[1]")		
+
 		if(renew_button.text == "RENEW"):
 			due_date_object = datetime.strptime(due_date.text, '%m/%d/%Y')
 

@@ -3,6 +3,7 @@
 from Utilitaires_BANQ import *
 
 import mysql.connector
+import urllib.request
 
 
 def delete_all_table_rows(cursor, table):
@@ -20,8 +21,9 @@ if __name__ == "__main__":
 	cnx = mysql.connector.connect(user='root', password='root', host='127.0.0.1', database='banq')
 	my_cursor = cnx.cursor()
 	#delete_all_table_rows(my_cursor, table)
+	creds = getCredentials()
 
-	connect_to_site(browser, url)
+	connect_to_site(browser, url, creds)
 	#is_html_element_present_click(browser, 'Consulter mon dossier' , By.LINK_TEXT)
 	is_html_element_present_click(browser, "subscriber's account" , By.LINK_TEXT)
 	time.sleep(4)
@@ -57,6 +59,18 @@ if __name__ == "__main__":
 		formatted_borrowing_date = borrowing_date_object.strftime('%Y-%m-%d %H:%M:%S')
 		formatted_due_date = due_date_object.strftime('%Y-%m-%d %H:%M:%S')
 
+		#Need to get image from site
+		#<div style="background: rgba(0, 0, 0, 0) url(&quot;/in/rest/Thumb/image?id=p%3A%3Ausmarcdef_0002940088&amp;author=Zappa%2C+Frank%2C+1940-1993&amp;title=Absolutely+free&amp;year=1995&amp;publisher=Gloucester%2C+Mass.+%3A+Rykodisc%2C+p1995.&amp;TypeOfDocument=Audio&amp;mat=MUSIC_CD&amp;ct=true&amp;size=256&amp;isPhysical=1&quot;) no-repeat scroll center center / contain; height: 100%; min-width: 100%; min-height: 100%; border-radius: 1px 1px 0px 0px; position: absolute;"></div>
+		
+		#<div class="cardMediaNoActions_xe8xza-o_O-color_1bra37d" title="Absolutely free"><div style="background: rgba(0, 0, 0, 0) url(&quot;/in/rest/Thumb/image?id=p%3A%3Ausmarcdef_0002940088&amp;author=Zappa%2C+Frank%2C+1940-1993&amp;title=Absolutely+free&amp;year=1995&amp;publisher=Gloucester%2C+Mass.+%3A+Rykodisc%2C+p1995.&amp;TypeOfDocument=Audio&amp;mat=MUSIC_CD&amp;ct=true&amp;size=256&amp;isPhysical=1&quot;) no-repeat scroll center center / contain; height: 100%; min-width: 100%; min-height: 100%; border-radius: 1px 1px 0px 0px; position: absolute;"></div></div>
+
+		img_div = card.find_element_by_xpath("div[starts-with(@class,'cardMediaNoActions_')]/div[1]")
+		img_attribute = img_div.get_attribute("style")
+		#img_property = img_div.get_property("url")
+		#url(&quot;/in/rest/Thumb/image?id=p%3A%3Ausmarcdef_0002940088&amp;author=Zappa%2C+Frank%2C+1940-1993&amp;title=Absolutely+free&amp;year=1995&amp;publisher=Gloucester%2C+Mass.+%3A+Rykodisc%2C+p1995.&amp;TypeOfDocument=Audio&amp;mat=MUSIC_CD&amp;ct=true&amp;size=256&amp;isPhysical=1&quot;) 
+
+		#<img src="/in/rest/Thumb/image?id=p%3A%3Ausmarcdef_0003267355&amp;author=Zappa%2C+Frank%2C+1940-1993&amp;title=Joe%27s+Domage&amp;year=2004&amp;publisher=%5BS.l.%5D+%3A+Vaulternative+Records%2C+p2004&amp;TypeOfDocument=Audio&amp;mat=MUSIC_CD&amp;ct=true&amp;size=256&amp;isPhysical=1" style="cursor: pointer; transition: opacity 0.25s ease-in-out 0s; max-height: 198px; max-width: 160px; position: absolute; inset: 0px; margin: auto; opacity: 1;">
+
 
 		#author exists
 		if(len(meta_fields)>1):
@@ -78,6 +92,18 @@ if __name__ == "__main__":
 		print(type_document_name.text)
 		print(borrowing_date.text)
 		print(due_date.text)
+		
+		partial_link_text = parse_style_attribute(img_attribute)
+
+		print("le partial link text: " + partial_link_text)
+		
+		#partial_link_text = "/in/rest/Thumb/image?id=p%3A%3Ausmarcdef_0003267355&amp;author=Zappa%2C+Frank%2C+1940-1993&amp;title=Joe\%27s+Domage&amp;year=2004&amp;publisher=%5BS.l.%5D+%3A+Vaulternative+Records%2C+p2004&amp;TypeOfDocument=Audio&amp;mat=MUSIC_CD&amp;ct=true&amp;size=256&amp;isPhysical=1"
+		urllib.request.urlretrieve("https://cap.banq.qc.ca/account/loanhistory" + partial_link_text, "file_name.jpg")
+		
+		#<img src="/in/rest/Thumb/image?id=p%3A%3Ausmarcdef_0003267355&amp;author=Zappa%2C+Frank%2C+1940-1993&amp;title=Joe%27s+Domage&amp;year=2004&amp;publisher=%5BS.l.%5D+%3A+Vaulternative+Records%2C+p2004&amp;TypeOfDocument=Audio&amp;mat=MUSIC_CD&amp;ct=true&amp;size=256&amp;isPhysical=1" style="cursor: pointer; transition: opacity 0.25s ease-in-out 0s; max-height: 198px; max-width: 160px; position: absolute; inset: 0px; margin: auto; opacity: 1;">
+		#exit()
+
+		#print(type(img))
 
 		#label = card.find_elements_by_xpath("div[@class='cardStacked_n7d4vb']/div[@class='cardContent_p5m42o']/div[1]/div[1]/div[@class='metaFields_1su17lh']/div[1]/div[@class='meta-label metaLabel_13uwct0']")
 		#value = card.find_elements_by_xpath("div[@class='cardStacked_n7d4vb']/div[@class='cardContent_p5m42o']/div[1]/div[1]/div[@class='metaFields_1su17lh']/div[1]/div[@class='meta-values metaValue_tcono5']/span[1]")

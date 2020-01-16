@@ -9,9 +9,22 @@ from selenium.webdriver.common.keys import Keys
 from datetime import datetime
 import time
 import sys
+import re
 
 url = 'http://banq.qc.ca/mon_dossier/mon_dossier.html?language_id=1'
 browser = webdriver.Firefox(executable_path="/home/alienmint/Documents/Programmation/pythonPDF/gecko/geckodriver")
+
+def parse_style_attribute(style_string):
+    if 'background' in style_string:
+    	#style_string = style_string.split(' url("')[1].replace('");', '')
+        #style_string = style_string.split(' url("')[1]
+        #print("fuk")
+        #s = 'asdf=5;iwantthis123jasd'
+        #result = re.search('asdf(.*)jasd', s)
+        
+        result = re.search('url\(\"(.*)\"\)', style_string)		
+        #print("the result: " + result.group(1))
+        return result.group(1)
 
 def getCredentials():
 	creds = ()
@@ -55,8 +68,8 @@ def infinite_scroll():
 
 	p = 1
 	try:
-		while True:
-		#for i in range(5):
+		#while True:
+		for i in range(2):
 		    # Scroll down to bottom
 		    browser.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 
