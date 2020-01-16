@@ -96,12 +96,15 @@ if __name__ == "__main__":
 		partial_link_text = parse_style_attribute(img_attribute)
 
 		print("le partial link text: " + partial_link_text)
+		print("====")
+		print("full link: " + "https://cap.banq.qc.ca/account/loanhistory" + partial_link_text)
 		
 		#partial_link_text = "/in/rest/Thumb/image?id=p%3A%3Ausmarcdef_0003267355&amp;author=Zappa%2C+Frank%2C+1940-1993&amp;title=Joe\%27s+Domage&amp;year=2004&amp;publisher=%5BS.l.%5D+%3A+Vaulternative+Records%2C+p2004&amp;TypeOfDocument=Audio&amp;mat=MUSIC_CD&amp;ct=true&amp;size=256&amp;isPhysical=1"
-		urllib.request.urlretrieve("https://cap.banq.qc.ca/account/loanhistory" + partial_link_text, "file_name.jpg")
-		
+
+		#urllib.request.urlretrieve("https://cap.banq.qc.ca/account/loanhistory" + partial_link_text, "file_name.jpg")
+		urllib.request.urlretrieve("https://cap.banq.qc.ca/account/loanhistory/in/rest/Thumb/image?id=p%3A%3Ausmarcdef_0003267355", "file_name.jpg")
 		#<img src="/in/rest/Thumb/image?id=p%3A%3Ausmarcdef_0003267355&amp;author=Zappa%2C+Frank%2C+1940-1993&amp;title=Joe%27s+Domage&amp;year=2004&amp;publisher=%5BS.l.%5D+%3A+Vaulternative+Records%2C+p2004&amp;TypeOfDocument=Audio&amp;mat=MUSIC_CD&amp;ct=true&amp;size=256&amp;isPhysical=1" style="cursor: pointer; transition: opacity 0.25s ease-in-out 0s; max-height: 198px; max-width: 160px; position: absolute; inset: 0px; margin: auto; opacity: 1;">
-		#exit()
+		exit()
 
 		#print(type(img))
 

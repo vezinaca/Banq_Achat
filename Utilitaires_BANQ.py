@@ -12,7 +12,8 @@ import sys
 import re
 
 url = 'http://banq.qc.ca/mon_dossier/mon_dossier.html?language_id=1'
-browser = webdriver.Firefox(executable_path="/home/alienmint/Documents/Programmation/pythonPDF/gecko/geckodriver")
+browser = webdriver.Firefox(executable_path="/home/alienmint/Documents/Programmation/pythonPDF/Banq_Achat/gecko/geckodriver")
+#browser = webdriver.Chrome(executable_path="/home/alienmint/Documents/Programmation/pythonPDF/Banq_Achat/gecko/chromedriver")
 
 def parse_style_attribute(style_string):
     if 'background' in style_string:
@@ -69,7 +70,7 @@ def infinite_scroll():
 	p = 1
 	try:
 		#while True:
-		for i in range(2):
+		for i in range(1):
 		    # Scroll down to bottom
 		    browser.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 
