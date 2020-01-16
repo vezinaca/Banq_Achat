@@ -9399,3 +9399,4 @@ JavaScript error: resource://gre/modules/ContentPrefServiceParent.jsm, line 167:
 1579199563645	Marionette	INFO	Listening on port 36729
 1579199563739	Marionette	WARN	TLS certificate errors will be ignored for this session
 JavaScript error: https://www.banq.qc.ca/formulaires/suggestions_achat/index.html, line 216: TypeError: $(...).offset(...) is undefined
+1579199715101	Marionette	INFO	Stopped listening on port 36729

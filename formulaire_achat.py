@@ -46,6 +46,16 @@ if __name__ == '__main__':
 	'''
 	<textarea name="p_t03" rows="2" cols="45" id="P5_TITRE" class="banq_formFieldLarge"></textarea>
 
+	<input type="text" id="P5_AUTEUR" name="p_t04" value="" size="60" maxlength="2000" class="banq_formFieldLarge">
+
+	<input type="text" id="P5_EDITEUR" name="p_t05" value="" size="60" maxlength="2000" class="banq_formFieldLarge">
+
+	<input type="text" id="P5_COLLECTION" name="p_t06" value="" size="60" maxlength="2000" class="banq_formFieldLarge">
+
+	<input type="text" id="P5_DATE_EDITION" name="p_t07" value="" size="60" maxlength="4" class="banq_formFieldLarge">
+
+	<textarea name="p_t08" rows="2" cols="45" id="P5_SUJET" class="banq_formFieldLarge"></textarea>
+	
 	<select name="p_t09" id="P5_SUPPORT" size="1" style="width:210px">
           <option value="" selected="selected"> </option>
           <option value="Livre">Livre</option>
