@@ -1,12 +1,23 @@
 #!/usr/bin/env python3
-
-from Utilitaires_BANQ import *
-
-import os.path
+import sys, os.path
 import webbrowser
 import requests
 import bs4 
+from selenium import webdriver
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
+from selenium.common.exceptions import TimeoutException
+import time
 
+def connect_to_site(browser, url):
+	browser.get(url)
+	num_client = browser.find_element_by_id('NUM')
+	num_client.send_keys('00115446')
+	pwd = browser.find_element_by_id('PWD')
+	pwd.send_keys('19771314')
+	connection_button = browser.find_element_by_name('_eventId_proceed')
+	connection_button.click()
 
 DEBUG = True
 #Currently not used
@@ -52,6 +63,15 @@ def post_process(html):
 	my_links = soup.select(css_selector_media)
 	return(remove_non_media_links(my_links))
 
+def connect_to_site(browser, url):
+	browser.get(url)
+	num_client = browser.find_element_by_id('NUM')
+	num_client.send_keys('00115446')
+	pwd = browser.find_element_by_id('PWD')
+	pwd.send_keys('19771314')
+	connection_button = browser.find_element_by_name('_eventId_proceed')
+	connection_button.click()
+
 def verify_presence_by_link_text_click(browser, link_text):
 	delay = 3 # seconds
 	try:
@@ -72,9 +92,8 @@ def verify_presence_by_xpath_click(browser, link_text):
 
 if __name__ == "__main__":
 
-	creds = getCredentials()
-
-	connect_to_site(browser, url, creds)
+	url_mon_dossier = 'http://banq.qc.ca/mon_dossier/mon_dossier.html'
+	browser = webdriver.Firefox(executable_path="/home/alienmint/Documents/Programmation/pythonPDF/gecko/geckodriver")
 
 	if DEBUG == True:
 		search_text = 'Frank Zappa'
@@ -101,15 +120,9 @@ if __name__ == "__main__":
 			print(k, v)
 		print('\n')
 	
-	
-	is_html_element_present_click(browser, "Forms", By.LINK_TEXT)
+	connect_to_site(browser, url_mon_dossier)
 	#<a href="/formulaires/index.html">Formulaires</a>
-	#verify_presence_by_link_text_click(browser, "Formulaires")
+	verify_presence_by_link_text_click(browser, "Formulaires")
 	#<a href="/formulaires/suggestions_achat/index.html">» Suggestions d'achat</a>
 	time.sleep(5)
-
-	#<a href="/formulaires/suggestions_achat/index.html">» Purchase suggestion</a>
-	#is_html_element_present_click(browser, " Purchase suggestion", By.LINK_TEXT)
-	#is_html_element_present_click(browser, "//*[contains(text(), '» Purchase suggestion')", By.LINK_TEXT)
-	is_html_element_present_click(browser, " Purchase suggestion", By.LINK_TEXT)
-	#verify_presence_by_link_text_click(browser, " Suggestions d'achat")
+	verify_presence_by_link_text_click(browser, " Suggestions d'achat")

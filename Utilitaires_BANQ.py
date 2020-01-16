@@ -34,6 +34,7 @@ def getCredentials():
 			return creds
 	else:
 		print("Need to pass credentials as arguments. Ex: python3 app.py username password")
+		browser.close()
 		exit(0)
 
 def connect_to_site(browser, url, creds):
