@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from Utilitaires_BANQ import *
+#from Utilitaires_BANQ import *
 
 import os.path
 import webbrowser
@@ -12,6 +12,8 @@ DEBUG = True
 #Currently not used
 LOCAL = False
 html_file_name = 'catalogue.html'
+
+
 
 pre_url_search = 'http://www.banq.qc.ca/techno/recherche/rms.html?q='
 pre_media_url = 'https://cap.banq.qc.ca'
@@ -52,6 +54,7 @@ def post_process(html):
 	my_links = soup.select(css_selector_media)
 	return(remove_non_media_links(my_links))
 
+'''
 def verify_presence_by_link_text_click(browser, link_text):
 	delay = 3 # seconds
 	try:
@@ -69,12 +72,12 @@ def verify_presence_by_xpath_click(browser, link_text):
 	    link_verify.click()
 	except TimeoutException:
 		print ("Loading of " + link_text + "took too much time!")
-
+'''
 if __name__ == "__main__":
 
-	creds = getCredentials()
+	#creds = getCredentials()
 
-	connect_to_site(browser, url, creds)
+	#connect_to_site(browser, url, creds)
 
 	if DEBUG == True:
 		search_text = 'Frank Zappa'
@@ -85,13 +88,16 @@ if __name__ == "__main__":
 
 	url = pre_url_search + search_text
 
-
+	print (url)
 	#uncomment the following line if you want to compare search results in browser
 	#webbrowser.open(url)
 	
 	response = get_response(url)
+	print(response.text)
 	
 	list_of_dic_of_medias = post_process(response.text)
+
+	print(list_of_dic_of_medias)
 
 	for media in list_of_dic_of_medias:
 		#python2
@@ -102,14 +108,18 @@ if __name__ == "__main__":
 		print('\n')
 	
 	
-	is_html_element_present_click(browser, "Forms", By.LINK_TEXT)
+	#is_html_element_present_click(browser, "Forms", By.LINK_TEXT)
+
 	#<a href="/formulaires/index.html">Formulaires</a>
 	#verify_presence_by_link_text_click(browser, "Formulaires")
 	#<a href="/formulaires/suggestions_achat/index.html">» Suggestions d'achat</a>
-	time.sleep(5)
+
+	#time.sleep(5)
 
 	#<a href="/formulaires/suggestions_achat/index.html">» Purchase suggestion</a>
 	#is_html_element_present_click(browser, " Purchase suggestion", By.LINK_TEXT)
 	#is_html_element_present_click(browser, "//*[contains(text(), '» Purchase suggestion')", By.LINK_TEXT)
-	is_html_element_present_click(browser, " Purchase suggestion", By.LINK_TEXT)
+	
+	#is_html_element_present_click(browser, " Purchase suggestion", By.LINK_TEXT)
+
 	#verify_presence_by_link_text_click(browser, " Suggestions d'achat")

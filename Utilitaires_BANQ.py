@@ -10,10 +10,14 @@ from datetime import datetime
 import time
 import sys
 import re
+import os
 
 url = 'http://banq.qc.ca/mon_dossier/mon_dossier.html?language_id=1'
 browser = webdriver.Firefox(executable_path="/home/alienmint/Documents/Programmation/pythonPDF/Banq_Achat/gecko/geckodriver")
 #browser = webdriver.Chrome(executable_path="/home/alienmint/Documents/Programmation/pythonPDF/Banq_Achat/gecko/chromedriver")
+#when using Toshiba laptop
+#browser = webdriver.Firefox(executable_path="/home/labby/Documents/Programmation/pythonPDF/Banq_Achat/gecko/geckodriver")
+#browser = webdriver.Chrome(executable_path="/home/labby/Documents/Programmation/pythonPDF/Banq_Achat/gecko/chromedriver")
 
 def parse_style_attribute(style_string):
     if 'background' in style_string:
