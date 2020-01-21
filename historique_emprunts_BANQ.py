@@ -9,19 +9,31 @@ import urllib.request
 def delete_all_table_rows(cursor, table):
 	cursor.execute("TRUNCATE TABLE " + table)
 
+def convertToBinaryData(filename):
+    # Convert digital data to binary format
+    with open(filename, 'rb') as file:
+        binaryData = file.read()
+    return binaryData
+
+def write_file(data, filename):
+    # Convert binary data to proper format and write it on Hard Disk
+    with open(filename, 'wb') as file:
+        file.write(data)
+
 def insert_into_db(cnx, mycursor, valeurs):
 	print('in insert into')
-	#sql = """INSERT INTO phonebook(number, Mobile) VALUES(%s,%s)""" % (name,number)
+	
 	sql = "INSERT INTO livre (title, author, type_document, borrowing_date, due_date, image_name, img) VALUES (%s, %s, %s, %s, %s, %s, %s)"
 	mycursor.execute(sql, valeurs)
 	cnx.commit()
 	print(mycursor.rowcount, "record inserted.")
+	#exit()
 
 if __name__ == "__main__":
 
 	cnx = mysql.connector.connect(user='root', password='root', host='127.0.0.1', database='banq')
 	my_cursor = cnx.cursor()
-	#delete_all_table_rows(my_cursor, "livre")
+	delete_all_table_rows(my_cursor, "livre")
 	#exit()
 	creds = getCredentials()
 
@@ -78,6 +90,7 @@ if __name__ == "__main__":
 		my_path = 'images/'
 		fullfilename = os.path.join(my_path, title.text + "_.jpg")
 		urllib.request.urlretrieve("https://cap.banq.qc.ca/" + partial_link_text, fullfilename)
+		photoBinaryData = convertToBinaryData(fullfilename)
 
 		#author exists
 		if(len(meta_fields)>1):
@@ -86,14 +99,16 @@ if __name__ == "__main__":
 			type_document = meta_fields[1]
 			type_document_name = type_document.find_element_by_xpath("div[@class='meta-values metaValue_tcono5']/span[1]")
 			print(author_name.text)
-			val = [str(title.text), str(author_name.text) , str(type_document_name.text), formatted_borrowing_date, formatted_due_date, str(fullfilename), urllib.request.urlretrieve("https://cap.banq.qc.ca/" + partial_link_text, fullfilename) ]
+			#val = [str(title.text), str(author_name.text) , str(type_document_name.text), formatted_borrowing_date, formatted_due_date, str(fullfilename), urllib.request.urlretrieve("https://cap.banq.qc.ca/" + partial_link_text, fullfilename) ]
+			val = [str(title.text), str(author_name.text) , str(type_document_name.text), formatted_borrowing_date, formatted_due_date, str(fullfilename), photoBinaryData]
 			
 		#author doesn't exist
 		else:
 			type_document = meta_fields[0]
 			type_document_name = type_document.find_element_by_xpath("div[@class='meta-values metaValue_tcono5']/span[1]")
-			val = [str(title.text), "" , str(type_document_name.text), formatted_borrowing_date, formatted_due_date, str(fullfilename), urllib.request.urlretrieve("https://cap.banq.qc.ca/" + partial_link_text, fullfilename)]
-		
+			#val = [str(title.text), "" , str(type_document_name.text), formatted_borrowing_date, formatted_due_date, str(fullfilename), urllib.request.urlretrieve("https://cap.banq.qc.ca/" + partial_link_text, fullfilename)]
+			val = [str(title.text), "" , str(type_document_name.text), formatted_borrowing_date, formatted_due_date, str(fullfilename), photoBinaryData]
+			
 		insert_into_db(cnx, my_cursor, val)	
 		print(title.text)
 		print(type_document_name.text)
