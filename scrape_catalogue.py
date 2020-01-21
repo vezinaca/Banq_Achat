@@ -12,7 +12,8 @@ DEBUG = True
 LOCAL = False
 html_file_name = 'catalogue.html'
 
-pre_url_search = 'http://www.banq.qc.ca/techno/recherche/rms.html?q='
+#pre_url_search = 'http://www.banq.qc.ca/techno/recherche/rms.html?q='
+pre_url_search = 'http://www.banq.qc.ca/techno/recherche/rms.html'
 pre_media_url = 'https://cap.banq.qc.ca'
 css_selector_media = '#RMS_afficherIris .ValorisationListeDesc a'
 
@@ -26,9 +27,18 @@ def create_local_html_file(html_file_name, response):
 
 		html_file.close()
 
+#payload = {'key1': 'value1', 'key2': 'value2'}
+#>>> r = requests.get('https://httpbin.org/get', params=payload)
 
-def get_response(url):
-	res = requests.get(url, safe='' )
+'''
+def get_response(param):
+	res = requests.get(pre_url_search, params=param)
+	res.raise_for_status()
+	return res
+'''
+
+def get_response(parametres):
+	res = requests.get(pre_url_search, params=parametres)
 	res.raise_for_status()
 	return res
 
@@ -68,20 +78,33 @@ if __name__ == "__main__":
 		#if len(sys.argv) > 1:
 		search_text = ''.join(sys.argv[1:])
 
+	param_search = {'q': search_text}
 	print("search_text: " + search_text)
 	#search_text_url = urlify(search_text)
-	url = pre_url_search + search_text
+	#url = pre_url_search + search_text
 
-	print (url)
+	#print (url)
 	
 	#uncomment the following line if you want to compare search results in browser
-	webbrowser.open(url)
+	#webbrowser.open(url)
+	#webbrowser.open('http://www.banq.qc.ca/techno/recherche/rms.html?q=Frank%20Zappa')
 	
-	
-
-	response = get_response(url)
+	response = get_response(param_search)
 	#print(response.text)
 	#time.sleep(5)
+
+	#httpbin.org/get?key=val
+	#payload = {'key1': 'value1', 'key2': 'value2'}
+	#r = requests.get('https://httpbin.org/get', params=payload)
+
+	
+	#webbrowser.open('http://www.banq.qc.ca/techno/recherche/rms.html', params=la_search)
+	#response = requests.get('http://www.banq.qc.ca/techno/recherche/rms.html', params=la_search)
+	#response.raise_for_status()
+	
+
+
+
 	
 	list_of_dic_of_medias = post_process(response.text)
 
