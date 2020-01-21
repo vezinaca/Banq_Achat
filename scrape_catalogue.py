@@ -1,19 +1,16 @@
 #!/usr/bin/env python3
 
-#from Utilitaires_BANQ import *
+from Utilitaires_BANQ import *
 
 import os.path
 import webbrowser
 import requests
 import bs4 
 
-
 DEBUG = True
 #Currently not used
 LOCAL = False
 html_file_name = 'catalogue.html'
-
-
 
 pre_url_search = 'http://www.banq.qc.ca/techno/recherche/rms.html?q='
 pre_media_url = 'https://cap.banq.qc.ca'
@@ -31,7 +28,7 @@ def create_local_html_file(html_file_name, response):
 
 
 def get_response(url):
-	res = requests.get(url)
+	res = requests.get(url, safe='' )
 	res.raise_for_status()
 	return res
 
@@ -54,25 +51,9 @@ def post_process(html):
 	my_links = soup.select(css_selector_media)
 	return(remove_non_media_links(my_links))
 
-'''
-def verify_presence_by_link_text_click(browser, link_text):
-	delay = 3 # seconds
-	try:
-	    link_verify = WebDriverWait(browser, delay).until(EC.presence_of_element_located((By.LINK_TEXT, link_text)))
-	    print(link_text + " page is ready")
-	    link_verify.click()
-	except TimeoutException:
-		print ("Loading of " + link_text + "took too much time!")
+def urlify(in_string):
+    return "%20".join(in_string.split())
 
-def verify_presence_by_xpath_click(browser, link_text):
-	delay = 8 # seconds
-	try:
-	    link_verify = WebDriverWait(browser, delay).until(EC.presence_of_element_located((By.XPATH, link_text)))
-	    print(link_text + " page is ready")
-	    link_verify.click()
-	except TimeoutException:
-		print ("Loading of " + link_text + "took too much time!")
-'''
 if __name__ == "__main__":
 
 	#creds = getCredentials()
@@ -81,19 +62,26 @@ if __name__ == "__main__":
 
 	if DEBUG == True:
 		search_text = 'Frank Zappa'
+		#search_text = 'Zappa'
 	else:
 		assert len(sys.argv) > 1, "Missing arguments."
 		#if len(sys.argv) > 1:
 		search_text = ''.join(sys.argv[1:])
 
+	print("search_text: " + search_text)
+	#search_text_url = urlify(search_text)
 	url = pre_url_search + search_text
 
 	print (url)
-	#uncomment the following line if you want to compare search results in browser
-	#webbrowser.open(url)
 	
+	#uncomment the following line if you want to compare search results in browser
+	webbrowser.open(url)
+	
+	
+
 	response = get_response(url)
-	print(response.text)
+	#print(response.text)
+	#time.sleep(5)
 	
 	list_of_dic_of_medias = post_process(response.text)
 
@@ -106,6 +94,8 @@ if __name__ == "__main__":
 		for k, v in media.items():
 			print(k, v)
 		print('\n')
+
+	browser.quit()
 	
 	
 	#is_html_element_present_click(browser, "Forms", By.LINK_TEXT)
