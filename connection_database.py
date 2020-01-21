@@ -145,7 +145,7 @@ print(otherStr)
 
 
 
-
+'''
 folder = '/path/to/folder'
 for filename in os.listdir(folder):
     file_path = os.path.join(folder, filename)
@@ -157,7 +157,7 @@ for filename in os.listdir(folder):
     except Exception as e:
         print('Failed to delete %s. Reason: %s' % (file_path, e))
 
-
+'''
 
 
 cnx.close()

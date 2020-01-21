@@ -56,21 +56,30 @@ if __name__ == "__main__":
 	infinite_scroll()
 	time.sleep(4)
 	#//input[starts-with(@id, 'activation:') and contains(@id, ':voId:1')]
-	all_book_titles = browser.find_elements_by_xpath("//div[@class='cardContent_p5m42o']/div[1]/div[1]/div[1]/span[1]/div[1]/div[1]/span[1]") 
+	#//div[starts-with(@class,'card_dzxwpk'
+	#all_book_titles = browser.find_elements_by_xpath("//div[@class='cardContent_p5m42o']/div[1]/div[1]/div[1]/span[1]/div[1]/div[1]/span[1]") 
+	all_book_titles = browser.find_elements_by_xpath("//div[starts-with(@class,'cardContent_')]/div[1]/div[1]/div[1]/span[1]/div[1]/div[1]/span[1]") 
 	all_cards_stacked = browser.find_elements_by_xpath("//div[starts-with(@class,'card_dzxwpk')]")
+
 
 	print("size of all cards main: " + str(len(all_cards_stacked)))
 	print ("size of all book titles: " + str(len(all_book_titles)))
 	
 	for card in all_cards_stacked:
 		
-		title = card.find_element_by_xpath("div[@class='cardStacked_n7d4vb']/div[@class='cardContent_p5m42o']/div[1]/div[1]/div[1]/span[1]/div[1]/div[1]/span[1]")
+		#title = card.find_element_by_xpath("div[@class='cardStacked_n7d4vb']/div[@class='cardContent_p5m42o']/div[1]/div[1]/div[1]/span[1]/div[1]/div[1]/span[1]")
+		title = card.find_element_by_xpath("div[starts-with(@class,'cardStacked_')]/div[starts-with(@class,'cardContent_')]/div[1]/div[1]/div[1]/span[1]/div[1]/div[1]/span[1]")
+		
 		#label = card.find_elements_by_xpath("div[@class='cardStacked_n7d4vb']/div[@class='cardContent_p5m42o']/div[1]/div[1]/div[@class='metaFields_1su17lh']/div[1]/div[@class='meta-label metaLabel_13uwct0']")
-		meta_fields = card.find_elements_by_xpath("div[@class='cardStacked_n7d4vb']/div[@class='cardContent_p5m42o']/div[1]/div[1]/div[@class='metaFields_1su17lh']/div")
 		
-		borrowing_date = card.find_element_by_xpath("div[@class='cardStacked_n7d4vb']/div[@class='cardContent_p5m42o']/div[2]/div[@class='listContent_1nnce6d']/div[@class='cardContent_p5m42o']/div[1]/div[1]/div[1]/div[1]")
-		due_date = card.find_element_by_xpath("div[@class='cardStacked_n7d4vb']/div[@class='cardContent_p5m42o']/div[2]/div[@class='listContent_1nnce6d']/div[@class='cardContent_p5m42o']/div[1]/div[2]/div[1]/div[1]")
+		#meta_fields = card.find_elements_by_xpath("div[@class='cardStacked_n7d4vb']/div[@class='cardContent_p5m42o']/div[1]/div[1]/div[@class='metaFields_1su17lh']/div")
+		meta_fields = card.find_elements_by_xpath("div[starts-with(@class,'cardStacked_')]/div[starts-with(@class,'cardContent_')]/div[1]/div[1]/div[starts-with(@class,'metaFields_')]/div")
 		
+		#borrowing_date = card.find_element_by_xpath("div[@class='cardStacked_n7d4vb']/div[@class='cardContent_p5m42o']/div[2]/div[@class='listContent_1nnce6d']/div[@class='cardContent_p5m42o']/div[1]/div[1]/div[1]/div[1]")
+		borrowing_date = card.find_element_by_xpath("div[starts-with(@class,'cardStacked_')]/div[starts-with(@class,'cardContent_')]/div[2]/div[starts-with(@class,'listContent_')]/div[starts-with(@class,'cardContent_')]/div[1]/div[1]/div[1]/div[1]")		
+		
+		#due_date = card.find_element_by_xpath("div[@class='cardStacked_n7d4vb']/div[@class='cardContent_p5m42o']/div[2]/div[@class='listContent_1nnce6d']/div[@class='cardContent_p5m42o']/div[1]/div[2]/div[1]/div[1]")
+		due_date = card.find_element_by_xpath("div[starts-with(@class,'cardStacked_')]/div[starts-with(@class,'cardContent_')]/div[2]/div[starts-with(@class,'listContent_')]/div[starts-with(@class,'cardContent_')]/div[1]/div[2]/div[1]/div[1]")		
 		#en
 		borrowing_date_object = datetime.strptime(borrowing_date.text, '%m/%d/%Y')
 		#fr
@@ -89,7 +98,7 @@ if __name__ == "__main__":
 		partial_link_text = parse_style_attribute(img_attribute)
 		my_path = 'images/'
 		#fullfilename = os.path.join(my_path, title.text.replace('/','-') + ".jpg")
-		fullfilename = os.path.join(my_path, replaceMultiple(title.text, ['\\', '/'] , "-") + ".jpg")
+		fullfilename = os.path.join(my_path, replaceMultiple(title.text, ['\\', '/', ' ', ','] , "_") + ".jpg")
 		
 		try:
 			urllib.request.urlretrieve("https://cap.banq.qc.ca/" + partial_link_text, fullfilename)
