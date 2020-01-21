@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 from Utilitaires_BANQ import *
+from Isbn_search_scrape import *
 
 import os.path
 import webbrowser
@@ -12,7 +13,7 @@ DEBUG = True
 LOCAL = False
 html_file_name = 'catalogue.html'
 
-#pre_url_search = 'http://www.banq.qc.ca/techno/recherche/rms.html?q='
+webbrowser_pre_url_search = 'http://www.banq.qc.ca/techno/recherche/rms.html?q='
 pre_url_search = 'http://www.banq.qc.ca/techno/recherche/rms.html'
 pre_media_url = 'https://cap.banq.qc.ca'
 css_selector_media = '#RMS_afficherIris .ValorisationListeDesc a'
@@ -27,15 +28,6 @@ def create_local_html_file(html_file_name, response):
 
 		html_file.close()
 
-#payload = {'key1': 'value1', 'key2': 'value2'}
-#>>> r = requests.get('https://httpbin.org/get', params=payload)
-
-'''
-def get_response(param):
-	res = requests.get(pre_url_search, params=param)
-	res.raise_for_status()
-	return res
-'''
 
 def get_response(parametres):
 	res = requests.get(pre_url_search, params=parametres)
@@ -66,6 +58,10 @@ def urlify(in_string):
 
 if __name__ == "__main__":
 
+
+	isbn_search_scrape = Isbn_search_scrape()
+
+	print(isbn_search_scrape.getTest())
 	#creds = getCredentials()
 
 	#connect_to_site(browser, url, creds)
@@ -81,14 +77,15 @@ if __name__ == "__main__":
 	param_search = {'q': search_text}
 	print("search_text: " + search_text)
 	#search_text_url = urlify(search_text)
-	#url = pre_url_search + search_text
+	url = webbrowser_pre_url_search + search_text
 
 	#print (url)
 	
 	#uncomment the following line if you want to compare search results in browser
 	#webbrowser.open(url)
+
 	#webbrowser.open('http://www.banq.qc.ca/techno/recherche/rms.html?q=Frank%20Zappa')
-	webbrowser.open('http://www.banq.qc.ca/techno/recherche/rms.html?q=Frank Zappa')
+	#webbrowser.open('http://www.banq.qc.ca/techno/recherche/rms.html?q=Frank Zappa')
 	response = get_response(param_search)  
 	#print(response.text)
 	#time.sleep(5)
@@ -97,15 +94,6 @@ if __name__ == "__main__":
 	#payload = {'key1': 'value1', 'key2': 'value2'}
 	#r = requests.get('https://httpbin.org/get', params=payload)
 
-	
-	#webbrowser.open('http://www.banq.qc.ca/techno/recherche/rms.html', params=la_search)
-	#response = requests.get('http://www.banq.qc.ca/techno/recherche/rms.html', params=la_search)
-	#response.raise_for_status()
-	
-
-
-
-	
 	list_of_dic_of_medias = post_process(response.text)
 
 	print(list_of_dic_of_medias)
