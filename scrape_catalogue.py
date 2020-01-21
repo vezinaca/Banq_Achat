@@ -89,7 +89,7 @@ if __name__ == "__main__":
 	#webbrowser.open(url)
 	#webbrowser.open('http://www.banq.qc.ca/techno/recherche/rms.html?q=Frank%20Zappa')
 	webbrowser.open('http://www.banq.qc.ca/techno/recherche/rms.html?q=Frank Zappa')
-	response = get_response(param_search)
+	response = get_response(param_search)  
 	#print(response.text)
 	#time.sleep(5)
 
