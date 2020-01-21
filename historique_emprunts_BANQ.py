@@ -43,7 +43,7 @@ if __name__ == "__main__":
 
 	cnx = mysql.connector.connect(user='root', password='root', host='127.0.0.1', database='banq')
 	my_cursor = cnx.cursor()
-	delete_all_table_rows(my_cursor, "livre")
+	#delete_all_table_rows(my_cursor, "livre")
 
 	creds = getCredentials()
 	connect_to_site(browser, url, creds)

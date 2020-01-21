@@ -51,6 +51,7 @@ def connect_to_site(browser, url, creds):
 	connection_button = browser.find_element_by_name('_eventId_proceed')
 	connection_button.click()
 
+'''
 def is_html_element_present_click(browser, link_text, by_search):
 	delay = 3 # seconds
 	try:
@@ -59,6 +60,13 @@ def is_html_element_present_click(browser, link_text, by_search):
 	    link_verify.click()
 	except TimeoutException:
 		print ("Loading of " + link_text + "took too much time!")
+'''
+
+def is_html_element_present_click(browser, link_text, by_search):
+	delay = 3 # seconds
+	link_verify = WebDriverWait(browser, delay).until(EC.presence_of_element_located((by_search, link_text)))
+	print(link_text + " page is ready")
+	link_verify.click()
 
 #unused
 def scroll_to_bottom():
