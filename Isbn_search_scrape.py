@@ -18,3 +18,9 @@ class Isbn_search_scrape(object):
 
 	def __str__(self):
 		pass
+
+
+if __name__ == '__main__':
+	print('test isbn')
+
+	#https://isbnsearch.org/
