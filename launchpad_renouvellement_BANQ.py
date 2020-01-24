@@ -2,30 +2,71 @@
 
 from Utilitaires_BANQ import *
 
+try:
+	import launchpad_py as launchpad
+except ImportError:
+	try:
+		import launchpad
+	except ImportError:
+		sys.exit("error loading launchpad.py")
+
+
+lp = launchpad.Launchpad();
+lp.Open()
+
+def renew_book(renew_button):
+	renew_button.click()
+	infinite_scroll()
+	infinite_scroll()
+
+def get_all_status_books():
+	pass
+
+def illuminate_status_books(all_status_books):
+
+	#[0, 7]
+	#[16, 23]
+	#[32, 39]
+
+	all_cards_stacked = browser.find_elements_by_xpath("//div[starts-with(@class,'card_dzxwpk')]/div[starts-with(@class,'cardStacked_')]")
+
+	button_number = 0
+
+	for card in all_cards_stacked:
+		title = card.find_element_by_xpath("div[starts-with(@class,'cardContent_')]/div[1]/div[1]/div[1]/span[1]/div[1]/div[1]/span[1]")		
+		borrowing_date = card.find_element_by_xpath("div[starts-with(@class,'cardContent_')]/div[2]/div[starts-with(@class,'listContent_')]/div[starts-with(@class,'cardContent_')]/div[1]/div[1]/div[1]/div[1]")				
+		due_date = card.find_element_by_xpath("div[starts-with(@class,'cardContent_')]/div[2]/div[starts-with(@class,'listContent_')]/div[starts-with(@class,'cardContent_')]/div[1]/div[2]/div[1]/div[1]")				
+		renew_button = card.find_element_by_xpath("div[2]/div[starts-with(@class,'cardActions_')]/button[1]")		
+
+		if(renew_button.text == "RENEW"):
+			due_date_object = datetime.strptime(due_date.text, '%m/%d/%Y')
+			difference_date = (due_date_object - today).days
+			if(difference_date < 100):
+				lp.LedCtrlRaw(0, 0, 3)
+				
+				
+
+
+				#infinite_scroll()
+				#infinite_scroll()
+				#break
+
+
+
 def renouvellement_livre():
 
 	print("dans renouvellement_livre")
-	
-	#all_cards_stacked = browser.find_elements_by_xpath("//div[starts-with(@class,'card_dzxwpk')]")
+		
 	all_cards_stacked = browser.find_elements_by_xpath("//div[starts-with(@class,'card_dzxwpk')]/div[starts-with(@class,'cardStacked_')]")
 	
 	for card in all_cards_stacked:
-		
-		#title = card.find_element_by_xpath("div[@class='cardStacked_n7d4vb']/div[@class='cardContent_p5m42o']/div[1]/div[1]/div[1]/span[1]/div[1]/div[1]/span[1]")
+				
 		title = card.find_element_by_xpath("div[starts-with(@class,'cardContent_')]/div[1]/div[1]/div[1]/span[1]/div[1]/div[1]/span[1]")		
 		
-		#borrowing_date = card.find_element_by_xpath("div[@class='cardStacked_n7d4vb']/div[@class='cardContent_p5m42o']/div[2]/div[@class='listContent_1nnce6d']/div[@class='cardContent_p5m42o']/div[1]/div[1]/div[1]/div[1]")
-		#borrowing_date = card.find_element_by_xpath("div[starts-with(@class,'cardContent_')]/div[2]/div[@class='listContent_1nnce6d']/div[@class='cardContent_p5m42o']/div[1]/div[1]/div[1]/div[1]")		
 		borrowing_date = card.find_element_by_xpath("div[starts-with(@class,'cardContent_')]/div[2]/div[starts-with(@class,'listContent_')]/div[starts-with(@class,'cardContent_')]/div[1]/div[1]/div[1]/div[1]")				
 		
-		#due_date = card.find_element_by_xpath("div[@class='cardStacked_n7d4vb']/div[@class='cardContent_p5m42o']/div[2]/div[@class='listContent_1nnce6d']/div[@class='cardContent_p5m42o']/div[1]/div[2]/div[1]/div[1]")
-		#due_date = card.find_element_by_xpath("div[starts-with(@class,'cardContent_')]/div[2]/div[@class='listContent_1nnce6d']/div[@class='cardContent_p5m42o']/div[1]/div[2]/div[1]/div[1]")		
 		due_date = card.find_element_by_xpath("div[starts-with(@class,'cardContent_')]/div[2]/div[starts-with(@class,'listContent_')]/div[starts-with(@class,'cardContent_')]/div[1]/div[2]/div[1]/div[1]")				
 		
-		#renew_button_text = card.find_element_by_xpath("div[@class='cardStacked_n7d4vb']/div[2]/div[@class='cardActions_1423utz']/button[1]/div[1]/span[1]")				
-
-		#renew_button = card.find_element_by_xpath("div[@class='cardStacked_n7d4vb']/div[2]/div[@class='cardActions_1423utz']/button[1]")				
-		#renew_button = card.find_element_by_xpath("div[2]/div[@class='cardActions_1423utz']/button[1]")		
 		renew_button = card.find_element_by_xpath("div[2]/div[starts-with(@class,'cardActions_')]/button[1]")		
 
 		if(renew_button.text == "RENEW"):
@@ -48,7 +89,29 @@ def renouvellement_livre():
 				
 		
 if __name__ == "__main__":
+
+	mode = "Mk1"
+	# create an instance
 	
+	# Clear the buffer because the Launchpad remembers everything :-)
+	lp.ButtonFlush()
+
+	lp.LedAllOn()
+
+	lp.Reset()
+
+	but = lp.ButtonStateRaw()
+
+	lp.LedCtrlRaw(22, 3, 3)
+	lp.LedCtrlRaw(0, 3, 0)
+	lp.LedCtrlXY(3,3,0,3)
+
+	lp.ButtonFlush()
+
+	lp.LedAllOn()
+
+	lp.Reset()
+		
 	creds = getCredentials()
 
 	today = datetime.now()
@@ -75,9 +138,6 @@ if __name__ == "__main__":
 	for i in range(len(all_cards_stacked)):
 		renouvellement_livre()
 		
-
-	
-
 	'''
 			elif (renew_button.text == "NON-RENEWABLE"):
 			all_non_renewable_buttons_to_click.append(renew_button)

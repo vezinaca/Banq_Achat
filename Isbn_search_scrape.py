@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 
 from Utilitaires_BANQ import *
+#from recaptcha import RecaptchaClient
+
 
 import os.path
 import webbrowser
@@ -37,6 +39,9 @@ def post_process(html, css_selector_media):
 
 if __name__ == '__main__':
 
+	#recaptcha_client = RecaptchaClient('private key', 'public key')
+	#data-sitekey="6Le3hh8TAAAAAODFPWK6yDdyyYGeE1YF71ymniO2"
+
 	headers = {'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1'}
 
 	pre_url_search = "https://isbnsearch.org/search"
@@ -45,8 +50,8 @@ if __name__ == '__main__':
 
 	response = get_response(param_search, headers)
 	
-	all_books = post_process(response.text, "body > div > div")
-	
+	#all_books = post_process(response.text, "body > div > div")
+	all_books = post_process(response.text, ".bookinfo p")
 	print (type(all_books))
 	print(all_books)
 
