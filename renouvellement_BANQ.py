@@ -35,16 +35,17 @@ def renouvellement_livre():
 			#print(str(difference_date))
 			#print(difference_date < 16)
 			if(difference_date < 100):
-				if "fury" in title.text or "free" in title.text:
-					if "fury" in title.text:
-						print('renew fury')
-					if "free" in title.text:
-						print('renew free')
-						
-					#renew_button.click()
-					infinite_scroll()
-					infinite_scroll()
-					break
+				#if "fury" in title.text or "free" in title.text:
+				#	if "fury" in title.text:
+				#		print('renew fury')
+				#	if "free" in title.text:
+				#		print('renew free')
+				
+				print("renew: " + str(title.text))		
+				#renew_button.click()
+				infinite_scroll()
+				infinite_scroll()
+				break
 				
 		
 if __name__ == "__main__":
