@@ -78,11 +78,12 @@ if __name__ == '__main__':
 	soup = bs4.BeautifulSoup(open("isbnsearch_dungeon-dragon-art.html"), 'html.parser')
 	my_books = soup.select(".bookinfo")
 
-
+	print(my_books[0].select('h2 a'))
 	#all_books = post_process(open("isbnsearch_dungeon-dragon-art.html"), ".bookinfo")
 
-	for book in my_books:
-		another_soup = bs4.BeautifulSoup(book, 'html.parser')
+	#for book in my_books:
+	#	print(book.select('h2 a'))
+		#another_soup = bs4.BeautifulSoup(book, 'html.parser')
 		#h2 = another_soup.select("h2")
 		#print(book)
 		
