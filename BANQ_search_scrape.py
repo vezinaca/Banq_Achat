@@ -16,7 +16,7 @@ html_file_name = 'catalogue.html'
 webbrowser_pre_url_search = 'http://www.banq.qc.ca/techno/recherche/rms.html?q='
 pre_url_search = 'http://www.banq.qc.ca/techno/recherche/rms.html'
 pre_media_url = 'https://cap.banq.qc.ca'
-css_selector_media = '#RMS_afficherIris .ValorisationListeDesc a'
+#css_selector_media = '#RMS_afficherIris .ValorisationListeDesc a'
 
 #Currently not used
 def create_local_html_file(html_file_name, response):
@@ -47,17 +47,29 @@ def remove_non_media_links(list_links):
 		
 	return only_media_list_of_dic
 
-def post_process(html):
+def post_process(html, selector):
 
 	soup = bs4.BeautifulSoup(html, 'html.parser')
-	my_links = soup.select(css_selector_media)
-	return(remove_non_media_links(my_links))
-
+	my_links = soup.select(selector)
+	return my_links
+	
 def urlify(in_string):
     return "%20".join(in_string.split())
 
+def print_dictionnary(dic):
+	for media in dic:
+		#python2
+		#for k, v in d.iteritems():
+		#	print k, v
+		for k, v in media.items():
+			print(k, v)
+		print('\n')
+
 if __name__ == "__main__":
 
+	browser.quit()
+
+	css_selector_media = '#RMS_afficherIris .ValorisationListeDesc a'
 
 	isbn_search_scrape = Isbn_search_scrape()
 
@@ -86,41 +98,49 @@ if __name__ == "__main__":
 
 	#webbrowser.open('http://www.banq.qc.ca/techno/recherche/rms.html?q=Frank%20Zappa')
 	#webbrowser.open('http://www.banq.qc.ca/techno/recherche/rms.html?q=Frank Zappa')
-	response = get_response(param_search)  
-	#print(response.text)
+	response = get_response(param_search)
+	print ("#################################################")  
+	print(response.text)
+	print ("#################################################")
 	#time.sleep(5)
 
 	#httpbin.org/get?key=val
 	#payload = {'key1': 'value1', 'key2': 'value2'}
 	#r = requests.get('https://httpbin.org/get', params=payload)
 
-	list_of_dic_of_medias = post_process(response.text)
+	#my_links = post_process(response.text, css_selector_media)
+	#list_of_dic_of_medias = remove_non_media_links(my_links)
+	my_links = post_process(response.text, 'div')
+	print(type(my_links))
+	#img_links = post_process(my_links, 'img')
+	
 
-	print(list_of_dic_of_medias)
+	#print(list_of_dic_of_medias)
+	print("------------------------------------")
+	print(my_links)
+	print("------------------------------------")
 
+	'''
+	print("------------------------------------")
+	print(img_links)
+	print("------------------------------------")
+	'''
+
+	print(type(my_links))
+
+
+
+
+	#print_dictionnary(my_links)
+
+
+	'''
 	for media in list_of_dic_of_medias:
 		#python2
 		#for k, v in d.iteritems():
 		#	print k, v
 		for k, v in media.items():
 			print(k, v)
-		print('\n')
-
-	browser.quit()
+		print('\n')	
+	'''
 	
-	
-	#is_html_element_present_click(browser, "Forms", By.LINK_TEXT)
-
-	#<a href="/formulaires/index.html">Formulaires</a>
-	#verify_presence_by_link_text_click(browser, "Formulaires")
-	#<a href="/formulaires/suggestions_achat/index.html">» Suggestions d'achat</a>
-
-	#time.sleep(5)
-
-	#<a href="/formulaires/suggestions_achat/index.html">» Purchase suggestion</a>
-	#is_html_element_present_click(browser, " Purchase suggestion", By.LINK_TEXT)
-	#is_html_element_present_click(browser, "//*[contains(text(), '» Purchase suggestion')", By.LINK_TEXT)
-	
-	#is_html_element_present_click(browser, " Purchase suggestion", By.LINK_TEXT)
-
-	#verify_presence_by_link_text_click(browser, " Suggestions d'achat")
