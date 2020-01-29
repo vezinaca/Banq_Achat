@@ -17,7 +17,7 @@ if __name__ == '__main__':
 	time.sleep(5)
 
 	title = browser.find_element_by_id('P5_TITRE')
-	#title.send_keys("He-Man and the Masters of the Universe Omnibus")
+	title.send_keys("He-Man and the Masters of the Universe Omnibus")
 
 	# select by visible text
 	#select.select_by_visible_text('Banana')
@@ -41,7 +41,7 @@ if __name__ == '__main__':
 	#<input class="Bouton ButSubmit" value="Envoyer" type="submit">
 	
 	submit_button = browser.find_element_by_class_name('ButSubmit')
-	submit_button.click()
+	#submit_button.click()
 
 	'''
 	<textarea name="p_t03" rows="2" cols="45" id="P5_TITRE" class="banq_formFieldLarge"></textarea>

@@ -3,10 +3,6 @@
 from Utilitaires_BANQ import *
 #from recaptcha import RecaptchaClient
 
-#from lxml import html
-from lxml import etree
-
-
 import os.path
 import webbrowser
 import requests
@@ -78,10 +74,25 @@ if __name__ == '__main__':
 	soup = bs4.BeautifulSoup(open("isbnsearch_dungeon-dragon-art.html"), 'html.parser')
 	my_books = soup.select(".bookinfo")
 
-	print(my_books[0].select('h2 a'))
+	#print(my_books[0].select('h2 a'))
 	#all_books = post_process(open("isbnsearch_dungeon-dragon-art.html"), ".bookinfo")
 
-	#for book in my_books:
+	for book in my_books:
+		#titre = book.select('h2 a').getText()
+		titre = book.find('a').getText()
+		all_p = book.find_all('p')
+		#my_string.split()[:4] # first 4 words
+		#search_text = ''.join(sys.argv[1:])
+		#s2 = ' '.join(s.split()[1:])
+		author = ' '.join(all_p[0].getText().split()[1:])
+		isbn_13 =all_p[1].getText()
+		isbn_10 =all_p[2].getText()
+		print(titre)
+		print(author)
+		print(isbn_10)
+		print(isbn_13)
+		print ("===")
+
 	#	print(book.select('h2 a'))
 		#another_soup = bs4.BeautifulSoup(book, 'html.parser')
 		#h2 = another_soup.select("h2")
