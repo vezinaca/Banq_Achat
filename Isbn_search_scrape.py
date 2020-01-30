@@ -12,15 +12,9 @@ import bs4
 class Isbn_search_scrape(object):
 
 	def __init__(self):
-		self.test = 3
+		self.response = None
 		self.list_of_dic_books = []
 		
-	def getTest(self):
-		return self.test
-
-	def __str__(self):
-		pass
-
 	def get_response(self, parametres, headers):
 		res = requests.get(pre_url_search, params=parametres, headers=headers)
 		res.raise_for_status()
@@ -41,14 +35,15 @@ class Isbn_search_scrape(object):
 		my_links = soup.select(css_selector_media)
 		return my_links
 
-	def print_dictionnary(self, dic):
-		for media in dic:
+	def print_dictionnary(self):
+		for media in self.list_of_dic_books:
 			#python2
 			#for k, v in d.iteritems():
 			#	print k, v
 			for k, v in media.items():
 				print(k, v)
 			print('\n')
+
 
 if __name__ == '__main__':
 
@@ -81,16 +76,17 @@ if __name__ == '__main__':
 		recherche_isbn13 = ' '.join(all_p[1].getText().split()[1:])
 		isbn_13 =all_p[1].getText()
 		isbn_10 =all_p[2].getText()
+		'''
 		print(titre)
 		print(auteur)
 		print("recherche " + recherche_isbn13)
 		print(isbn_10)
 		print(isbn_13)
 		print ("===")
-
+		'''
 		isbn_search_scrape.list_of_dic_books.append({'Titre':titre, 'Auteur': auteur, 'Recherche': recherche_isbn13, 'isbn_13': isbn_13, 'isbn_10': isbn_10})
 
-	isbn_search_scrape.print_dictionnary(isbn_search_scrape.list_of_dic_books)
+	isbn_search_scrape.print_dictionnary()
 
 	
 
