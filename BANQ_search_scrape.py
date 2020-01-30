@@ -67,80 +67,55 @@ def print_dictionnary(dic):
 
 if __name__ == "__main__":
 
-	browser.quit()
+	#browser.quit()
+
+	#webbrowser_pre_url_search = 'http://www.banq.qc.ca/techno/recherche/rms.html?q='
+	#pre_url_search = 'http://www.banq.qc.ca/techno/recherche/rms.html'
+
+	if DEBUG == True:
+		#search_text = 'Frank Zappa'
+		
+		#zappa gear
+		search_text = '9781540012029'
+		
+		#hole 33 1/3
+		#search_text = '9781623563776'
+	else:
+		assert len(sys.argv) > 1, "Missing arguments."
+		#if len(sys.argv) > 1:
+		search_text = ''.join(sys.argv[1:])
+
 
 	css_selector_media = '#RMS_afficherIris .ValorisationListeDesc a'
 
 	isbn_search_scrape = Isbn_search_scrape()
 
 	print(isbn_search_scrape.getTest())
-	#creds = getCredentials()
+	
+	creds = getCredentials()
 
-	#connect_to_site(browser, url, creds)
+	url = webbrowser_pre_url_search + search_text
 
-	if DEBUG == True:
-		search_text = 'Frank Zappa'
-		#search_text = 'Zappa'
-	else:
-		assert len(sys.argv) > 1, "Missing arguments."
-		#if len(sys.argv) > 1:
-		search_text = ''.join(sys.argv[1:])
-
+	time.sleep(4)
+	connect_to_site(browser, url, creds)
+	
 	param_search = {'q': search_text}
 	print("search_text: " + search_text)
 	#search_text_url = urlify(search_text)
-	url = webbrowser_pre_url_search + search_text
+	#url = webbrowser_pre_url_search + search_text
 
-	#print (url)
-	
 	#uncomment the following line if you want to compare search results in browser
 	#webbrowser.open(url)
 
 	#webbrowser.open('http://www.banq.qc.ca/techno/recherche/rms.html?q=Frank%20Zappa')
 	#webbrowser.open('http://www.banq.qc.ca/techno/recherche/rms.html?q=Frank Zappa')
+	
 	response = get_response(param_search)
-	print ("#################################################")  
-	print(response.text)
-	print ("#################################################")
-	#time.sleep(5)
-
-	#httpbin.org/get?key=val
-	#payload = {'key1': 'value1', 'key2': 'value2'}
-	#r = requests.get('https://httpbin.org/get', params=payload)
-
-	#my_links = post_process(response.text, css_selector_media)
-	#list_of_dic_of_medias = remove_non_media_links(my_links)
-	my_links = post_process(response.text, 'div')
-	print(type(my_links))
-	#img_links = post_process(my_links, 'img')
 	
+	my_links = post_process(response.text, css_selector_media)
+	list_of_dic_of_medias = remove_non_media_links(my_links)
 
-	#print(list_of_dic_of_medias)
-	print("------------------------------------")
-	print(my_links)
-	print("------------------------------------")
-
-	'''
-	print("------------------------------------")
-	print(img_links)
-	print("------------------------------------")
-	'''
-
-	print(type(my_links))
-
-
-
-
-	#print_dictionnary(my_links)
-
-
-	'''
-	for media in list_of_dic_of_medias:
-		#python2
-		#for k, v in d.iteritems():
-		#	print k, v
-		for k, v in media.items():
-			print(k, v)
-		print('\n')	
-	'''
-	
+	if len(list_of_dic_of_medias) == 0:
+		print("dict is Empty")
+	else:
+		print_dictionnary(list_of_dic_of_medias)

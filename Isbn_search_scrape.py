@@ -13,6 +13,7 @@ class Isbn_search_scrape(object):
 
 	def __init__(self):
 		self.test = 3
+		self.list_of_dic_books = []
 		
 	def getTest(self):
 		return self.test
@@ -20,39 +21,38 @@ class Isbn_search_scrape(object):
 	def __str__(self):
 		pass
 
-def get_response(parametres, headers):
-	res = requests.get(pre_url_search, params=parametres, headers=headers)
-	res.raise_for_status()
-	return res
+	def get_response(self, parametres, headers):
+		res = requests.get(pre_url_search, params=parametres, headers=headers)
+		res.raise_for_status()
+		return res
 
-def create_local_html_file(html_file_name, response):
-	
-	if not os.path.isfile(html_file_name):
-		html_file = open(html_file_name, 'wb')
-		for chunk in response.iter_content(100000):
-			html_file.write(chunk)
+	def create_local_html_file(self, html_file_name, response):
+		
+		if not os.path.isfile(html_file_name):
+			html_file = open(html_file_name, 'wb')
+			for chunk in response.iter_content(100000):
+				html_file.write(chunk)
 
-		html_file.close()
+			html_file.close()
 
-def post_process(html, css_selector_media):
+	def post_process(self, html, css_selector_media):
 
-	soup = bs4.BeautifulSoup(html, 'html.parser')
-	my_links = soup.select(css_selector_media)
-	return my_links
+		soup = bs4.BeautifulSoup(html, 'html.parser')
+		my_links = soup.select(css_selector_media)
+		return my_links
 
-def print_dictionnary(dic):
-	for media in dic:
-		#python2
-		#for k, v in d.iteritems():
-		#	print k, v
-		for k, v in media.items():
-			print(k, v)
-		print('\n')
+	def print_dictionnary(self, dic):
+		for media in dic:
+			#python2
+			#for k, v in d.iteritems():
+			#	print k, v
+			for k, v in media.items():
+				print(k, v)
+			print('\n')
 
 if __name__ == '__main__':
 
-	#recaptcha_client = RecaptchaClient('private key', 'public key')
-	#data-sitekey="6Le3hh8TAAAAAODFPWK6yDdyyYGeE1YF71ymniO2"
+	isbn_search_scrape = Isbn_search_scrape()
 
 	# from beautifulSoupPdf.py
 	#USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36'
@@ -71,22 +71,12 @@ if __name__ == '__main__':
 
 	#create_local_html_file("isbnsearch_dungeon-dragon-art.html", response)
 	
-	#titre, auteur, isbn
-
-	soup = bs4.BeautifulSoup(open("isbnsearch_dungeon-dragon-art.html"), 'html.parser')
-	my_books = soup.select(".bookinfo")
-
-	list_of_dic_books = []
-	#print(my_books[0].select('h2 a'))
-	#all_books = post_process(open("isbnsearch_dungeon-dragon-art.html"), ".bookinfo")
+	#list_of_dic_books = []
+	my_books = isbn_search_scrape.post_process(open("isbnsearch_dungeon-dragon-art.html"), ".bookinfo")
 
 	for book in my_books:
-		#titre = book.select('h2 a').getText()
 		titre = book.find('a').getText()
 		all_p = book.find_all('p')
-		#my_string.split()[:4] # first 4 words
-		#search_text = ''.join(sys.argv[1:])
-		#s2 = ' '.join(s.split()[1:])
 		auteur = ' '.join(all_p[0].getText().split()[1:])
 		recherche_isbn13 = ' '.join(all_p[1].getText().split()[1:])
 		isbn_13 =all_p[1].getText()
@@ -98,9 +88,9 @@ if __name__ == '__main__':
 		print(isbn_13)
 		print ("===")
 
-		list_of_dic_books.append({'Titre':titre, 'Auteur': auteur, 'Recherche': recherche_isbn13, 'isbn_13': isbn_13, 'isbn_10': isbn_10})
+		isbn_search_scrape.list_of_dic_books.append({'Titre':titre, 'Auteur': auteur, 'Recherche': recherche_isbn13, 'isbn_13': isbn_13, 'isbn_10': isbn_10})
 
-	print_dictionnary(list_of_dic_books)
+	isbn_search_scrape.print_dictionnary(isbn_search_scrape.list_of_dic_books)
 
 	
 
