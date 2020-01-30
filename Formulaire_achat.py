@@ -19,6 +19,9 @@ if __name__ == '__main__':
 	title = browser.find_element_by_id('P5_TITRE')
 	title.send_keys("He-Man and the Masters of the Universe Omnibus")
 
+	auteur = browser.find_element_by_id('P5_AUTEUR')
+	auteur.send_keys("")
+
 	# select by visible text
 	#select.select_by_visible_text('Banana')
 	select_support = Select(browser.find_element_by_id('P5_SUPPORT'))

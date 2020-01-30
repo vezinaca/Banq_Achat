@@ -34,18 +34,20 @@ def create_local_html_file(html_file_name, response):
 
 		html_file.close()
 
-
-'''
-def get_response(parametres):
-	res = requests.get(pre_url_search, params=parametres)
-	res.raise_for_status()
-	return res
-'''
 def post_process(html, css_selector_media):
 
 	soup = bs4.BeautifulSoup(html, 'html.parser')
 	my_links = soup.select(css_selector_media)
 	return my_links
+
+def print_dictionnary(dic):
+	for media in dic:
+		#python2
+		#for k, v in d.iteritems():
+		#	print k, v
+		for k, v in media.items():
+			print(k, v)
+		print('\n')
 
 if __name__ == '__main__':
 
@@ -74,6 +76,7 @@ if __name__ == '__main__':
 	soup = bs4.BeautifulSoup(open("isbnsearch_dungeon-dragon-art.html"), 'html.parser')
 	my_books = soup.select(".bookinfo")
 
+	list_of_dic_books = []
 	#print(my_books[0].select('h2 a'))
 	#all_books = post_process(open("isbnsearch_dungeon-dragon-art.html"), ".bookinfo")
 
@@ -84,42 +87,22 @@ if __name__ == '__main__':
 		#my_string.split()[:4] # first 4 words
 		#search_text = ''.join(sys.argv[1:])
 		#s2 = ' '.join(s.split()[1:])
-		author = ' '.join(all_p[0].getText().split()[1:])
+		auteur = ' '.join(all_p[0].getText().split()[1:])
+		recherche_isbn13 = ' '.join(all_p[1].getText().split()[1:])
 		isbn_13 =all_p[1].getText()
 		isbn_10 =all_p[2].getText()
 		print(titre)
-		print(author)
+		print(auteur)
+		print("recherche " + recherche_isbn13)
 		print(isbn_10)
 		print(isbn_13)
 		print ("===")
 
-	#	print(book.select('h2 a'))
-		#another_soup = bs4.BeautifulSoup(book, 'html.parser')
-		#h2 = another_soup.select("h2")
-		#print(book)
-		
-		#print("===")
-		#url =  "http://www.example.com/servlet/av/ResultTemplate=AVResult.html"
-		#response = urlopen(url)
-		#htmlparser = etree.HTMLParser()
-		#tree = etree.parse(open("isbnsearch_dungeon-dragon-art.html"), htmlparser)
-		#print(tree.xpath("p[1]"))
-		#print(book.get_text())
-		#title = book.find_element_by_xpath("h2")
-		#page = requests.get('http://econpy.pythonanywhere.com/ex/001.html')
-		
-		#tree = html.fromstring(book.content)
-		#This will create a list of buyers:
-		#h2 = tree.xpath('h2')
-		
-		#print('H2: ', h2)
-		
-		#book.p
+		list_of_dic_books.append({'Titre':titre, 'Auteur': auteur, 'Recherche': recherche_isbn13, 'isbn_13': isbn_13, 'isbn_10': isbn_10})
 
-	#print (type(all_books))
+	print_dictionnary(list_of_dic_books)
 
-	#print(all_books[0].get('.bookinfo h2'))
-	#print(all_books[0].attrs)
+	
 
 
 
