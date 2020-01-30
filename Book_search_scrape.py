@@ -23,10 +23,17 @@ class Book_search_scrape(object):
 		self.css_selector_media = css_selector_media
 		
 		
-	def set_response(self, headers):
+	def set_response(self, headers = {'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1'}):
 		self.response = requests.get(self.pre_url_search, params=self.param_search_dic, headers=headers)
 		self.response.raise_for_status()
 		#return res
+
+	
+	def set_response(self, url, headers = {'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1'}):
+		self.response = requests.get(url)
+		self.response.raise_for_status()
+		#return res
+	
 
 	def create_local_html_file(self, html_file_name, response):
 		
