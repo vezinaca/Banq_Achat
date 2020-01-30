@@ -23,7 +23,7 @@ def write_file(data, filename):
         file.write(data)
 
 def insert_into_db(cnx, mycursor, valeurs):
-	sql = "INSERT INTO livre (title, author, type_document, borrowing_date, due_date, image_name, img) VALUES (%s, %s, %s, %s, %s, %s, %s)"
+	sql = "INSERT INTO book (title, author, type_document, borrowing_date, due_date, image_name, img) VALUES (%s, %s, %s, %s, %s, %s, %s)"
 	mycursor.execute(sql, valeurs)
 	cnx.commit()
 	print(mycursor.rowcount, "record inserted.")
