@@ -90,7 +90,15 @@ if __name__ == '__main__':
 
 	book_search_scrape_banq.print_dictionnary()
 
-	
+	# if dic of banq is empty then remplir formulaire
+	# insert infos in database personnal (that will eventually be online)
+	# add program to veryfiy 4 times a week if book was found.
+	# if book is found reserve it.  say something about bientot disponible.
+
+	# s'inscrire a mon site pour gerer vos suggestions d'achats..
+	#gerer les suggestions d'achats des gens...vous devez etre connecter dans une autre fenetre pour éviter la vie privée.  
+
+
 
 
 
