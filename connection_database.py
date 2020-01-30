@@ -32,29 +32,28 @@ cnx.commit()
 print(mycursor.rowcount, "record inserted.")
 
 '''
-#mycursor.execute("SELECT * FROM livre WHERE type_document='Music CDs'")
+#mycursor.execute("SELECT * FROM commande WHERE id=7")
 
-mycursor.execute("SELECT * FROM livre WHERE id=7")
+#mycursor.execute("SELECT * FROM livre WHERE id=7")
 
 
 #myresult = mycursor.fetchall()
 #exit()
-myresult = mycursor.fetchone()
+#myresult = mycursor.fetchone()
 
 #exit()
 
 #for x in myresult:
-#  print(x)
-
+#    print(x)
+#exit()
 
 #https://stackoverflow.com/questions/52759667/properly-getting-blobs-from-mysql-database-with-mysql-connector-in-python/52992413
-
 #sql_fetch_blob_query = """SELECT photo from python_employee where id = %s"""
 
 
 
 #sql_fetch_blob_query = """SELECT img from livre where id = %s"""
-sql_fetch_blob_query = """SELECT img from livre where id=7"""
+sql_fetch_blob_query = """SELECT img from commande where id=7"""
 
 
 print('blah')
@@ -62,6 +61,8 @@ mycursor.execute(sql_fetch_blob_query)
 print('blah22222')
 record = mycursor.fetchone()
 write_file(record[0], "blahhhh222.jpg")
+exit()
+
 #for row in record:
  #   print(row)
     #write_file(row[0], "blahhhh222.jpg")
