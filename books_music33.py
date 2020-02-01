@@ -25,6 +25,9 @@ if __name__ == '__main__':
 	my_search_results_33 = book_search_scrape_33.post_process(open("333sound.html"))
 	my_path = 'images/33sound'
 
+	nb_titre = 0
+	nb_id = 0
+	nb_auteur = 0
 
 	for search_result in my_search_results_33:
 		#print('in search results')
@@ -40,7 +43,9 @@ if __name__ == '__main__':
 		le_html = str(all_td[1])
 		#print("html: " + le_html)
 		my_id = re.search('<td>(.*)\. ', le_html)
-		titre = re.search('\. (.*)</i>', le_html)
+		#my_id = re.search('<td>(.*)<i>', le_html)
+		#titre = re.search('\. (.*)</i>', le_html)
+		titre = re.search('\.(.*)</i>', le_html)
 		if titre != None:
 			titre_sans_tag = replaceMultiple(titre.group(1), ["<i>"], "")
 
@@ -52,17 +57,22 @@ if __name__ == '__main__':
 			#print("id:_" + my_id.group(1))
 			this_id = re.sub("[^0-9]", "", my_id.group(1))
 			print("id:_" + this_id)
+			nb_id = nb_id + 1
 		if titre != None:
 			#print("titre:_" + titre.group(1))
 			print("titre:_" + titre_sans_tag)
+			nb_titre = nb_titre + 1
 		if auteur != None:
 			print("auteur:_" + auteur.group(1))
+			nb_auteur = nb_auteur + 1
 		
 		#titre = re.search('asdf=5;(.*)123jasd', le_html)
 		#s = 'asdf=5;iwantthis123jasd'
 		#result = re.search('asdf=5;(.*)123jasd', s)
 		#print(result.group(1))
-		#print(str(le_html))
+
+		print(str(le_html))
+		print("======")
 		#exit()
 
 		#auteur = all_td[1]
@@ -95,3 +105,7 @@ if __name__ == '__main__':
 	#cnx.close()
 	
 	#book_search_scrape_isbn.print_dictionnary()
+
+	print("nb_id: " + str(nb_id))
+	print("nb_titre: " + str(nb_titre))
+	print("nb_auteur: " + str(nb_auteur))
