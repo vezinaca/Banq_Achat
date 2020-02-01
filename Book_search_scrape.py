@@ -28,12 +28,12 @@ class Book_search_scrape(object):
 		self.response.raise_for_status()
 		#return res
 
-	
+	'''
 	def set_response(self, url, headers = {'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1'}):
 		self.response = requests.get(url)
 		self.response.raise_for_status()
 		#return res
-	
+	'''
 
 	def create_local_html_file(self, html_file_name, response):
 		
@@ -107,14 +107,14 @@ if __name__ == '__main__':
 	
 	cnx = mysql.connector.connect(user='root', password='root', host='127.0.0.1', database='banq')
 	my_cursor = cnx.cursor()
-	book_search_scrape_isbn.delete_all_table_rows(my_cursor, "orders")
+	#book_search_scrape_isbn.delete_all_table_rows(my_cursor, "orders")
 
 
 	headers = {'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1'}
 
-	#book_search_scrape_isbn.set_response(headers)
+	book_search_scrape_isbn.set_response(headers)
 
-	#book_search_scrape_isbn.create_local_html_file("hawking.html", book_search_scrape_isbn.response)
+	book_search_scrape_isbn.create_local_html_file("tmbg_flood.html", book_search_scrape_isbn.response)
 	
 	#my_books_isbn = book_search_scrape_isbn.post_process(open("isbnsearch_kerouac.html"))
 
@@ -135,60 +135,65 @@ if __name__ == '__main__':
 
 	#my_search_results_isbn = book_search_scrape_isbn.post_process(open("isbnsearch_kerouac2.html"))
 	#my_search_results_isbn = book_search_scrape_isbn.post_process(book_search_scrape_isbn.response.text)
-	my_search_results_isbn = book_search_scrape_isbn.post_process(open("isbnsearch_hole.html"))
+	my_search_results_isbn = book_search_scrape_isbn.post_process(open(search_text + ".html"))
 	my_path = 'images/commandes'
 
-	for search_result in my_search_results_isbn:
-		'''
 
-		print(search_result)
-		bookinfo = search_result.find('.image')
-		bookinfo = search_result.select('.image')
-		print("blah " + str(bookinfo))
-		'''
-		'''
-		titre = search_result.find('.bookinfo > a').getText()
-		all_p = search_result.find_all('.bookinfo > p')
-		auteur = ' '.join(all_p[0].getText().split()[1:])
-		recherche_isbn13 = ' '.join(all_p[1].getText().split()[1:])
-		isbn_13 =all_p[1].getText()
-		isbn_10 =all_p[2].getText()
-		image_url = search_result.find('.image > img')
-		img_attribute = image_url['src']
-		fullfilename = os.path.join(my_path, book_search_scrape_isbn.replaceMultiple(titre, ['\\', '/', ' ', ','] , "_") + ".jpg")
-		'''
-		#title = search_result.find("h4", class_="h12 talk-link__speaker").text
-		#title = search_result.find(class_="bookinfo", "h2", "a").text
+	if (len(my_search_results_isbn) != 0):
+		for search_result in my_search_results_isbn:
+			'''
 
-		titre = search_result.select_one('.bookinfo > h2 > a').getText()
-		all_p = search_result.select('.bookinfo > p')
-		auteur = ' '.join(all_p[0].getText().split()[1:])
-		recherche_isbn13 = ' '.join(all_p[1].getText().split()[1:])
-		isbn_13 =all_p[1].getText()
-		isbn_10 =all_p[2].getText()
-		image_url = search_result.select_one('.image > a > img')
-		img_attribute = image_url['src']
-		fullfilename = os.path.join(my_path, book_search_scrape_isbn.replaceMultiple(titre, ['\\', '/', ' ', ','] , "_") + ".jpg")
-		
-		#print(title)
-		print(titre)
-		print(auteur)
-		print(recherche_isbn13)
-		print(img_attribute)
-		print(fullfilename)
-		
+			print(search_result)
+			bookinfo = search_result.find('.image')
+			bookinfo = search_result.select('.image')
+			print("blah " + str(bookinfo))
+			'''
+			'''
+			titre = search_result.find('.bookinfo > a').getText()
+			all_p = search_result.find_all('.bookinfo > p')
+			auteur = ' '.join(all_p[0].getText().split()[1:])
+			recherche_isbn13 = ' '.join(all_p[1].getText().split()[1:])
+			isbn_13 =all_p[1].getText()
+			isbn_10 =all_p[2].getText()
+			image_url = search_result.find('.image > img')
+			img_attribute = image_url['src']
+			fullfilename = os.path.join(my_path, book_search_scrape_isbn.replaceMultiple(titre, ['\\', '/', ' ', ','] , "_") + ".jpg")
+			'''
+			#title = search_result.find("h4", class_="h12 talk-link__speaker").text
+			#title = search_result.find(class_="bookinfo", "h2", "a").text
 
-		try:
-			urllib.request.urlretrieve(img_attribute, fullfilename)
-		except FileNotFoundError:
-			"can't find file"
-		photoBinaryData = book_search_scrape_isbn.convertToBinaryData(fullfilename)
+			titre = search_result.select_one('.bookinfo > h2 > a').getText()
+			all_p = search_result.select('.bookinfo > p')
+			auteur = ' '.join(all_p[0].getText().split()[1:])
+			recherche_isbn13 = ' '.join(all_p[1].getText().split()[1:])
+			isbn_13 =all_p[1].getText()
+			isbn_10 =all_p[2].getText()
+			image_url = search_result.select_one('.image > a > img')
+			img_attribute = image_url['src']
+			fullfilename = os.path.join(my_path, book_search_scrape_isbn.replaceMultiple(titre, ['\\', '/', ' ', ','] , "_") + ".jpg")
+			
+			#print(title)
+			print(titre)
+			print(auteur)
+			print(recherche_isbn13)
+			print(img_attribute)
+			print(fullfilename)
+			
 
-		book_search_scrape_isbn.list_of_dic_books.append({'Titre':titre, 'Auteur': auteur, 'Recherche': recherche_isbn13, 'isbn_13': isbn_13, 'isbn_10': isbn_10, 'fullfilename': fullfilename})
-		
-		val = [str(titre), str(auteur), str("Printed Books"), str(recherche_isbn13), str(fullfilename), photoBinaryData, datetime.now(), False, False, 0]
-		book_search_scrape_isbn.insert_into_db(cnx, my_cursor, val)	
+			try:
+				urllib.request.urlretrieve(img_attribute, fullfilename)
+			except FileNotFoundError:
+				"can't find file"
+			photoBinaryData = book_search_scrape_isbn.convertToBinaryData(fullfilename)
 
+			book_search_scrape_isbn.list_of_dic_books.append({'Titre':titre, 'Auteur': auteur, 'Recherche': recherche_isbn13, 'isbn_13': isbn_13, 'isbn_10': isbn_10, 'fullfilename': fullfilename})
+			
+			val = [str(titre), str(auteur), str("Printed Books"), str(recherche_isbn13), str(fullfilename), photoBinaryData, datetime.now(), False, False, 0]
+			book_search_scrape_isbn.insert_into_db(cnx, my_cursor, val)	
+
+	else:
+		print("No search results found, possible ISBN search site reCaptcha")
+		exit()
 	cnx.close()
 	
 	book_search_scrape_isbn.print_dictionnary()
