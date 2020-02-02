@@ -43,7 +43,11 @@ if __name__ == '__main__':
 		le_html = str(all_td[1])
 		#print("html: " + le_html)
 		my_id = re.search('<td>(.*)\. ', le_html)
-		#my_id = re.search('<td>(.*)<i>', le_html)
+		
+		substring = le_html[0:10]
+		my_id_85_from_sub = re.findall('[0-9]+', substring)
+		my_id = ' '.join(map(str, my_id_85_from_sub))
+
 		#titre = re.search('\. (.*)</i>', le_html)
 		titre = re.search('\.(.*)</i>', le_html)
 		if titre != None:
@@ -55,8 +59,8 @@ if __name__ == '__main__':
 		print('======')
 		if my_id !=None:
 			#print("id:_" + my_id.group(1))
-			this_id = re.sub("[^0-9]", "", my_id.group(1))
-			print("id:_" + this_id)
+			#this_id = re.sub("[^0-9]", "", my_id.group(1))
+			print("id:_" + my_id)
 			nb_id = nb_id + 1
 		if titre != None:
 			#print("titre:_" + titre.group(1))
