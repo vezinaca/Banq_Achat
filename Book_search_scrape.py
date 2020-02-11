@@ -262,6 +262,7 @@ if __name__ == '__main__':
 		print('The book ' + book_search_scrape_isbn.list_of_dic_books[0].get('Titre') + ' by ' + book_search_scrape_isbn.list_of_dic_books[0].get('Auteur') + ' was FOUND in the BANQ catalogue.')		
 		
 
+	# only got for first result in search results: line 143
 	# if dic of banq is empty then remplir formulaire
 	# insert infos in database personnal (that will eventually be online)
 	# add program to veryfiy 4 times a week if book was found.
