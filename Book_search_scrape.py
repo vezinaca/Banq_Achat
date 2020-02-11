@@ -134,8 +134,8 @@ if __name__ == '__main__':
 
 
 	#my_search_results_isbn = book_search_scrape_isbn.post_process(open("isbnsearch_kerouac2.html"))
-	#my_search_results_isbn = book_search_scrape_isbn.post_process(book_search_scrape_isbn.response.text)
-	my_search_results_isbn = book_search_scrape_isbn.post_process(open(search_text + ".html"))
+	my_search_results_isbn = book_search_scrape_isbn.post_process(book_search_scrape_isbn.response.text)
+	#my_search_results_isbn = book_search_scrape_isbn.post_process(open(search_text + ".html"))
 	my_path = 'images/commandes'
 
 

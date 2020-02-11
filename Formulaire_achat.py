@@ -35,7 +35,9 @@ if __name__ == '__main__':
 
 	commentaires = browser.find_element_by_id('P5_COMMENTAIRES')
 	commentaires.send_keys('https://www.amazon.ca/He-Man-Masters-Universe-Omnibus-Robinson/dp/1401290493/ref=sr_1_4?keywords=heman&qid=1579199340&s=books&sr=1-4')
-	
+	#isbn
+
+
 	'''
 	<div class="BlocBouton">
       <input class="Bouton ButSubmit" value="Envoyer" type="submit">

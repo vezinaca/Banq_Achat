@@ -30,7 +30,6 @@ if __name__ == '__main__':
 	'''
 	substring = str_html_not_working[0:10]
 	my_id_85 = re.findall('[0-9]+', substring)
-	#my_id_85 = re.findall('[0-9]+', str_html_not_working)
 	listToStr = ' '.join(map(str, my_id_85))
 	print(listToStr)  
 
