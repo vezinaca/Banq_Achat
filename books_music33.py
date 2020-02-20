@@ -11,7 +11,19 @@ def replaceMultiple(mainString, toBeReplaces, newString):
             # Replace the string
             mainString = mainString.replace(elem, newString)
     
-    return  mainString 
+    return  mainString
+
+def insert_into_db(cnx, mycursor, valeurs):
+	sql = "INSERT INTO thirtythreebooks (id, title, author) VALUES (%s, %s, %s)"
+	mycursor.execute(sql, valeurs)
+	cnx.commit()
+	print(mycursor.rowcount, "record inserted.")
+
+def delete_all_table_rows(cursor, table):
+	cursor.execute("TRUNCATE TABLE " + table)
+	cnx.commit()
+	print ("Table " + table + " Truncated: %d rows deleted" % cursor.rowcount)
+
 
 if __name__ == '__main__':
 	#main()
@@ -20,6 +32,11 @@ if __name__ == '__main__':
 	#print (book_search_scrape_33.pre_url_search)
 	#book_search_scrape_33.set_response(book_search_scrape_33.pre_url_search)
 
+	cnx = mysql.connector.connect(user='root', password='root', host='127.0.0.1', database='banq')
+	my_cursor = cnx.cursor()
+
+	delete_all_table_rows(my_cursor, 'thirtythreebooks')
+	#exit()
 
 	#book_search_scrape_33.create_local_html_file("333sound.html", book_search_scrape_33.response)
 	my_search_results_33 = book_search_scrape_33.post_process(open("333sound.html"))
@@ -33,8 +50,8 @@ if __name__ == '__main__':
 		#print('in search results')
 		
 		all_td = search_result.select('td')
-		img = search_result.select_one('td > figure > img')
-		print(img['src'])
+		#img = search_result.select_one('td > figure > img')
+		#print(img['src'])
 		#titre = search_result.select_one('.bookinfo > h2 > a').getText()
 		#auteur = ' '.join(all_td[1].getText().split()[1:])
 		#titre = all_td[1].select_one('i')
@@ -66,9 +83,13 @@ if __name__ == '__main__':
 		titre = re.search('\.(.*)</i>', le_html)
 		if titre != None:
 			titre_sans_tag = replaceMultiple(titre.group(1), ["<i>"], "")
+			
 
 
+		#Prince’s Sign “☮” the Times
 		auteur = re.search('<br/>by (.*)<br/>Buy', le_html)
+		print("type(auteur....): ")
+		print(type(auteur))
 		#titre = re.search('<td>(.*)\. ', le_html)
 		print('======')
 		if my_id !=None:
@@ -83,6 +104,20 @@ if __name__ == '__main__':
 		if auteur != None:
 			print("auteur:_" + auteur.group(1))
 			nb_auteur = nb_auteur + 1
+
+		#if (my_id == '10'):
+		#	titre_sans_tag = "Prince’s Sign the Times"
+		#titre_sans_tag = 'Prince’s Sign “☮” the Times'
+		titre_sans_tag_remove_symbol = titre_sans_tag.replace(u"\u262E", '_')
+		print(titre_sans_tag)
+
+		print("TITRE SANS TAG: " + titre_sans_tag)
+		if (auteur == None):
+			my_author = 'Skip author'
+		else:
+			my_author = str(auteur.group(1))
+		val = [str(my_id), str(titre_sans_tag_remove_symbol), my_author]
+		insert_into_db(cnx, my_cursor, val)
 		
 		#titre = re.search('asdf=5;(.*)123jasd', le_html)
 		#s = 'asdf=5;iwantthis123jasd'

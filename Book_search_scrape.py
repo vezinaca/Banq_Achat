@@ -95,47 +95,45 @@ class Book_search_scrape(object):
 
 if __name__ == '__main__':
 
-	#browser.quit()
+	browser.quit()
 	formulaire_link = "https://www.banq.qc.ca/formulaires/suggestions_achat/index.html"
-	assert len(sys.argv) > 1, "Missing arguments."
-	search_text = ' '.join(sys.argv[1:])
 
-	#book_search_scrape_isbn = Book_search_scrape("https://isbnsearch.org/search", 's', search_text, ".bookinfo")
-	book_search_scrape_isbn = Book_search_scrape("https://isbnsearch.org/search", 's', search_text, "#searchresults li")
-	# from beautifulSoupPdf.py
-	#USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36'
-	
+	#assert len(sys.argv) > 1, "Missing arguments."
+	#search_text = ' '.join(sys.argv[1:])
+
 	cnx = mysql.connector.connect(user='root', password='root', host='127.0.0.1', database='banq')
 	my_cursor = cnx.cursor()
-	#book_search_scrape_isbn.delete_all_table_rows(my_cursor, "orders")
 
-
+	ids_of_wanted_books = [6,9,10]
+	
+	if (len(sys.argv) > 1):
+		search_text = ' '.join(sys.argv[1:])
+	else:
+		format_strings = ','.join(['%s'] * len(ids_of_wanted_books))
+		my_cursor.execute("SELECT title, author FROM thirtythreebooks WHERE id IN (%s)" % format_strings, tuple(ids_of_wanted_books))
+		record = my_cursor.fetchall()
+		
+		for row in record:
+			search_text = str(row[0] + " " + str(row[1]))
+			print(search_text)
+			break
+		
+	print(search_text) 
+	exit()
+		
+	book_search_scrape_isbn = Book_search_scrape("https://isbnsearch.org/search", 's', search_text, "#searchresults li")
+	
+	
+	
 	headers = {'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1'}
 
 	book_search_scrape_isbn.set_response(headers)
 
-	book_search_scrape_isbn.create_local_html_file("tmbg_flood.html", book_search_scrape_isbn.response)
+	#book_search_scrape_isbn.create_local_html_file("tmbg_flood.html", book_search_scrape_isbn.response)
 	
-	#my_books_isbn = book_search_scrape_isbn.post_process(open("isbnsearch_kerouac.html"))
-
-	#my_books_isbn = book_search_scrape_isbn.post_process(open("isbnsearch_hole.html"))
 	
-	#<img src="https://images-na.ssl-images-amazon.com/images/I/410iKQv9qjL._SL160_.jpg" alt="Hole's Live Through This (33 1/3)">
-	'''
-	for book in my_books_isbn:
-		titre = book.find('a').getText()
-		all_p = book.find_all('p')
-		auteur = ' '.join(all_p[0].getText().split()[1:])
-		recherche_isbn13 = ' '.join(all_p[1].getText().split()[1:])
-		isbn_13 =all_p[1].getText()
-		isbn_10 =all_p[2].getText()
-		book_search_scrape_isbn.list_of_dic_books.append({'Titre':titre, 'Auteur': auteur, 'Recherche': recherche_isbn13, 'isbn_13': isbn_13, 'isbn_10': isbn_10})
-	'''
-
-
-	#my_search_results_isbn = book_search_scrape_isbn.post_process(open("isbnsearch_kerouac2.html"))
 	my_search_results_isbn = book_search_scrape_isbn.post_process(book_search_scrape_isbn.response.text)
-	#my_search_results_isbn = book_search_scrape_isbn.post_process(open(search_text + ".html"))
+	
 	my_path = 'images/commandes'
 
 
