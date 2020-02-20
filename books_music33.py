@@ -33,6 +33,8 @@ if __name__ == '__main__':
 		#print('in search results')
 		
 		all_td = search_result.select('td')
+		img = search_result.select_one('td > figure > img')
+		print(img['src'])
 		#titre = search_result.select_one('.bookinfo > h2 > a').getText()
 		#auteur = ' '.join(all_td[1].getText().split()[1:])
 		#titre = all_td[1].select_one('i')
@@ -41,12 +43,24 @@ if __name__ == '__main__':
 		#re.sub("[^0-9]", "", "sdkjh987978asd098as0980a98sd")
 
 		le_html = str(all_td[1])
+		#le_html_image = str(all_td[0])
 		#print("html: " + le_html)
-		my_id = re.search('<td>(.*)\. ', le_html)
-		
-		substring = le_html[0:10]
-		my_id_85_from_sub = re.findall('[0-9]+', substring)
-		my_id = ' '.join(map(str, my_id_85_from_sub))
+		#id_regex = re.compile(r'\d{3}')
+
+		regex_id = re.compile(r'\d+')
+		#mo = regex_id.search(le_html)
+		#print(mo.group())
+
+
+
+		#my_id = re.search('<td>(.*)\. ', le_html)
+		mo_id = regex_id.search(le_html)
+		if mo_id != None:
+			my_id = mo_id.group()
+
+		#substring = le_html[0:10]
+		#my_id_85_from_sub = re.findall('[0-9]+', substring)
+		#my_id = ' '.join(map(str, my_id_85_from_sub))
 
 		#titre = re.search('\. (.*)</i>', le_html)
 		titre = re.search('\.(.*)</i>', le_html)
@@ -75,7 +89,7 @@ if __name__ == '__main__':
 		#result = re.search('asdf=5;(.*)123jasd', s)
 		#print(result.group(1))
 
-		print(str(le_html))
+		#print(str(le_html))
 		print("======")
 		#exit()
 

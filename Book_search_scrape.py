@@ -140,56 +140,35 @@ if __name__ == '__main__':
 
 
 	if (len(my_search_results_isbn) != 0):
-		for search_result in my_search_results_isbn:
-			'''
+		
+		titre = my_search_results_isbn[0].select_one('.bookinfo > h2 > a').getText()
+		all_p = my_search_results_isbn[0].select('.bookinfo > p')
+		auteur = ' '.join(all_p[0].getText().split()[1:])
+		recherche_isbn13 = ' '.join(all_p[1].getText().split()[1:])
+		isbn_13 =all_p[1].getText()
+		isbn_10 =all_p[2].getText()
+		image_url = my_search_results_isbn[0].select_one('.image > a > img')
+		img_attribute = image_url['src']
+		fullfilename = os.path.join(my_path, book_search_scrape_isbn.replaceMultiple(titre, ['\\', '/', ' ', ','] , "_") + ".jpg")
+		
+		#print(title)
+		print(titre)
+		print(auteur)
+		print(recherche_isbn13)
+		print(img_attribute)
+		print(fullfilename)
+		
 
-			print(search_result)
-			bookinfo = search_result.find('.image')
-			bookinfo = search_result.select('.image')
-			print("blah " + str(bookinfo))
-			'''
-			'''
-			titre = search_result.find('.bookinfo > a').getText()
-			all_p = search_result.find_all('.bookinfo > p')
-			auteur = ' '.join(all_p[0].getText().split()[1:])
-			recherche_isbn13 = ' '.join(all_p[1].getText().split()[1:])
-			isbn_13 =all_p[1].getText()
-			isbn_10 =all_p[2].getText()
-			image_url = search_result.find('.image > img')
-			img_attribute = image_url['src']
-			fullfilename = os.path.join(my_path, book_search_scrape_isbn.replaceMultiple(titre, ['\\', '/', ' ', ','] , "_") + ".jpg")
-			'''
-			#title = search_result.find("h4", class_="h12 talk-link__speaker").text
-			#title = search_result.find(class_="bookinfo", "h2", "a").text
+		try:
+			urllib.request.urlretrieve(img_attribute, fullfilename)
+		except FileNotFoundError:
+			"can't find file"
+		photoBinaryData = book_search_scrape_isbn.convertToBinaryData(fullfilename)
 
-			titre = search_result.select_one('.bookinfo > h2 > a').getText()
-			all_p = search_result.select('.bookinfo > p')
-			auteur = ' '.join(all_p[0].getText().split()[1:])
-			recherche_isbn13 = ' '.join(all_p[1].getText().split()[1:])
-			isbn_13 =all_p[1].getText()
-			isbn_10 =all_p[2].getText()
-			image_url = search_result.select_one('.image > a > img')
-			img_attribute = image_url['src']
-			fullfilename = os.path.join(my_path, book_search_scrape_isbn.replaceMultiple(titre, ['\\', '/', ' ', ','] , "_") + ".jpg")
-			
-			#print(title)
-			print(titre)
-			print(auteur)
-			print(recherche_isbn13)
-			print(img_attribute)
-			print(fullfilename)
-			
-
-			try:
-				urllib.request.urlretrieve(img_attribute, fullfilename)
-			except FileNotFoundError:
-				"can't find file"
-			photoBinaryData = book_search_scrape_isbn.convertToBinaryData(fullfilename)
-
-			book_search_scrape_isbn.list_of_dic_books.append({'Titre':titre, 'Auteur': auteur, 'Recherche': recherche_isbn13, 'isbn_13': isbn_13, 'isbn_10': isbn_10, 'fullfilename': fullfilename})
-			
-			val = [str(titre), str(auteur), str("Printed Books"), str(recherche_isbn13), str(fullfilename), photoBinaryData, datetime.now(), False, False, 0]
-			book_search_scrape_isbn.insert_into_db(cnx, my_cursor, val)	
+		book_search_scrape_isbn.list_of_dic_books.append({'Titre':titre, 'Auteur': auteur, 'Recherche': recherche_isbn13, 'isbn_13': isbn_13, 'isbn_10': isbn_10, 'fullfilename': fullfilename})
+		
+		val = [str(titre), str(auteur), str("Printed Books"), str(recherche_isbn13), str(fullfilename), photoBinaryData, datetime.now(), False, False, 0]
+		book_search_scrape_isbn.insert_into_db(cnx, my_cursor, val)	
 
 	else:
 		print("No search results found, possible ISBN search site reCaptcha")
@@ -217,7 +196,7 @@ if __name__ == '__main__':
 	#browser.get(formulaire_link)
 
 	if (len(my_books_banq) == 0):
-		print('The book ' + book_search_scrape_isbn.list_of_dic_books[0].get('Titre') + ' by ' + book_search_scrape_isbn.list_of_dic_books[0].get('Auteur') + ' was NOT FOUND in the BANQ catalogue.')
+		print('The book ' + book_search_scrape_isbn.list_of_dic_books[0].get('Titre') + ' by ' + book_search_scrape_isbn.list_of_dic_books[0].get('Auteur') + ' was NOT found in the BANQ catalogue.')
 		print('The book ' + book_search_scrape_isbn.list_of_dic_books[0].get('Titre') + ' by ' + book_search_scrape_isbn.list_of_dic_books[0].get('Auteur') + ' will be ordered.')
 		
 
