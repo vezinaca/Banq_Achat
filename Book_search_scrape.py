@@ -116,10 +116,10 @@ if __name__ == '__main__':
 		for row in record:
 			search_text = str(row[0] + " " + str(row[1]))
 			print(search_text)
-			break
+			#break
 		
-	print(search_text) 
-	exit()
+	#print(search_text) 
+	#exit()
 		
 	book_search_scrape_isbn = Book_search_scrape("https://isbnsearch.org/search", 's', search_text, "#searchresults li")
 	
