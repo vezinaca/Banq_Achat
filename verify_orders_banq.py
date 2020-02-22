@@ -82,6 +82,7 @@ if __name__ == '__main__':
 				close_popup_button = browser.find_element_by_xpath("//body/div[4]/div[1]/div[1]/div[1]/div[1]/div[2]/button[1]")
 				print("texte du close_popup_boutton: " + close_popup_button.text)
 				close_popup_button.click()
+				
 			#table name, field, value of field, isbn
 			#sql = "UPDATE orders SET last_checked = %s WHERE isbn = %s"
 			#sql = "UPDATE %s SET %s = %s WHERE isbn = %s"
