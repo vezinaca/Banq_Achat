@@ -5,8 +5,10 @@
 #updater bd
 
 import mysql.connector
+import smtplib
 from Utilitaires_BANQ import *
 from Book_search_scrape import *
+from datetime import date
 
 def update_received_db(cnx, mycursor, valeurs):
 	
@@ -24,9 +26,26 @@ def update_last_checked_db(cnx, mycursor, valeurs):
 	cnx.commit()
 	print(mycursor.rowcount, "record updated.")
 
+def send_email(email_string):
+
+
+	smtpObj = smtplib.SMTP('smtp.gmail.com', 587)
+	
+	smtpObj.ehlo()
+	smtpObj.starttls()
+	smtpObj.login('racontemoidoncca@gmail.com', 'ZaqWsxcd')
+	smtpObj.sendmail('racontemoidoncca@gmail.com', 'vezinaca@gmail.com',
+	email_string)
+	smtpObj.quit()
+	print("email sent")
+	
 if __name__ == '__main__':
 	#main()
 	#browser.quit()
+
+	email_string = 'Subject: New book availibility verification for ' + str(date.today()) + '\n'
+	email_string = email_string + "\nGreetings bookworm, \n\nHere are the verifications: \n\n"
+	
 	
 	headers = {'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1'}
 
@@ -58,9 +77,11 @@ if __name__ == '__main__':
 
 		if (len(my_books_banq) == 0):
 			print('The book ' + row[1] + ' by ' + row[2] + ' was NOT found in the BANQ catalogue.')
+			email_string = email_string + '\n\nThe book ' + row[1] + ' by ' + row[2] + ' was NOT found in the BANQ catalogue.'
 			#print('The book ' + book_search_scrape_isbn.list_of_dic_books[0].get('Titre') + ' by ' + book_search_scrape_isbn.list_of_dic_books[0].get('Auteur') + ' will be ordered.')
 		else:
 			print('The book ' + isbn_du_livre_recherche + ' by '  + ' was FOUND in the BANQ catalogue.')
+			email_string = email_string + '\n\nThe book ' + isbn_du_livre_recherche + ' by '  + ' was FOUND in the BANQ catalogue.'
 			url_recherche_selenium = 'https://www.banq.qc.ca/techno/recherche/rms.html?q=' + isbn_du_livre_recherche
 			browser.get(url_recherche_selenium)
 			time.sleep(3)
@@ -71,6 +92,7 @@ if __name__ == '__main__':
 			book_status = browser.find_element_by_xpath("//div[starts-with(@class,'_290')]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]")
 			print("this book status: " + book_status.text)
 			if ('loan' in book_status.text):
+				email_string = email_string + "\n\t\t This book is on loan but will be reserved"
 				print("oui c emprunte")
 				reserver_button = browser.find_element_by_xpath("//div[starts-with(@class,'_290')]/div[1]/div[1]/div[1]/div[1]/button[1]")
 				print("texte du boutton: " + reserver_button.text)
@@ -82,7 +104,7 @@ if __name__ == '__main__':
 				close_popup_button = browser.find_element_by_xpath("//body/div[4]/div[1]/div[1]/div[1]/div[1]/div[2]/button[1]")
 				print("texte du close_popup_boutton: " + close_popup_button.text)
 				close_popup_button.click()
-				
+
 			#table name, field, value of field, isbn
 			#sql = "UPDATE orders SET last_checked = %s WHERE isbn = %s"
 			#sql = "UPDATE %s SET %s = %s WHERE isbn = %s"
@@ -90,6 +112,8 @@ if __name__ == '__main__':
 			#update_received_db(cnx, my_cursor, val)
 
 		val = [datetime.now(), isbn_du_livre_recherche]
-		update_last_checked_db(cnx, my_cursor, val)		
-
+		update_last_checked_db(cnx, my_cursor, val)	
+	new_email_string = email_string.replace(u'\u2013','')
+	send_email(new_email_string)
 	cnx.close()
+	browser.quit()
