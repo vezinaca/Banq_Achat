@@ -105,6 +105,9 @@ if __name__ == '__main__':
 	my_cursor = cnx.cursor()
 
 	ids_of_wanted_books = [60, 106, 110]
+
+	creds = ('00115446', '19771314')
+	connect_to_site(browser, url, creds)
 	
 	if (len(sys.argv) > 1):
 		search_text = ' '.join(sys.argv[1:])
@@ -184,8 +187,7 @@ if __name__ == '__main__':
 
 			book_search_scrape_banq.print_dictionnary()
 			#creds = getCredentials()
-			creds = ('00115446', '19771314')
-			connect_to_site(browser, url, creds)
+			
 
 			#browser.get(formulaire_link)
 
