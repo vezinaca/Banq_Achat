@@ -12,7 +12,7 @@ from datetime import date
 
 def update_received_db(cnx, mycursor, valeurs):
 	
-	sql = "UPDATE orders SET received = %s WHERE isbn = %s"
+	sql = "UPDATE orders_test SET received = %s WHERE isbn = %s"
 	mycursor.execute(sql, valeurs)
 	cnx.commit()
 	print(mycursor.rowcount, "record updated.")
@@ -21,7 +21,7 @@ def update_received_db(cnx, mycursor, valeurs):
 
 def update_last_checked_db(cnx, mycursor, valeurs):
 	
-	sql = "UPDATE orders SET last_checked = %s WHERE isbn = %s"
+	sql = "UPDATE orders_test SET last_checked = %s WHERE isbn = %s"
 	mycursor.execute(sql, valeurs)
 	cnx.commit()
 	print(mycursor.rowcount, "record updated.")
@@ -57,12 +57,14 @@ if __name__ == '__main__':
 	creds = ('00115446', '19771314')
 	connect_to_site(browser, url, creds)
 
-	sql_select_all = """SELECT * FROM orders WHERE received=0"""
+	sql_select_all = """SELECT * FROM orders_test WHERE received=0"""
 	my_cursor.execute(sql_select_all)
 	record = my_cursor.fetchall()
 
 	for row in record:
 		
+		titre = row[1]
+		auteur = row[2]
 		isbn_du_livre_recherche = row[4]
 		book_search_scrape_banq = Book_search_scrape("http://www.banq.qc.ca/techno/recherche/rms.html", 'q', isbn_du_livre_recherche, '#RMS_afficherIris .ValorisationListeDesc a')
 		book_search_scrape_banq.set_response(headers)
@@ -76,12 +78,12 @@ if __name__ == '__main__':
 		#browser.get(formulaire_link)
 
 		if (len(my_books_banq) == 0):
-			print('The book ' + row[1] + ' by ' + row[2] + ' was NOT found in the BANQ catalogue.')
-			email_string = email_string + '\n\nThe book ' + row[1] + ' by ' + row[2] + ' was NOT found in the BANQ catalogue.'
+			print('The book ' + titre + ' by ' + auteur + + " ISBN13: " + isbn_du_livre_recherche +' was NOT found in the BANQ catalogue.')
+			email_string = email_string + '\n\nThe book ' + titre + ' by ' + auteur + " ISBN13: " + isbn_du_livre_recherche +  ' was NOT found in the BANQ catalogue.'
 			#print('The book ' + book_search_scrape_isbn.list_of_dic_books[0].get('Titre') + ' by ' + book_search_scrape_isbn.list_of_dic_books[0].get('Auteur') + ' will be ordered.')
 		else:
-			print('The book ' + isbn_du_livre_recherche + ' by '  + ' was FOUND in the BANQ catalogue.')
-			email_string = email_string + '\n\nThe book ' + isbn_du_livre_recherche + ' by '  + ' was FOUND in the BANQ catalogue.'
+			print('The book ' + titre + ' by ' + auteur + ' was FOUND in the BANQ catalogue.')
+			email_string = email_string + '\n\nThe book ' + titre + ' by ' + auteur + " ISBN13: "+ isbn_du_livre_recherche + ' was FOUND in the BANQ catalogue.'
 			url_recherche_selenium = 'https://www.banq.qc.ca/techno/recherche/rms.html?q=' + isbn_du_livre_recherche
 			browser.get(url_recherche_selenium)
 			time.sleep(3)
@@ -89,9 +91,19 @@ if __name__ == '__main__':
 			book_link.click()
 
 			time.sleep(3)
-			book_status = browser.find_element_by_xpath("//div[starts-with(@class,'_290')]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]")
+			#on loan
+			#book_status = browser.find_element_by_xpath("//div[starts-with(@class,'_290')]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]")
+			#Available
+			book_status = browser.find_element_by_xpath("//div[starts-with(@class,'_290')]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]")
 			print("this book status: " + book_status.text)
-			if ('loan' in book_status.text):
+			#print("this book status avail: " + book_status_avail.text)
+			if ('Available' in book_status.text):
+				email_string = email_string + '\n\nThe book ' + titre + " by " + auteur + " ISBN13: " + isbn_du_livre_recherche + ' was FOUND and is AVAILABLE in the BANQ catalogue.'
+				print('The book ' + titre + " by " + auteur + " ISBN13: " +  isbn_du_livre_recherche + ' is available in the BANQ catalogue.')
+
+			# need to verify what is written on website when books says: 'en commande', reserve it anyways
+			#if ('loan' in book_status.text):
+			else:
 				email_string = email_string + "\n\t\t This book is on loan but will be reserved"
 				print("oui c emprunte")
 				reserver_button = browser.find_element_by_xpath("//div[starts-with(@class,'_290')]/div[1]/div[1]/div[1]/div[1]/button[1]")
