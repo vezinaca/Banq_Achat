@@ -17,8 +17,6 @@ def update_received_db(cnx, mycursor, valeurs):
 	cnx.commit()
 	print(mycursor.rowcount, "record updated.")
 
-
-
 def update_last_checked_db(cnx, mycursor, valeurs):
 	
 	sql = "UPDATE orders SET last_checked = %s WHERE isbn = %s"
@@ -28,9 +26,7 @@ def update_last_checked_db(cnx, mycursor, valeurs):
 
 def send_email(email_string):
 
-
 	smtpObj = smtplib.SMTP('smtp.gmail.com', 587)
-	
 	smtpObj.ehlo()
 	smtpObj.starttls()
 	smtpObj.login('racontemoidoncca@gmail.com', 'ZaqWsxcd')
@@ -71,16 +67,11 @@ if __name__ == '__main__':
 		print('===============================')
 		my_books_banq = book_search_scrape_banq.post_process(book_search_scrape_banq.response.text)
 
-		#book_search_scrape_banq.print_dictionnary()
-		#creds = getCredentials()
-		
-
-		#browser.get(formulaire_link)
 
 		if (len(my_books_banq) == 0):
 			print('The book ' + titre + ' (' + isbn_du_livre_recherche + ') by ' + auteur + ' was NOT found in the BANQ catalogue.')
 			email_string = email_string + '\n\nThe book ' + titre + ' (' +  isbn_du_livre_recherche + ') by ' + auteur + ' was NOT found in the BANQ catalogue.'
-			#print('The book ' + book_search_scrape_isbn.list_of_dic_books[0].get('Titre') + ' by ' + book_search_scrape_isbn.list_of_dic_books[0].get('Auteur') + ' will be ordered.')
+			
 		else:
 			print('The book ' + titre + ' by ' + auteur + ' was FOUND in the BANQ catalogue.')
 			email_string = email_string + '\n\nThe book ' + titre + ' (' + isbn_du_livre_recherche + ') by ' + auteur + ' was FOUND in the BANQ catalogue.'
@@ -91,14 +82,12 @@ if __name__ == '__main__':
 			book_link.click()
 
 			time.sleep(5)
-			#on loan
-			#book_status = browser.find_element_by_xpath("//div[starts-with(@class,'_290')]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]")
-			#Available
+			
 			book_status = browser.find_element_by_xpath("//div[starts-with(@class,'_290')]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]")
 			print("Book status: " + book_status.text)
-			#print("this book status avail: " + book_status_avail.text)
+			
 			if ('Available' in book_status.text):
-				#email_string = email_string + '\n\nThe book ' + titre + " by " + auteur + " ISBN13: " + isbn_du_livre_recherche + ' was FOUND and is AVAILABLE in the BANQ catalogue.'
+				
 				email_string = email_string + "\n\t\t This book is currently available"
 				print('The book ' + titre + ' (' + isbn_du_livre_recherche +  ") by " + auteur + ' is available in the BANQ catalogue.')
 
@@ -106,7 +95,6 @@ if __name__ == '__main__':
 			#if ('loan' in book_status.text):
 			else:
 				email_string = email_string + "\n\t\t This book is " + book_status.text + " but will be RESERVED."
-				#print("oui c emprunte")
 				reserver_button = browser.find_element_by_xpath("//div[starts-with(@class,'_290')]/div[1]/div[1]/div[1]/div[1]/button[1]")
 				#print("texte du boutton: " + reserver_button.text)
 				reserver_button.click()
@@ -126,6 +114,7 @@ if __name__ == '__main__':
 
 		val = [datetime.now(), isbn_du_livre_recherche]
 		update_last_checked_db(cnx, my_cursor, val)	
+	
 	new_email_string = email_string.replace(u'\u2013','')
 	send_email(new_email_string)
 	cnx.close()
