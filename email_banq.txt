@@ -1,0 +1,1 @@
+Contrairement au processus de réservation de document, l'usagé n'est pas avisé lorsqu'une suggestion d'achat qu'il a effectué est disponible pour l'emprunt. 
