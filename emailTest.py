@@ -12,6 +12,6 @@ print(smtpObj.login('racontemoidoncca@gmail.com', 'ZaqWsxcd'))
 email_string = 'Subject: New book availibility verification for ' + str(datetime.now()) + '\n'
 email_string = email_string + "\nBonjour, \n Voici vos livres"
 
-smtpObj.sendmail('racontemoidoncca@gmail.com', 'vezinaca@gmail.com',
+smtpObj.sendmail('racontemoidoncca@gmail.com', 'lesdisquesmusique@gmail.com',
 email_string)
 smtpObj.quit()

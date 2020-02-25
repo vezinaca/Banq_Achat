@@ -34,7 +34,7 @@ def renouvellement_livre():
 			difference_date = (due_date_object - today).days
 			#print(str(difference_date))
 			#print(difference_date < 16)
-			if(difference_date < 100):
+			if(difference_date < 5):
 				#if "fury" in title.text or "free" in title.text:
 				#	if "fury" in title.text:
 				#		print('renew fury')
@@ -42,7 +42,7 @@ def renouvellement_livre():
 				#		print('renew free')
 				
 				print("renew: " + str(title.text))		
-				#renew_button.click()
+				renew_button.click()
 				infinite_scroll()
 				infinite_scroll()
 				break
