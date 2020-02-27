@@ -104,7 +104,9 @@ if __name__ == '__main__':
 	cnx = mysql.connector.connect(user='root', password='root', host='127.0.0.1', database='banq')
 	my_cursor = cnx.cursor()
 
-	ids_of_wanted_books = [60, 106, 110]
+	#ids_of_wanted_books = [ 60, 110]
+
+	ids_of_wanted_books = [20, 95]
 
 	creds = ('00115446', '19771314')
 	connect_to_site(browser, url, creds)
@@ -223,7 +225,8 @@ if __name__ == '__main__':
 				commentaires.send_keys(book_search_scrape_isbn.list_of_dic_books[0].get('isbn_13'))
 				
 				submit_button = browser.find_element_by_class_name('ButSubmit')
-				#submit_button.click()		
+				#submit_button.click()
+				time.sleep(4)		
 			else:
 				print('The book ' + book_search_scrape_isbn.list_of_dic_books[0].get('Titre') + ' by ' + book_search_scrape_isbn.list_of_dic_books[0].get('Auteur') + ' was FOUND in the BANQ catalogue.')		
 				

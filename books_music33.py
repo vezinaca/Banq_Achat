@@ -50,46 +50,41 @@ if __name__ == '__main__':
 		#print('in search results')
 		
 		all_td = search_result.select('td')
-		#img = search_result.select_one('td > figure > img')
-		#print(img['src'])
-		#titre = search_result.select_one('.bookinfo > h2 > a').getText()
-		#auteur = ' '.join(all_td[1].getText().split()[1:])
-		#titre = all_td[1].select_one('i')
-
-
-		#re.sub("[^0-9]", "", "sdkjh987978asd098as0980a98sd")
+		
 
 		le_html = str(all_td[1])
-		#le_html_image = str(all_td[0])
-		#print("html: " + le_html)
-		#id_regex = re.compile(r'\d{3}')
+		
 
 		regex_id = re.compile(r'\d+')
-		#mo = regex_id.search(le_html)
-		#print(mo.group())
-
-
-
+		
 		#my_id = re.search('<td>(.*)\. ', le_html)
 		mo_id = regex_id.search(le_html)
 		if mo_id != None:
 			my_id = mo_id.group()
+			#if my_id == '130':
+			#	break
 
 		#substring = le_html[0:10]
 		#my_id_85_from_sub = re.findall('[0-9]+', substring)
 		#my_id = ' '.join(map(str, my_id_85_from_sub))
 
 		#titre = re.search('\. (.*)</i>', le_html)
-		titre = re.search('\.(.*)</i>', le_html)
+		#re.compile(r'\.(.*)(</i>|</em>)')
+		#titre = re.search('\.(.*)</i>', le_html)
+		titre = re.search('\.(.*)(</i>|</em>)', le_html)
 		if titre != None:
-			titre_sans_tag = replaceMultiple(titre.group(1), ["<i>"], "")
+			titre_sans_tag = replaceMultiple(titre.group(1), ["<i>", "<em>", "</em>", "<br/>"], "")
 			
 
 
 		#Prince’s Sign “☮” the Times
-		auteur = re.search('<br/>by (.*)<br/>Buy', le_html)
+		#regex_auteur = re.compile(r'(<br/>|</em>)by (.*)<br/>Buy')
+		regex_auteur = re.compile(r'(<br/>|</em>)by (.*)<br/>Buy')
+		mo_auteur = regex_auteur.search(le_html)
+		#auteur = re.search('<br/>by (.*)<br/>Buy', le_html)
+		#auteur = re.search('(<br/>|</em>)by (.*)<br/>Buy', le_html)
 		print("type(auteur....): ")
-		print(type(auteur))
+		#print(type(auteur))
 		#titre = re.search('<td>(.*)\. ', le_html)
 		print('======')
 		if my_id !=None:
@@ -101,8 +96,11 @@ if __name__ == '__main__':
 			#print("titre:_" + titre.group(1))
 			print("titre:_" + titre_sans_tag)
 			nb_titre = nb_titre + 1
-		if auteur != None:
-			print("auteur:_" + auteur.group(1))
+		#if auteur != None:
+		#	print("auteur:_" + auteur.group(1))
+		#	nb_auteur = nb_auteur + 1
+		if mo_auteur != None:
+			print("auteur:_" + mo_auteur.group())
 			nb_auteur = nb_auteur + 1
 
 		#if (my_id == '10'):
@@ -112,10 +110,11 @@ if __name__ == '__main__':
 		print(titre_sans_tag)
 
 		print("TITRE SANS TAG: " + titre_sans_tag)
-		if (auteur == None):
+		if (mo_auteur == None):
 			my_author = 'Skip author'
 		else:
-			my_author = str(auteur.group(1))
+			#my_author = str(auteur.group(1))
+			my_author = replaceMultiple(mo_auteur.group(), ["<i>", "<em>", "</em>", "<br/>", "Buy", "by"], "")
 		val = [str(my_id), str(titre_sans_tag_remove_symbol), my_author]
 		insert_into_db(cnx, my_cursor, val)
 		
@@ -124,7 +123,7 @@ if __name__ == '__main__':
 		#result = re.search('asdf=5;(.*)123jasd', s)
 		#print(result.group(1))
 
-		#print(str(le_html))
+		print(str(le_html))
 		print("======")
 		#exit()
 
