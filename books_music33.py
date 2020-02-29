@@ -35,7 +35,7 @@ if __name__ == '__main__':
 	cnx = mysql.connector.connect(user='root', password='root', host='127.0.0.1', database='banq')
 	my_cursor = cnx.cursor()
 
-	delete_all_table_rows(my_cursor, 'thirtythreebooks')
+	#delete_all_table_rows(my_cursor, 'thirtythreebooks')
 	#exit()
 
 	#book_search_scrape_33.create_local_html_file("333sound.html", book_search_scrape_33.response)
@@ -61,8 +61,9 @@ if __name__ == '__main__':
 		mo_id = regex_id.search(le_html)
 		if mo_id != None:
 			my_id = mo_id.group()
-			#if my_id == '130':
-			#	break
+			#if (int(my_id) < 131):
+			#	print("yes yes")
+			#	continue
 
 		#substring = le_html[0:10]
 		#my_id_85_from_sub = re.findall('[0-9]+', substring)
@@ -116,6 +117,7 @@ if __name__ == '__main__':
 			#my_author = str(auteur.group(1))
 			my_author = replaceMultiple(mo_auteur.group(), ["<i>", "<em>", "</em>", "<br/>", "Buy", "by"], "")
 		val = [str(my_id), str(titre_sans_tag_remove_symbol), my_author]
+		#if (int(my_id) > 130):
 		insert_into_db(cnx, my_cursor, val)
 		
 		#titre = re.search('asdf=5;(.*)123jasd', le_html)

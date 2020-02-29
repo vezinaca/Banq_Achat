@@ -24,9 +24,32 @@ print(mo_bat.group()) #Batcopter
 print(mo_bat.group(1)) #copter
 
 question_mark = re.compile(r'Bat(wo)?man')
-mo_batwoman = question_mark.search("Batwoman was here")
-print(mo_batwoman.group())
+mo_batwoman = question_mark.search("Batman was here")
+print("non pe: " + mo_batwoman.group())
+
+
+mo_batman_question = question_mark.search('Batman was here shit shit')
+print("oui shit hit: " + mo_batman_question.group())
+print("non pe: " + mo_batwoman.group())
 
 star_re = re.compile(r'Bat(wo)*man')
 mo_starBat = star_re.search('Batwowowoman is a gigigigigirl')
 print(mo_starBat.group())
+
+plus_re = re.compile(r'Bat(wo)+man')
+mo_plus = plus_re.search('Batwowoman is under the bridge')
+print(mo_plus.group())
+
+ha_re = re.compile(r'(ha){3,5}?')
+mo_ha = ha_re.search('hahahahaha')
+print (mo_ha.group())
+
+#=================================================
+#findAll returns list
+print("################find all")
+
+phoneNumRegex = re.compile(r'(\d{3})-(\d{3})-(\d{4})')
+list_findAll = phoneNumRegex.findall("work: 543-545-6654 and cell is 665-333-4444")
+for thing in list_findAll:
+	print(thing)
+
