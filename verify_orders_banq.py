@@ -53,7 +53,7 @@ if __name__ == '__main__':
 	creds = ('00115446', '19771314')
 	connect_to_site(browser, url, creds)
 
-	sql_select_all = """SELECT * FROM orders WHERE received=0"""
+	sql_select_all = """SELECT * FROM orders WHERE accepted=1"""
 	my_cursor.execute(sql_select_all)
 	record = my_cursor.fetchall()
 

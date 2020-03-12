@@ -95,7 +95,7 @@ class Book_search_scrape(object):
 
 if __name__ == '__main__':
 
-	browser.quit()
+	#browser.quit()
 	formulaire_link = "https://www.banq.qc.ca/formulaires/suggestions_achat/index.html"
 
 	#assert len(sys.argv) > 1, "Missing arguments."
