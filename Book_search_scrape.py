@@ -96,6 +96,7 @@ class Book_search_scrape(object):
 if __name__ == '__main__':
 
 	#browser.quit()
+	browser = webdriver.Firefox(executable_path="/home/alienmint/Documents/Programmation/pythonPDF/Banq_Achat/gecko/geckodriver")
 	formulaire_link = "https://www.banq.qc.ca/formulaires/suggestions_achat/index.html"
 
 	#assert len(sys.argv) > 1, "Missing arguments."
@@ -190,6 +191,8 @@ if __name__ == '__main__':
 	#creds = getCredentials()
 	creds = ('00115446', '19771314')
 	connect_to_site(browser, url, creds)
+
+	kill_coronavirus_alert_message(browser)
 
 	#browser.get(formulaire_link)
 
