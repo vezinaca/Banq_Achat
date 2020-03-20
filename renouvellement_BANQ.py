@@ -2,7 +2,7 @@
 
 from Utilitaires_BANQ import *
 
-def renouvellement_livre():
+def renouvellement_livre(browser):
 
 	print("dans renouvellement_livre")
 	
@@ -43,8 +43,8 @@ def renouvellement_livre():
 				
 				print("renew: " + str(title.text))		
 				#renew_button.click()
-				infinite_scroll()
-				infinite_scroll()
+				infinite_scroll(browser)
+				infinite_scroll(browser)
 				break
 				
 		
@@ -57,23 +57,13 @@ if __name__ == "__main__":
 	#browser = webdriver.Chrome(executable_path="/home/labby/Documents/Programmation/pythonPDF/Banq_Achat/gecko/chromedriver")
 	
 	creds = getCredentials()
+	connect_to_site(browser, url, creds)
 
 	today = datetime.now()
 	#remove message important because of Coronavirus
 	time.sleep(2)
 
-	#By.CLASS_NAME
-
-	#niveau_2 = browser.find_element_by_class_name('niveau2')
-	is_html_element_present_click(browser, 'niveau2', By.CLASS_NAME)
-	#message_important = browser.find_element_by_id('MessageImportant')
-	#niveau_2 = browser.find_element_by_class('niveau2')
-
-	#message_important.click()
-	exit()
-	#remove message important because of Coronovirus
-	#is_html_element_present_click(browser, "MessageImportant", By.ID)
-	#is_html_element_present_click(browser, 'Consulter mon dossier' , By.LINK_TEXT)
+	kill_coronavirus_alert_message(browser)
 	
 	is_html_element_present_click(browser, "subscriber's account" , By.LINK_TEXT)
 	#is_html_element_present_click(browser, "//*[contains(text(), 'subscriber\'s account') or contains(text(), 'Consulter mon dossier')]", By.XPATH)
@@ -83,8 +73,8 @@ if __name__ == "__main__":
 	
 	time.sleep(4)
 	#for this renouvellement page, i have to use infinite scroll twice.
-	infinite_scroll()
-	infinite_scroll()
+	infinite_scroll(browser)
+	infinite_scroll(browser)
 			
 	#//input[starts-with(@id, 'activation:') and contains(@id, ':voId:1')]
 		
@@ -94,7 +84,7 @@ if __name__ == "__main__":
 	print("size of all cards main: " + str(len(all_cards_stacked)))
 
 	for i in range(len(all_cards_stacked)):
-		renouvellement_livre()
+		renouvellement_livre(browser)
 		
 
 	

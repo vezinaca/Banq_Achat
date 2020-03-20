@@ -54,27 +54,8 @@ if __name__ == '__main__':
 
 	creds = ('00115446', '19771314')
 	connect_to_site(browser, url, creds)
-
-
-	##### coronavirus message
-	delay = 3 # seconds
-	message_important = WebDriverWait(browser, delay).until(EC.presence_of_element_located((By.ID, 'MessageImportant')))
-	print(message_important) 
-	close_covid = WebDriverWait(message_important, delay).until(EC.presence_of_element_located((By.CLASS_NAME, 'niveau2')))
 	
-	print('niveau2' + " page is ready")
-	#print(close_covid.text)
-	close_covid.click()
-
-	########
-
-
-
-
-
-
-
-
+	kill_coronavirus_alert_message(browser)
 
 
 	sql_select_all = """SELECT * FROM orders WHERE accepted=1"""

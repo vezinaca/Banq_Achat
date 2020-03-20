@@ -52,6 +52,13 @@ def connect_to_site(browser, url, creds):
 	connection_button = browser.find_element_by_name('_eventId_proceed')
 	connection_button.click()
 
+def kill_coronavirus_alert_message(browser):
+	##### coronavirus message
+	delay = 3 # seconds
+	message_important = WebDriverWait(browser, delay).until(EC.presence_of_element_located((By.ID, 'MessageImportant')))
+	close_covid = WebDriverWait(message_important, delay).until(EC.presence_of_element_located((By.CLASS_NAME, 'niveau2')))
+	close_covid.click()
+	########
 
 def is_html_element_present_click(browser, link_text, by_search):
 	delay = 3 # seconds
@@ -74,8 +81,8 @@ def infinite_scroll(browser):
 
 	p = 1
 	try:
-		#while True:
-		for i in range(4):
+		while True:
+		#for i in range(4):
 		    # Scroll down to bottom
 		    browser.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 
@@ -92,6 +99,7 @@ def infinite_scroll(browser):
 	except KeyboardInterrupt:
 		print('allo')
 
+'''
 def infinite_scroll():
 	#infinite scroll
 	# https://stackoverflow.com/questions/20986631/how-can-i-scroll-a-web-page-using-selenium-webdriver-in-python
@@ -103,8 +111,8 @@ def infinite_scroll():
 
 	p = 1
 	try:
-		#while True:
-		for i in range(4):
+		while True:
+		#for i in range(4):
 		    # Scroll down to bottom
 		    browser.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 
@@ -120,6 +128,8 @@ def infinite_scroll():
 		    last_height = new_height
 	except KeyboardInterrupt:
 		print('allo')
+
+'''
 
 def printList(my_list):
 	i = 1
