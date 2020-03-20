@@ -14,7 +14,7 @@ import re
 import os
 
 url = 'http://banq.qc.ca/mon_dossier/mon_dossier.html?language_id=1'
-browser = webdriver.Firefox(executable_path="/home/alienmint/Documents/Programmation/pythonPDF/Banq_Achat/gecko/geckodriver")
+#browser = webdriver.Firefox(executable_path="/home/alienmint/Documents/Programmation/pythonPDF/Banq_Achat/gecko/geckodriver")
 #browser = webdriver.Chrome(executable_path="/home/alienmint/Documents/Programmation/pythonPDF/Banq_Achat/gecko/chromedriver")
 #when using Toshiba laptop
 #browser = webdriver.Firefox(executable_path="/home/labby/Documents/Programmation/pythonPDF/Banq_Achat/gecko/geckodriver")
@@ -52,6 +52,7 @@ def connect_to_site(browser, url, creds):
 	connection_button = browser.find_element_by_name('_eventId_proceed')
 	connection_button.click()
 
+
 def is_html_element_present_click(browser, link_text, by_search):
 	delay = 3 # seconds
 	link_verify = WebDriverWait(browser, delay).until(EC.presence_of_element_located((by_search, link_text)))
@@ -61,6 +62,35 @@ def is_html_element_present_click(browser, link_text, by_search):
 #unused
 #def scroll_to_bottom():
 #	browser.find_element_by_tag_name('html').send_keys(Keys.END)
+
+def infinite_scroll(browser):
+	#infinite scroll
+	# https://stackoverflow.com/questions/20986631/how-can-i-scroll-a-web-page-using-selenium-webdriver-in-python
+
+	SCROLL_PAUSE_TIME = 2
+
+	# Get scroll height
+	last_height = browser.execute_script("return document.body.scrollHeight")
+
+	p = 1
+	try:
+		#while True:
+		for i in range(4):
+		    # Scroll down to bottom
+		    browser.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+
+		    # Wait to load page
+		    time.sleep(SCROLL_PAUSE_TIME)
+		    print(str(p) + ") " +'scrolling...')
+		    p = p + 1
+
+		    # Calculate new scroll height and compare with last scroll height
+		    new_height = browser.execute_script("return document.body.scrollHeight")
+		    if new_height == last_height:
+		        break
+		    last_height = new_height
+	except KeyboardInterrupt:
+		print('allo')
 
 def infinite_scroll():
 	#infinite scroll

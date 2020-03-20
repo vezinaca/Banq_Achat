@@ -39,6 +39,8 @@ if __name__ == '__main__':
 	#main()
 	#browser.quit()
 
+	browser = webdriver.Firefox(executable_path="/home/alienmint/Documents/Programmation/pythonPDF/Banq_Achat/gecko/geckodriver")
+
 	email_string = 'Subject: New book availibility verification for ' + str(date.today()) + '\n'
 	email_string = email_string + "\nGreetings bookworm, \n\nHere are the verifications:"
 	
@@ -52,6 +54,28 @@ if __name__ == '__main__':
 
 	creds = ('00115446', '19771314')
 	connect_to_site(browser, url, creds)
+
+
+	##### coronavirus message
+	delay = 3 # seconds
+	message_important = WebDriverWait(browser, delay).until(EC.presence_of_element_located((By.ID, 'MessageImportant')))
+	print(message_important) 
+	close_covid = WebDriverWait(message_important, delay).until(EC.presence_of_element_located((By.CLASS_NAME, 'niveau2')))
+	
+	print('niveau2' + " page is ready")
+	#print(close_covid.text)
+	close_covid.click()
+
+	########
+
+
+
+
+
+
+
+
+
 
 	sql_select_all = """SELECT * FROM orders WHERE accepted=1"""
 	my_cursor.execute(sql_select_all)

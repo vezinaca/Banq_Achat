@@ -42,19 +42,39 @@ def renouvellement_livre():
 				#		print('renew free')
 				
 				print("renew: " + str(title.text))		
-				renew_button.click()
+				#renew_button.click()
 				infinite_scroll()
 				infinite_scroll()
 				break
 				
 		
 if __name__ == "__main__":
+
+	browser = webdriver.Firefox(executable_path="/home/alienmint/Documents/Programmation/pythonPDF/Banq_Achat/gecko/geckodriver")
+	#browser = webdriver.Chrome(executable_path="/home/alienmint/Documents/Programmation/pythonPDF/Banq_Achat/gecko/chromedriver")
+	#when using Toshiba laptop
+	#browser = webdriver.Firefox(executable_path="/home/labby/Documents/Programmation/pythonPDF/Banq_Achat/gecko/geckodriver")
+	#browser = webdriver.Chrome(executable_path="/home/labby/Documents/Programmation/pythonPDF/Banq_Achat/gecko/chromedriver")
 	
 	creds = getCredentials()
 
 	today = datetime.now()
-	connect_to_site(browser, url, creds)
+	#remove message important because of Coronavirus
+	time.sleep(2)
+
+	#By.CLASS_NAME
+
+	#niveau_2 = browser.find_element_by_class_name('niveau2')
+	is_html_element_present_click(browser, 'niveau2', By.CLASS_NAME)
+	#message_important = browser.find_element_by_id('MessageImportant')
+	#niveau_2 = browser.find_element_by_class('niveau2')
+
+	#message_important.click()
+	exit()
+	#remove message important because of Coronovirus
+	#is_html_element_present_click(browser, "MessageImportant", By.ID)
 	#is_html_element_present_click(browser, 'Consulter mon dossier' , By.LINK_TEXT)
+	
 	is_html_element_present_click(browser, "subscriber's account" , By.LINK_TEXT)
 	#is_html_element_present_click(browser, "//*[contains(text(), 'subscriber\'s account') or contains(text(), 'Consulter mon dossier')]", By.XPATH)
 	time.sleep(8)
