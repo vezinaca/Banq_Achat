@@ -50,12 +50,8 @@ def main():
 	
 	delay = 3 # seconds
 	message_important = WebDriverWait(browser, delay).until(EC.presence_of_element_located((By.ID, 'MessageImportant')))
-	print(message_important) 
-	#close_covid = WebDriverWait(message_important, delay).until(EC.presence_of_element_located((By.CLASS_NAME, 'niveau2')))
-	
-	print('niveau2' + " page is ready")
-	#print(close_covid.text)
-	#close_covid.click()
+	close_covid = WebDriverWait(message_important, delay).until(EC.presence_of_element_located((By.CLASS_NAME, 'niveau2')))
+	close_covid.click()
 
 if __name__ == '__main__':
 	main()
