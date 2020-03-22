@@ -105,7 +105,6 @@ if __name__ == '__main__':
 	cnx = mysql.connector.connect(user='root', password='root', host='127.0.0.1', database='banq')
 	my_cursor = cnx.cursor()
 
-	ids_of_wanted_books = [6,9,10]
 	
 	if (len(sys.argv) > 1):
 		search_text = ' '.join(sys.argv[1:])
@@ -157,7 +156,7 @@ if __name__ == '__main__':
 		print(img_attribute)
 		print(fullfilename)
 		
-
+		#convert image to binary for database insert
 		try:
 			urllib.request.urlretrieve(img_attribute, fullfilename)
 		except FileNotFoundError:
@@ -200,9 +199,6 @@ if __name__ == '__main__':
 		print('The book ' + book_search_scrape_isbn.list_of_dic_books[0].get('Titre') + ' by ' + book_search_scrape_isbn.list_of_dic_books[0].get('Auteur') + ' was NOT found in the BANQ catalogue.')
 		print('The book ' + book_search_scrape_isbn.list_of_dic_books[0].get('Titre') + ' by ' + book_search_scrape_isbn.list_of_dic_books[0].get('Auteur') + ' will be ordered.')
 		
-
-		#connect_to_site(browser, url, creds)
-
 		browser.get(formulaire_link)
 
 		time.sleep(5)
@@ -226,29 +222,18 @@ if __name__ == '__main__':
 
 		commentaires = browser.find_element_by_id('P5_COMMENTAIRES')
 		commentaires.send_keys(book_search_scrape_isbn.list_of_dic_books[0].get('isbn_13'))
-		#isbn
-
-
-		'''
-		<div class="BlocBouton">
-	      <input class="Bouton ButSubmit" value="Envoyer" type="submit">
-	    </div>
-	    '''
-		#<input class="Bouton ButSubmit" value="Envoyer" type="submit">
 		
 		submit_button = browser.find_element_by_class_name('ButSubmit')
 		#submit_button.click()		
+	
+	#book was found, see availibility...if available, reserve it
 	else:
 		print('The book ' + book_search_scrape_isbn.list_of_dic_books[0].get('Titre') + ' by ' + book_search_scrape_isbn.list_of_dic_books[0].get('Auteur') + ' was FOUND in the BANQ catalogue.')		
 		
 
 	# only got for first result in search results: line 143
 	# if dic of banq is empty then remplir formulaire
-	# insert infos in database personnal (that will eventually be online)
-	# add program to veryfiy 4 times a week if book was found.
 	# if book is found, see if it's available, if not reserve it.  say something about bientot disponible.
-
-		#fields to have in database table....recu ou non.  id, titre, auteur, isbn, date commande, recu
 
 	#backup DB
 	# s'inscrire a mon site pour gerer vos suggestions d'achats..
