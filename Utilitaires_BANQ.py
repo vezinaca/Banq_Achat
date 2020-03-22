@@ -16,6 +16,7 @@ import os
 url = 'http://banq.qc.ca/mon_dossier/mon_dossier.html?language_id=1'
 #browser = webdriver.Firefox(executable_path="/home/alienmint/Documents/Programmation/pythonPDF/Banq_Achat/gecko/geckodriver")
 #browser = webdriver.Chrome(executable_path="/home/alienmint/Documents/Programmation/pythonPDF/Banq_Achat/gecko/chromedriver")
+
 #when using Toshiba laptop
 #browser = webdriver.Firefox(executable_path="/home/labby/Documents/Programmation/pythonPDF/Banq_Achat/gecko/geckodriver")
 #browser = webdriver.Chrome(executable_path="/home/labby/Documents/Programmation/pythonPDF/Banq_Achat/gecko/chromedriver")
@@ -65,6 +66,13 @@ def is_html_element_present_click(browser, link_text, by_search):
 	link_verify = WebDriverWait(browser, delay).until(EC.presence_of_element_located((by_search, link_text)))
 	print(link_text + " page is ready")
 	link_verify.click()
+
+def get_html_element(browser, link_text, by_search):
+	delay = 3 # seconds
+	link_verify = WebDriverWait(browser, delay).until(EC.presence_of_element_located((by_search, link_text)))
+	print(link_text + " page is ready")
+	return link_verify
+
 
 #unused
 #def scroll_to_bottom():
