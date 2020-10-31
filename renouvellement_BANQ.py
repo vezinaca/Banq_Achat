@@ -41,7 +41,7 @@ if __name__ == "__main__":
 	time.sleep(2)
 
 	#remove message important because of Coronavirus
-	kill_coronavirus_alert_message(browser)
+	#kill_coronavirus_alert_message(browser)
 	
 	#is_html_element_present_click(browser, "subscriber's account" , By.LINK_TEXT)
 	get_html_element(browser, "subscriber's account" , By.LINK_TEXT).click()

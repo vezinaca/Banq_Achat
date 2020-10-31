@@ -29,7 +29,7 @@ def send_email(email_string):
 	smtpObj = smtplib.SMTP('smtp.gmail.com', 587)
 	smtpObj.ehlo()
 	smtpObj.starttls()
-	smtpObj.login('racontemoidoncca@gmail.com', 'ZaqWsxcd')
+	smtpObj.login('racontemoidoncca@gmail.com', 'P0O9I8U7')
 	smtpObj.sendmail('racontemoidoncca@gmail.com', 'vezinaca@gmail.com',
 	email_string)
 	smtpObj.quit()
@@ -55,10 +55,10 @@ if __name__ == '__main__':
 	creds = ('00115446', '19771314')
 	connect_to_site(browser, url, creds)
 	
-	kill_coronavirus_alert_message(browser)
+	#kill_coronavirus_alert_message(browser)
 
 
-	sql_select_all = """SELECT * FROM orders WHERE accepted=1"""
+	sql_select_all = """SELECT * FROM orders WHERE accepted=1 AND received=0"""
 	my_cursor.execute(sql_select_all)
 	record = my_cursor.fetchall()
 

@@ -191,7 +191,7 @@ if __name__ == '__main__':
 	creds = ('00115446', '19771314')
 	connect_to_site(browser, url, creds)
 
-	kill_coronavirus_alert_message(browser)
+	#kill_coronavirus_alert_message(browser)
 
 	#browser.get(formulaire_link)
 
@@ -207,7 +207,9 @@ if __name__ == '__main__':
 		title.send_keys(book_search_scrape_isbn.list_of_dic_books[0].get('Titre'))
 
 		auteur = browser.find_element_by_id('P5_AUTEUR')
+		#auteur.send_keys(book_search_scrape_isbn.list_of_dic_books[0].get('Auteur').replace(',', ''))
 		auteur.send_keys(book_search_scrape_isbn.list_of_dic_books[0].get('Auteur'))
+		#print("voici: " + book_search_scrape_isbn.list_of_dic_books[0].get('Auteur').replace(',', ''))
 
 		# select by visible text
 		#select.select_by_visible_text('Banana')

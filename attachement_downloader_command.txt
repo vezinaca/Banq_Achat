@@ -1,0 +1,1 @@
+attachment-downloader --host imap.gmail.com --username thecrosswebear@gmail.com --password c3por5d4 --imap-folder inbox --output ~/Downloads/emailAttach
