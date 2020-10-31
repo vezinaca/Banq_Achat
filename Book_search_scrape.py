@@ -150,6 +150,7 @@ if __name__ == '__main__':
 		fullfilename = os.path.join(my_path, book_search_scrape_isbn.replaceMultiple(titre, ['\\', '/', ' ', ','] , "_") + ".jpg")
 		
 		#print(title)
+		
 		print(titre)
 		print(auteur)
 		print(recherche_isbn13)

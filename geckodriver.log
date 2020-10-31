@@ -17195,3 +17195,12 @@ JavaScript error: resource://gre/modules/TelemetryUtils.jsm, line 161: TypeError
 1604109031041	Marionette	INFO	Listening on port 40657
 1604109031154	Marionette	WARN	TLS certificate errors will be ignored for this session
 1604109048225	Marionette	INFO	Stopped listening on port 40657
+1604109811565	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileDNCCYi"
+console.info: MINT: Trying to use the system region (based on LANG).
+console.info: MINT: System region is CA
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.info: MINT: Loading search-config defaults.
+JavaScript error: resource://gre/modules/TelemetryUtils.jsm, line 161: TypeError: date is undefined
+1604109813399	Marionette	INFO	Listening on port 39475
+1604109813491	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604109818943	Marionette	INFO	Stopped listening on port 39475
