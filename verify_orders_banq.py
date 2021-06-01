@@ -29,7 +29,7 @@ def send_email(email_string):
 	smtpObj = smtplib.SMTP('smtp.gmail.com', 587)
 	smtpObj.ehlo()
 	smtpObj.starttls()
-	smtpObj.login('racontemoidoncca@gmail.com', 'P0O9I8U7')
+	smtpObj.login('racontemoidoncca@gmail.com', '********')
 	smtpObj.sendmail('racontemoidoncca@gmail.com', 'vezinaca@gmail.com',
 	email_string)
 	smtpObj.quit()
@@ -52,7 +52,7 @@ if __name__ == '__main__':
                               database='banq', use_pure=True)
 	my_cursor = cnx.cursor()
 
-	creds = ('00115446', '19771314')
+	creds = ('00115446', '******')
 	connect_to_site(browser, url, creds)
 	
 	#kill_coronavirus_alert_message(browser)
