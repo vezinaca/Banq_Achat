@@ -24,7 +24,7 @@ self::$instance = new PDO(
 #host='67.205.105.240
 User: fivemin_banq_me
 Database: fivemin_fivemin_banq
-pass: Otc[PvZ==,e[
+pass: ******
 
 cnx = mysql.connector.connect(user='fivemin_comix', password='Crisse123',
                               host='fiveminutesago.ca',
