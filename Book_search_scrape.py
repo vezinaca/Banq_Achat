@@ -189,7 +189,7 @@ if __name__ == '__main__':
 
 	book_search_scrape_banq.print_dictionnary()
 	#creds = getCredentials()
-	creds = ('00115446', '19771314')
+	creds = ('00115446', '*****')
 	connect_to_site(browser, url, creds)
 
 	#kill_coronavirus_alert_message(browser)
