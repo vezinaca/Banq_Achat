@@ -26,9 +26,7 @@ def parse_style_attribute(style_string):
     if 'background' in style_string:
     	#style_string = style_string.split(' url("')[1].replace('");', '')
         #style_string = style_string.split(' url("')[1]
-        #print("fuk")
-        #s = 'asdf=5;iwantthis123jasd'
-        #result = re.search('asdf(.*)jasd', s)
+        
         
         result = re.search('url\(\"(.*)\"\)', style_string)		
         #print("the result: " + result.group(1))
