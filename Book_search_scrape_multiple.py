@@ -108,7 +108,7 @@ if __name__ == '__main__':
 
 	ids_of_wanted_books = [20, 95]
 
-	creds = ('00115446', '19771314')
+	creds = ('00115446', '*******')
 	connect_to_site(browser, url, creds)
 	
 	if (len(sys.argv) > 1):
