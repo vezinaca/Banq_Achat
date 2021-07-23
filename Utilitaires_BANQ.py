@@ -44,9 +44,13 @@ def getCredentials():
 
 def connect_to_site(browser, url, creds):
 	browser.get(url)
-	num_client = browser.find_element_by_id('NUM')
+	#modif 23 juillet 2021
+	num_client = browser.find_element_by_id('username')
+	#num_client = browser.find_element_by_id('NUM')
 	num_client.send_keys(creds[0])
-	pwd = browser.find_element_by_id('PWD')
+	#pwd = browser.find_element_by_id('PWD')
+	#modif 23 juillet 2021
+	pwd = browser.find_element_by_id('password')
 	pwd.send_keys(creds[1])
 	connection_button = browser.find_element_by_name('_eventId_proceed')
 	connection_button.click()
